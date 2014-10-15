@@ -9,7 +9,7 @@
 	},
 	{
 		"link": {
-			"~/.dotfiles": ""
+			"~/.dotfiles": "",
 			"~/.tmux.conf": "tmux.conf",
 			"~/.gitignore_global": "gitignore_global",
 			"~/.gitconfig": "gitconfig",
