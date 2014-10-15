@@ -12,6 +12,7 @@
 	cob     = checkout -b
 	diff    = diff --word-diff
 	dc      = diff --cached
+	ds      = diff --staged
 	addi    = add --interactive
 	grep    = grep -iI
 	subup   = submodule update --init --recursive
