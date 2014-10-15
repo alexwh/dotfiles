@@ -13,9 +13,6 @@
 [submodule "vim/bundle/vim-repeat"]
 	path = vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "vim/bundle/clever-f.vim"]
-	path = vim/bundle/clever-f.vim
-	url = https://github.com/rhysd/clever-f.vim.git
 [submodule "vim/bundle/vim-easy-align"]
 	path = vim/bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
