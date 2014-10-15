@@ -27,9 +27,6 @@ unsetopt autocd cdablevars
 promptinit
 prompt pure
 
-source /usr/share/doc/pkgfile/command-not-found.zsh
-
-
 
 alias vi='vim'
 alias se='sudo -e'
@@ -142,6 +139,9 @@ sshp() {
 chpwd() {
 	ls
 }
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/doc/pkgfile/command-not-found.zsh
 
 [[ -z "$HOSTNAME" ]] && HOSTNAME=$(uname -n)
 if [[ $USER = "alex" ]] && [[ "$HOSTNAME" =~ "arch*" ]];then
