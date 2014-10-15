@@ -120,7 +120,7 @@ let g:clever_f_timeout_ms=1000
 let g:clever_f_fix_key_direction=1
 
 
-" autogroups
+" autocmds
 augroup reloadvimrc
 	au!
 	au BufWritePost .vimrc source $MYVIMRC
@@ -134,6 +134,9 @@ augroup notmpundos
 	" pass edits files in /dev/shm
 	au BufReadPre /dev/shm/* set noundofile
 augroup END
+
+" tpope style markdown runtime detection
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " gui settings
 if has('gui_running')
