@@ -22,3 +22,21 @@
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim/bundle/vim-sleuth"]
+	path = vim/bundle/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth.git
+[submodule "vim/bundle/vim-speeddating"]
+	path = vim/bundle/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+[submodule "vim/bundle/vim-eunuch"]
+	path = vim/bundle/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule "vim/bundle/vim-vinegar"]
+	path = vim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/vim-dispatch"]
+	path = vim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
