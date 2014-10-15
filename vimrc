@@ -144,5 +144,7 @@ if has('gui_running')
 	set guioptions-=l
 	set guioptions-=L
 
+	set guifont=Cousine\ 11
+
 	set cursorline
 endif
