@@ -4,6 +4,8 @@ execute pathogen#infect()
 " general options
 filetype plugin indent on
 syntax on
+colorscheme solarized
+set background=dark
 set encoding=utf-8
 set fileformat=unix
 "set modelines=0 " security issues
@@ -143,8 +145,4 @@ if has('gui_running')
 	set guioptions-=L
 
 	set cursorline
-endif
-
-if &diff
-	set background=dark
 endif
