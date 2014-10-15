@@ -11,7 +11,7 @@
 		"link": {
 			"~/.dotfiles": "",
 			"~/.tmux.conf": "tmux.conf",
-			"~/.gitignore_global": "gitignore_global",
+			"~/.cvsignore": "cvsignore",
 			"~/.gitconfig": "gitconfig",
 			"~/.i3blocks.conf": "i3blocks.conf",
 			"~/.makepkg.conf": "makepkg.conf",
