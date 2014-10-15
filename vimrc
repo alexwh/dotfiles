@@ -10,7 +10,6 @@ Plugin 'tpope/vim-unimpaired'
 
 " new
 Plugin 'tpope/vim-surround'
-Plugin 'rhysd/clever-f.vim'
 
 " underused
 Plugin 'justinmk/vim-sneak'
