@@ -7,7 +7,7 @@
 	default = simple
 [alias]
 	st      = status -s
-	cm      = commit -m
+	ci      = commit --verbose
 	co      = checkout
 	cob     = checkout -b
 	diff    = diff --word-diff
