@@ -1,23 +1,4 @@
-filetype off " required for vundle!
-set rtp+=~/.vim/bundle/vundle.vim
-call vundle#begin()
-Plugin 'gmarik/vundle.vim'
-
-" useful
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-unimpaired'
-
-" new
-Plugin 'tpope/vim-surround'
-
-" underused
-Plugin 'justinmk/vim-sneak'
-Plugin 'sjl/gundo.vim' " python dependency isn't nice
-Plugin 'junegunn/vim-easy-align'
-
-call vundle#end()
-" i should use pathogen
+execute pathogen#infect()
 
 " general options
 filetype plugin indent on
