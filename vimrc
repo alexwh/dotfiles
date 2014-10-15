@@ -142,7 +142,6 @@ if has('gui_running')
 	set guioptions-=l
 	set guioptions-=L
 
-	colorscheme getfresh
 	set cursorline
 endif
 
