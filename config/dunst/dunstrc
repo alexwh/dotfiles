@@ -110,7 +110,6 @@
     #  * foreground: use the same color as the foreground
     #  * frame: use the same color as the frame.
     #  * anything else will be interpreted as a X color
-#was frame
     separator_color = auto
 
     # print a notification on startup
