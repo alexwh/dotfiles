@@ -17,7 +17,6 @@ exec dropboxd
 exec firefox
 exec gtk-youtube-viewer
 exec teamspeak3
-# exec mumble "mumble://alex@awh.im?version=1.2.8"
 exec steam
 exec wmal-qt
 exec hexchat
@@ -94,14 +93,10 @@ bindsym $mod+shift+a exec /home/alex/scripts/at-pass
 bindsym $mod+shift+ctrl+a exec /home/alex/scripts/at-pass -c
 bindsym $mod+shift+l exec /home/alex/scripts/random.sh
 
-# start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -191,6 +186,7 @@ mode "$mode_power" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+# backspace doesn't work with modes for some reason
 bindsym $mod+shift+plus       mode "$mode_power"
 bindsym $mod+shift+underscore mode "$mode_power"
 
