@@ -1,0 +1,39 @@
+[
+	{
+		"clean": ["~"]
+	},
+	{
+		"shell": [
+			["mkdir -p ~/.config", "Creating .config folder"]
+		]
+	},
+	{
+		"link": {
+			"~/.dotfiles": ""
+			"~/.tmux.conf": "tmux.conf",
+			"~/.gitignore_global": "gitignore_global",
+			"~/.gitconfig": "gitconfig",
+			"~/.i3blocks.conf": "i3blocks.conf",
+			"~/.makepkg.conf": "makepkg.conf",
+			"~/.vimperatorrc": "vimperatorrc",
+			"~/.vim": "vim/",
+			"~/.vimrc": "vimrc",
+			"~/.zshrc": "zshrc",
+			"~/.config/dunst": "config/dunst/",
+			"~/.config/hexchat": "config/hexchat/",
+			"~/.config/i3": "config/i3/",
+			"~/.config/mpd": "config/mpd/",
+			"~/.config/mpv": "config/mpv/",
+			"~/.config/ranger": "config/ranger/",
+			"~/.config/sxiv": "config/sxiv/",
+			"~/.config/systemd": "config/systemd/",
+			"~/.config/termite": "config/termite/",
+			"~/.config/user-dirs.dirs": "config/user-dirs.dirs"
+		}
+	},
+	{
+		"shell": [
+			["git submodule update --init --recursive", "Installing submodules"]
+		]
+	}
+]

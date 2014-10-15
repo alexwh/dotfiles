@@ -1,0 +1,34 @@
+"3.8.1 (created: 2013/11/21 23:49:14)
+
+colorscheme molokai
+source! /home/alex/.vimperatorrc.local
+let mapleader=","
+
+set titlestring=Firefox
+set gui=addons,nobookmarks,nomenu,nonavigation,tabs
+
+nmap <C-j> <C-d>
+nmap <C-k> <C-u>
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+nnoremap [ [[<ESC>
+nnoremap ] ]]<ESC>
+
+nnoremap j 3j
+nnoremap k 3k
+
+nnoremap Y ;y
+nnoremap a <nop>
+nnoremap A <nop>
+
+highlight Hint font-size:125%;color:white;background-color:green;padding:2px;
+
+" use https://github.com/Earnestly/dotfiles/blob/master/.config/pentadactyl/plugins/launchv.js instead
+"command! mpvp :execute "!noglob mpv " + content.location.href + " 2&1>/dev/null"
+"nnoremap <leader>m :mpvp
+
+nnoremap <leader>h :noh<cr>
+nnoremap <leader># :emenu History.Show All History<cr>
+nnoremap <leader>p :emenu Edit.Preferences<cr>
+
+" vim: set ft=vimperator:

@@ -1,0 +1,11 @@
+[Unit]
+Description=timer for pacmanlist.service
+After=network-online.target
+Wants=network-online.target
+
+[Timer]
+OnCalendar=*-*-* 18:00:00
+Persistent=true
+
+[Install]
+WantedBy=default.target

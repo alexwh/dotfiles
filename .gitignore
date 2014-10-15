@@ -1,0 +1,8 @@
+vim/swap
+vim/undo
+vim/.netrwhist
+
+config/mpv/watch_later
+
+# contains passwords
+config/hexchat/servlist.conf

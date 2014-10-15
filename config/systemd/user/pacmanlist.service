@@ -1,0 +1,9 @@
+[Unit]
+Description=Send pacman packages to a synced folder
+
+[Service]
+Type=simple
+ExecStart=/home/alex/scripts/pacmanlistbackup.sh
+
+[Install]
+WantedBy=userscripts.target

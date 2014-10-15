@@ -1,0 +1,9 @@
+[Unit]
+Description=Run entrydns updater
+
+[Service]
+Type=simple
+ExecStart=/home/alex/scripts/entrydyndns.sh
+
+[Install]
+WantedBy=userscripts.target

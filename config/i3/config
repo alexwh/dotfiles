@@ -1,0 +1,231 @@
+set $mod Mod4
+
+# autostart
+exec --no-startup-id redshift -l 53.95:1.0833 -t 5700:4800 -r
+exec --no-startup-id dunst
+exec --no-startup-id clipit
+exec --no-startup-id volumeicon
+exec --no-startup-id udiskie
+#exec --no-startup-id mpd # systemd handled
+# will not lock if mouse is in top right of screen, will activate lock if in bottom left
+exec --no-startup-id xautolock -locker "i3lock -c 242424 --dpms" -notify 5 -notifier "notify-send i3lock 5s" -corners 0-+0
+
+exec i3-sensible-terminal
+exec transmission-qt
+exec google-musicmanager
+exec dropboxd
+exec firefox
+exec gtk-youtube-viewer
+exec teamspeak3
+# exec mumble "mumble://alex@awh.im?version=1.2.8"
+exec steam
+exec wmal-qt
+exec hexchat
+
+
+# workspace assignments
+# terminals
+assign [class="Xfce4-terminal"]     1
+assign [class="Termite"]            1
+
+# browsers
+assign [class="Firefox"]            2
+assign [class="Chromium"]           2
+
+# chats
+assign [class="Steam"]              3
+assign [class="Mumble"]             3
+assign [class="TeamSpeak 3"]        3
+
+# videos
+assign [class="Gtk-youtube-viewer"] 4
+assign [class="Wmal-gtk"]           4
+assign [class="Wmal-qt"]            4
+assign [class="mpv"]                4
+
+# misc
+assign [class="Hexchat"]            5
+
+# games
+assign [class="hl2_linux"]          6
+assign [class="dota_linux"]         6
+assign [class="(?i)minecraft"]      6
+assign [class="^Wine$" instance="^osu!.exe$"] 6
+
+# if trying to switch to current workspace, switch to last used one
+# workspace_auto_back_and_forth yes
+# move to last workspace
+bindsym $mod+z workspace back_and_forth
+# move container to last workspace and then go to it
+bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
+
+font pango:Arimo Regular 10
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# float popups
+for_window [window_role="pop-up"]         floating enable
+for_window [window_role="Preferences"]    floating enable
+for_window [class="mpv"]                  floating enable
+for_window [class="Qjackctl"]             floating enable
+for_window [class="Simplescreenrecorder"] floating enable
+
+# fullscreen games
+# for_window [class="hl2_linux"]  fullscreen enable
+# for_window [class="dota_linux"] fullscreen enable
+
+# amixer
+# volumeicon does this now
+# bindsym XF86AudioLowerVolume exec amixer set Master 1%-
+# bindsym XF86AudioRaiseVolume exec amixer set Master 1%+
+# bindsym XF86AudioMute exec amixer sset Master toggle
+
+# mpd
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioStop exec /home/alex/scripts/mrm.sh
+bindsym $mod+shift+n exec /home/alex/scripts/nowplaying.sh
+
+bindsym $mod+l exec xautolock -locknow
+bindsym $mod+shift+s exec /home/alex/scripts/imgurss.sh
+bindsym $mod+shift+a exec /home/alex/scripts/at-pass
+bindsym $mod+shift+ctrl+a exec /home/alex/scripts/at-pass -c
+bindsym $mod+shift+l exec /home/alex/scripts/random.sh
+
+# start a terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+a focus parent
+#bindsym $mod+d focus child
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+bindsym $mod+shift+1 move container to workspace 1
+bindsym $mod+shift+2 move container to workspace 2
+bindsym $mod+shift+3 move container to workspace 3
+bindsym $mod+shift+4 move container to workspace 4
+bindsym $mod+shift+5 move container to workspace 5
+bindsym $mod+shift+6 move container to workspace 6
+bindsym $mod+shift+7 move container to workspace 7
+bindsym $mod+shift+8 move container to workspace 8
+bindsym $mod+shift+9 move container to workspace 9
+bindsym $mod+shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+shift+r reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+ctrl+shift+r restart
+
+# jump to flashed windows
+bindsym $mod+x [urgent=latest] focus
+
+mode "resize" {
+	# These bindings trigger as soon as you enter the resize mode
+
+	# Pressing arrows will adjust the window’s width.
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
+
+
+	bindsym shift+Left resize shrink width 1 px or 1 ppt
+	bindsym shift+Down resize grow height 1 px or 1 ppt
+	bindsym shift+Up resize shrink height 1 px or 1 ppt
+	bindsym shift+Right resize grow width 1 px or 1 ppt
+
+
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+bindsym $mod+shift+backslash mode "resize"
+
+
+set $mode_power power (l) logout, (r) reboot, (s) shutdown
+mode "$mode_power" {
+    bindsym l exec --no-startup-id power.sh logout,   mode "default"
+    bindsym r exec --no-startup-id power.sh reboot,   mode "default"
+    bindsym s exec --no-startup-id power.sh shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+shift+plus       mode "$mode_power"
+bindsym $mod+shift+underscore mode "$mode_power"
+
+
+# hide title bars
+hide_edge_borders horizontal
+for_window [class="^.*"] border none
+# for_window [class="^.*"] border pixel 2
+
+# colors                border  backgr. text    indicator
+client.focused          #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused        #333333 #333333 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+# placeholder border & indicator are ignored
+# client.placeholder      #000000 #0c0c0c #ffffff #000000
+
+# i3bar settings
+bar {
+	# status_command $HOME/scripts/conky-i3bar
+	status_command i3blocks
+	position top
+	# font pango:Arimo Regular 10
+
+	mode hide
+	modifier $mod
+
+	colors {
+		background #222222
+		statusline #dddddd
+		separator #666666
+
+		focused_workspace  #0088cc #0088cc #ffffff
+		active_workspace   #333333 #333333 #888888
+		inactive_workspace #333333 #333333 #888888
+		urgent_workspace   #2f343a #900000 #ffffff
+	}
+}
