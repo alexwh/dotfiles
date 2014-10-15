@@ -91,7 +91,6 @@ nnoremap U <c-r>
 
 " leader shortcuts
 nmap <silent> <leader>h :noh<cr>
-nmap <silent> <leader>u :GundoToggle<cr>
 nmap <leader>ev :edit ~/.vimrc<cr>
 nmap <leader>ez :edit ~/.zshrc<cr>
 nmap <leader>w :w<cr>
@@ -113,11 +112,6 @@ nmap <leader>dd "+dd
 " vim-easy-align plug binds
 vmap <enter> <plug>(EasyAlign)
 nmap <leader>a <plug>(EasyAlign)
-
-" clever f options
-let g:clever_f_smart_case=1
-let g:clever_f_timeout_ms=1000
-let g:clever_f_fix_key_direction=1
 
 
 " autocmds
