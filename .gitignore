@@ -4,5 +4,9 @@ vim/.netrwhist
 
 config/mpv/watch_later
 
+config/ranger/history
+config/ranger/bookmarks
+config/ranger/tagged
+
 # contains passwords
 config/hexchat/servlist.conf
