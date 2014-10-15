@@ -3,3 +3,5 @@
 [user]
 	email = git@alexwh.com
 	name = Alex W
+[push]
+	default = simple
