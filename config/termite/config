@@ -4,7 +4,7 @@ scroll_on_output = false
 scroll_on_keystroke = true
 audible_bell = true
 visible_bell = true
-mouse_autohide = false
+mouse_autohide = true
 allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
@@ -24,9 +24,6 @@ cursor_blink = system
 
 # "block", "underline" or "ibeam"
 cursor_shape = block
-
-# $BROWSER is used by default
-#browser = firefox
 
 # word characters used for word selection
 # (default if unset: all graphic non-punctuation/space characters)
@@ -73,4 +70,4 @@ color15 = #fdf6e3
 #border_width = 0.5
 #roundness = 2.0
 
-# vim: ft=dosini
+# vim: ft=dosini cms=#%s
