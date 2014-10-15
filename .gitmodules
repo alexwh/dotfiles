@@ -22,9 +22,6 @@
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "vim/bundle/vim-sleuth"]
-	path = vim/bundle/vim-sleuth
-	url = https://github.com/tpope/vim-sleuth.git
 [submodule "vim/bundle/vim-speeddating"]
 	path = vim/bundle/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
