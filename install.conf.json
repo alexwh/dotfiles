@@ -18,6 +18,7 @@
 			"~/.vimperatorrc": "vimperatorrc",
 			"~/.vim": "vim/",
 			"~/.vimrc": "vimrc",
+			"~/.zsh": "zsh/",
 			"~/.zshrc": "zshrc",
 			"~/.config/dunst": "config/dunst/",
 			"~/.config/hexchat": "config/hexchat/",
