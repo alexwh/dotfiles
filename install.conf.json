@@ -27,8 +27,7 @@
 			"~/.config/ranger": "config/ranger/",
 			"~/.config/sxiv": "config/sxiv/",
 			"~/.config/systemd": "config/systemd/",
-			"~/.config/termite": "config/termite/",
-			"~/.config/user-dirs.dirs": "config/user-dirs.dirs"
+			"~/.config/termite": "config/termite/"
 		}
 	},
 	{
