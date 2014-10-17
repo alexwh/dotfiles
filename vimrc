@@ -11,7 +11,7 @@ set fileformat=unix
 "set modelines=0 " security issues
 set undofile
 set undodir=~/.vim/undo
-set directory=~/.vim/swap
+set noswapfile
 set backspace=indent,eol,start
 let mapleader=" "
 set autochdir
