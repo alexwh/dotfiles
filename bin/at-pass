@@ -1,0 +1,70 @@
+#!/usr/bin/env zsh
+# set -ue
+
+password_store="$HOME/.password-store"
+
+autotype() {
+	if [[ $* =~ ".*-c.*" ]];then
+		pass $*
+		notify-send "pass" "copied, will clear in 45s"
+		exit
+	else
+		# get the deets
+		output="$(pass $*)"
+	fi
+
+	# fail fast if it doesn't exist
+	exit_code="$?"
+	if [[ "$exit_code" -gt 0 ]]; then
+		exit "$exit_code" # $? is the result of [[ now
+	fi
+
+	# extract the junk we want
+	password="$(printf "%s" "$output" | head -n 1)"
+	username="$(printf "%s" "$output" | grep '^username: ' | cut -c 11-)"
+
+	# send those key presses to the window
+	active_window_id="$(xdotool getactivewindow)"
+
+	if [[ -n "$password" ]]; then
+		if [[ -n "$username" ]]; then
+			xdotool type --window "$active_window_id" -- "$username"
+			sleep 0.5
+			xdotool key --window "$active_window_id" "Tab"
+			sleep 0.5
+		fi
+		xdotool type --window "$active_window_id" -- "$password"
+		sleep 0.5
+		xdotool key --window "$active_window_id" "Return"
+		sleep 0.5
+	fi
+}
+
+# make sure the password store exists
+if [[ ! -d "$password_store" ]]; then
+	echo "The password store at $password_store doesn't exist"
+	exit 1
+fi
+
+# discern a list of possibilities
+candidates="$(find "$password_store" -name '*gpg' -print0 |
+tr "\0" "\n" |
+sed "s#$password_store/##;s#\.gpg\$##")"
+
+# ask which
+if [[ $* =~ ".*-c.*" ]];then
+	choice="$(echo -n "$candidates" | sort | dmenu -i -p 'autotype (copy)')"
+else
+	choice="$(echo -n "$candidates" | sort | dmenu -i -p 'autotype')"
+fi
+
+# fail if they didn't supply anything
+if [[ -z "$choice" ]]; then
+	exit 2
+fi
+
+# notify which we found, using stderr so it isn't piped to anything else
+echo "Using $choice." 1>&2
+
+# delegate to pass
+autotype "$choice" $*
