@@ -10,5 +10,8 @@ config/ranger/tagged
 
 config/sxiv/tags
 
+# don't force enabling services
+config/systemd/user/default.target.wants
+
 # contains passwords
 config/hexchat/servlist.conf
