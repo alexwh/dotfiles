@@ -69,11 +69,6 @@ nnoremap <down>   <c-e>
 nnoremap <silent> <left>  :bprev<cr>
 nnoremap <silent> <right> :bnext<cr>
 
-noremap  <buffer> <silent> k gk
-noremap  <buffer> <silent> j gj
-noremap  <buffer> <silent> 0 g0
-noremap  <buffer> <silent> $ g$
-
 inoremap <up>    <nop>
 inoremap <down>  <nop>
 inoremap <left>  <nop>
