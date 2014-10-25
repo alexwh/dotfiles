@@ -52,7 +52,6 @@ alias dc='cd'
 alias ffmpeg='ffmpeg -hide_banner'
 alias c='bc -qil'
 alias 'ps?'='ps ax | grep $(sed "s/^\(.\)/[\1]/g" <<< $1)'
-alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]' <<< "
 alias df='di -x tmpfs'
 alias ka='killall -r -i'
 alias mkdir='mkdir -p -v'
