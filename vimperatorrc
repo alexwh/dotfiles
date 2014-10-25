@@ -23,9 +23,9 @@ nnoremap A <nop>
 
 highlight Hint font-size:125%;color:white;background-color:green;padding:2px;
 
-" use https://github.com/Earnestly/dotfiles/blob/master/.config/pentadactyl/plugins/launchv.js instead
-"command! mpvp :execute "!noglob mpv " + content.location.href + " 2&1>/dev/null"
-"nnoremap <leader>m :mpvp
+" maybe use https://github.com/Earnestly/dotfiles/blob/master/.config/pentadactyl/plugins/launchv.js instead
+command mpvp execute "silent !(mpv '" + window.content.location.href + "' &)"
+nnoremap <leader>m :mpvp
 
 nnoremap <leader>h :noh<cr>
 nnoremap <leader># :emenu History.Show All History<cr>
