@@ -63,11 +63,11 @@ font pango:Arimo Regular 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# float popups
 for_window [window_role="pop-up"]         floating enable
 for_window [window_role="Preferences"]    floating enable
 for_window [class="mpv"]                  floating enable
 for_window [class="Qjackctl"]             floating enable
+for_window [class="Pavucontrol"]          floating enable
 for_window [class="Simplescreenrecorder"] floating enable
 
 # fullscreen games
