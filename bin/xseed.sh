@@ -13,5 +13,5 @@ name="${2:-$torname}"
 # times the piece size by 2 for a different hash
 # info.piece length is in bytes. dividing by 1024 gives us the kib size. 512 is double that
 torpiecesize=$(lstor -qo info.piece\ length "$1")
-piecesize=$(bc <<< "$torpiecesize/2048" | cut -f1 -d.)
+piecesize=$(bc <<< "$torpiecesize/512" | cut -f1 -d.)
 transmission-create -p -o "${name}_crossseed.torrent" -s "$piecesize" -t "$announce" "$dldir$name"
