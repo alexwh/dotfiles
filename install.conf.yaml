@@ -1,0 +1,26 @@
+- clean: ['~']
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.cvsignore: cvsignore
+    ~/.gitconfig: gitconfig
+    ~/.i3blocks.conf: i3blocks.conf
+    ~/.makepkg.conf: makepkg.conf
+    ~/.vimperatorrc: vimperatorrc
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+    ~/.config/dunst:
+        create: true
+        path: config/dunst/
+    ~/.config/hexchat: config/hexchat/
+    ~/.config/i3: config/i3/
+    ~/.config/mpd: config/mpd/
+    ~/.config/mpv: config/mpv/
+    ~/.config/ranger: config/ranger/
+    ~/.config/sxiv: config/sxiv/
+    ~/.config/systemd: config/systemd/
+    ~/.config/termite: config/termite/
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
