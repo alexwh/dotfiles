@@ -88,7 +88,7 @@ alias nh='sudo nethogs'
 
 alias pac='sudo pacman'
 alias pacup='sudo pacman -Syu'
-alias pacin='pacaur -S'
+alias pacin='sudo pacman -S'
 alias pacrm='sudo pacman -Rns'
 alias pacse='pacman -Ss'
 
