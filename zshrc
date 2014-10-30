@@ -118,6 +118,8 @@ chpwd() {
 	ls
 }
 
+[[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
