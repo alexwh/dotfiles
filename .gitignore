@@ -15,3 +15,5 @@ config/systemd/user/default.target.wants
 
 # contains passwords
 config/hexchat/servlist.conf
+# changes often
+config/hexchat/chanopt.conf
