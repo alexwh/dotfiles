@@ -71,8 +71,8 @@ for_window [class="Pavucontrol"]          floating enable
 for_window [class="Simplescreenrecorder"] floating enable
 
 # fullscreen games
-# for_window [class="hl2_linux"]  fullscreen enable
-# for_window [class="dota_linux"] fullscreen enable
+for_window [class="hl2_linux"]  fullscreen enable
+for_window [class="dota_linux"] fullscreen enable
 
 # amixer
 # volumeicon does this now
