@@ -21,7 +21,6 @@ else
 	printf 'Failed to setup keys using zkbd.\n'
 fi
 unfunction zkbd_file; unset keyfile ret
-source ~/.zkbd/$TERM-$DISPLAY
 
 bindkey '^r' history-incremental-search-backward
 [[ -n ${key[Backspace]} ]] && bindkey "${key[Backspace]}" backward-delete-char
