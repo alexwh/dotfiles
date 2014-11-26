@@ -18,3 +18,4 @@ if [[ $HOSTNAME = "archbox" ]];then
 	export VDPAU_DRIVER=r600
 fi
 
+export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # Like default, but without / -- ^W must be useful in paths, like it is in vim, bash, tcsh
