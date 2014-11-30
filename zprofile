@@ -12,3 +12,7 @@ export QT_STYLE_OVERRIDE=gtk
 export WINEARCH=win32 # no disadvantages
 
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # Like default, but without / -- ^W must be useful in paths, like it is in vim, bash, tcsh
+
+if [[ $USER = "alex" ]];then
+	eval $(keychain --eval -Q --quiet id_ecdsa)
+fi
