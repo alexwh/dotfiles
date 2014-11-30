@@ -11,6 +11,7 @@
     ~/.vimrc: vimrc
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
+    ~/.zprofile: zprofile
     ~/.config/dunst:
         create: true
         path: config/dunst/
