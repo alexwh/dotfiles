@@ -1,4 +1,3 @@
-source ~/.zsh/exports.zsh
 source ~/.zsh/setopt.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/keybindings.zsh
