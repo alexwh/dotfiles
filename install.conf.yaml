@@ -4,7 +4,6 @@
     ~/.tmux.conf: tmux.conf
     ~/.cvsignore: cvsignore
     ~/.gitconfig: gitconfig
-    ~/.i3blocks.conf: i3blocks.conf
     ~/.makepkg.conf: makepkg.conf
     ~/.vimperatorrc: vimperatorrc
     ~/.vim: vim/
@@ -17,6 +16,7 @@
         path: config/dunst/
     ~/.config/hexchat: config/hexchat/
     ~/.config/i3: config/i3/
+    ~/.config/i3blocks: config/i3blocks/
     ~/.config/mpd: config/mpd/
     ~/.config/mpv: config/mpv/
     ~/.config/ranger: config/ranger/
