@@ -89,8 +89,8 @@ bindsym $mod+shift+n exec /home/alex/scripts/nowplaying.sh
 
 bindsym $mod+l exec xautolock -locknow
 bindsym $mod+shift+s exec /home/alex/scripts/imgurss.sh
-bindsym $mod+shift+a exec /home/alex/scripts/at-pass
-bindsym $mod+shift+ctrl+a exec /home/alex/scripts/at-pass -c
+bindsym $mod+shift+a exec /home/alex/scripts/at-pass -up
+bindsym $mod+shift+ctrl+a exec /home/alex/scripts/at-pass -p
 bindsym $mod+shift+l exec /home/alex/scripts/random.sh
 
 # kill focused window

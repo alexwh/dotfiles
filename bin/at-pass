@@ -3,15 +3,19 @@
 
 password_store="$HOME/.password-store"
 
+while getopts "up" opt;do
+	case $opt in
+		u) TYPE_USERNAME="1" ;;
+		p) TYPE_PASSWORD="1" ;;
+		:) usage "-${OPTARG} requires an argument." ; exit 1 ;;
+		\?) usage "Invalid option -${OPTARG}" ; exit 1;;
+	esac
+done
+shift $((OPTIND-1))
+
 autotype() {
-	if [[ $* =~ ".*-c.*" ]];then
-		pass $*
-		notify-send "pass" "copied, will clear in 45s"
-		exit
-	else
-		# get the deets
-		output="$(pass $*)"
-	fi
+	# get the deets
+	output="$(pass $*)"
 
 	# fail fast if it doesn't exist
 	exit_code="$?"
@@ -26,17 +30,22 @@ autotype() {
 	# send those key presses to the window
 	active_window_id="$(xdotool getactivewindow)"
 
-	if [[ -n "$password" ]]; then
-		if [[ -n "$username" ]]; then
+	# need at least a password
+	if [[ -n "$password" && $TYPE_PASSWORD = "1" ]]; then
+		if [[ -n "$username" && $TYPE_USERNAME = "1" ]]; then
 			xdotool type --window "$active_window_id" -- "$username"
 			sleep 0.5
 			xdotool key --window "$active_window_id" "Tab"
 			sleep 0.5
 		fi
+		# security risk - password shows up in process list. is there any alternative?
 		xdotool type --window "$active_window_id" -- "$password"
 		sleep 0.5
 		xdotool key --window "$active_window_id" "Return"
 		sleep 0.5
+	else
+		notify-send "no pass to type"
+		exit 1
 	fi
 }
 
@@ -52,11 +61,7 @@ tr "\0" "\n" |
 sed "s#$password_store/##;s#\.gpg\$##")"
 
 # ask which
-if [[ $* =~ ".*-c.*" ]];then
-	choice="$(echo -n "$candidates" | sort | dmenu -i -p 'autotype (copy)')"
-else
-	choice="$(echo -n "$candidates" | sort | dmenu -i -p 'autotype')"
-fi
+choice="$(echo -n "$candidates" | sort | dmenu -i -p 'autotype')"
 
 # fail if they didn't supply anything
 if [[ -z "$choice" ]]; then
