@@ -11,7 +11,6 @@ exec --no-startup-id udiskie
 exec --no-startup-id xautolock -locker "i3lock -c 242424 --dpms" -notify 5 -notifier "notify-send i3lock 5s" -corners 0-+0
 
 exec i3-sensible-terminal -e tmux
-exec transmission-qt
 exec deluge-gtk
 exec google-musicmanager
 exec dropboxd
