@@ -18,22 +18,23 @@ tag_add() {
 	>>"$TAGFILE"
 	tags=$(dmenu <"$TAGFILE" | tr '\n' ',')
 	[ -z "$tags" ] && return
-	iptckwed -a "$tags" "$@"
+	iptckwed -i -a "$tags"
 	echo -n "$tags" | tr ',' '\n' | sort - "$TAGFILE" | uniq >"$TAGFILE.new"
 	mv -f "$TAGFILE"{.new,}
 }
 
 tag_del() {
-	tags=$(iptckwed -ql "$@" | cut -f 2 | tr ',' '\n' | sort | uniq | dmenu | tr '\n' ',')
+	cat >"$TMPFILE"
+	tags=$(iptckwed -iql <"$TMPFILE" | cut -f 2 | tr ',' '\n' | sort | uniq | dmenu | tr '\n' ',')
 	[ -z "$tags" ] && return
-	iptckwed -r "$tags" "$@"
+	iptckwed -i -r "$tags" <"$TMPFILE"
+	rm -f "$TMPFILE"
 }
 
 case "$KEY" in
-"C-c")      echo -n "$@" | xclip -selection clipboard ;;
-"C-d")      trash "$@" ;;
-"C-g")      gimp "$@" & ;;
-"C-t")      tag_add "$@" ;;
-"M-t")      tag_del "$@" ;;
+	"C-c")      tr '\n' ' ' | xclip -selection clipboard ;;
+	"C-d")      tr '\n' '\0' | xargs -0 trash ;;
+	"C-g")      tr '\n' '\0' | xargs -0 gimp & ;;
+	"C-t")      tag_add ;;
+	"M-t")      tag_del ;;
 esac
-
