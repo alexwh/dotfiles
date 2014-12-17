@@ -129,6 +129,8 @@ augroup END
 " tpope style markdown runtime detection
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
+
 " gui settings
 if has('gui_running')
 	set guicursor+=a:blinkon0 " cursor doesn't blink
