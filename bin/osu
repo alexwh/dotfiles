@@ -1,0 +1,2 @@
+#!/bin/bash
+WINEDEBUG=-all WINEARCH="win32" ssr-glinject wine "/home/alex/.wine/drive_c/Program Files/osu!/osu!.exe"

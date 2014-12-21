@@ -1,0 +1,2 @@
+#!/bin/bash
+WINEDEBUG=-all WINEARCH="win32" WINEPREFIX="/home/alex/.local/share/wineprefixes/steam" wine "/home/alex/.local/share/wineprefixes/steam/drive_c/Program Files/Steam/Steam.exe"
