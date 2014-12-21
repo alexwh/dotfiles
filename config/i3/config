@@ -38,8 +38,8 @@ assign [class="TeamSpeak 3"]        3
 
 # videos
 assign [class="Gtk-youtube-viewer"] 4
-assign [class="Wmal-gtk"]           4
-assign [class="Wmal-qt"]            4
+assign [class="Trackma-gtk"]        4
+assign [class="Trackma-qt"]         4
 assign [class="mpv"]                4
 
 # misc
