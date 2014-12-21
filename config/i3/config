@@ -18,7 +18,7 @@ exec firefox
 exec gtk-youtube-viewer
 exec teamspeak3
 exec steam
-exec wmal-qt
+exec trackma-qt
 exec hexchat
 
 
