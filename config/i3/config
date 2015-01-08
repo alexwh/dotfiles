@@ -20,6 +20,7 @@ exec teamspeak3
 exec steam
 exec trackma-qt
 exec hexchat
+exec syncthing-gtk
 
 
 # workspace assignments
