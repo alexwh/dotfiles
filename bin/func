@@ -1,5 +1,0 @@
-#!/bin/zsh
-source ~/.zshrc
-for i;do
-	$i
-done
