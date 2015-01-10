@@ -33,7 +33,7 @@ fi
 echo "Using $choice." 1>&2
 
 # get the deets
-output="$(pass "$choice" $*)"
+output="$(pass "$choice")"
 
 # fail fast if it doesn't exist
 exit_code="$?"
