@@ -1,5 +1,4 @@
 #!/usr/bin/env zsh
-# set -ue
 
 password_store="$HOME/.password-store"
 
@@ -7,47 +6,9 @@ while getopts "up" opt;do
 	case $opt in
 		u) TYPE_USERNAME="1" ;;
 		p) TYPE_PASSWORD="1" ;;
-		:) usage "-${OPTARG} requires an argument." ; exit 1 ;;
-		\?) usage "Invalid option -${OPTARG}" ; exit 1;;
 	esac
 done
 shift $((OPTIND-1))
-
-autotype() {
-	# get the deets
-	output="$(pass $*)"
-
-	# fail fast if it doesn't exist
-	exit_code="$?"
-	if [[ "$exit_code" -gt 0 ]]; then
-		exit "$exit_code" # $? is the result of [[ now
-	fi
-
-	# extract the junk we want
-	password="$(printf "%s" "$output" | head -n 1)"
-	username="$(printf "%s" "$output" | grep '^username: ' | cut -c 11-)"
-
-	# send those key presses to the window
-	active_window_id="$(xdotool getactivewindow)"
-
-	# need at least a password
-	if [[ -n "$password" && $TYPE_PASSWORD = "1" ]]; then
-		if [[ -n "$username" && $TYPE_USERNAME = "1" ]]; then
-			xdotool type --window "$active_window_id" -- "$username"
-			sleep 0.5
-			xdotool key --window "$active_window_id" "Tab"
-			sleep 0.5
-		fi
-		# security risk - password shows up in process list. is there any alternative?
-		xdotool type --window "$active_window_id" -- "$password"
-		sleep 0.5
-		xdotool key --window "$active_window_id" "Return"
-		sleep 0.5
-	else
-		notify-send "no pass to type"
-		exit 1
-	fi
-}
 
 # make sure the password store exists
 if [[ ! -d "$password_store" ]]; then
@@ -71,5 +32,34 @@ fi
 # notify which we found, using stderr so it isn't piped to anything else
 echo "Using $choice." 1>&2
 
-# delegate to pass
-autotype "$choice" $*
+# get the deets
+output="$(pass "$choice" $*)"
+
+# fail fast if it doesn't exist
+exit_code="$?"
+if [[ "$exit_code" -gt 0 ]]; then
+	exit "$exit_code" # $? is the result of [[ now
+fi
+
+# extract the junk we want
+# we assume password is on its own on line one
+# and the username is on any line beginning with "username: "
+password="$(printf "%s" "$output" | head -n 1)"
+username="$(printf "%s" "$output" | grep '^username: ' | cut -c 11-)"
+
+# send those key presses to the active window
+active_window_id="$(xdotool getactivewindow)"
+
+# need at least a password
+if [[ -n "$password" && $TYPE_PASSWORD = "1" ]]; then
+	if [[ -n "$username" && $TYPE_USERNAME = "1" ]]; then
+		xdotool type --window "$active_window_id" -- "$username"
+		xdotool key --window "$active_window_id" "Tab"
+	fi
+	# security risk - password shows up in process list. is there any alternative?
+	xdotool type --window "$active_window_id" -- "$password"
+	xdotool key --window "$active_window_id" "Return"
+else
+	notify-send "no pass to type"
+	exit 1
+fi
