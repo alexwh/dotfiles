@@ -30,8 +30,6 @@ file=$(mktemp /tmp/tmp.XXXXXXXXXX.png)
 case "$choice" in
 	select)
 		maim -s $file ;;
-	window)
-		maim -i "$(xdotool getactivewindow)" $file ;;
 	full)
 		maim $file ;;
 	file)
