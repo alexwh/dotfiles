@@ -29,7 +29,7 @@ file=$(mktemp /tmp/tmp.XXXXXXXXXX.png)
 
 case "$choice" in
 	select)
-		maim -s $file ;;
+		maim -s -b 1 $file ;;
 	full)
 		maim $file ;;
 	file)
