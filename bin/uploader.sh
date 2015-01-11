@@ -6,7 +6,7 @@ notify() {
 imgur() {
 	# API Key provided by Alan@imgur.com
 	# apikey="b3625162d3418ac51a9ee805b1840452"
-	imgurclientid="7d5235bd5e09cd2"
+	imgurclientid="fdd3b8a687cc481"
 
 	response=$(curl -sH "Authorization: Client-ID $imgurclientid" -F "image=@$1" https://api.imgur.com/3/upload.xml)
 
