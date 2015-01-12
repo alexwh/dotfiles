@@ -24,7 +24,7 @@ pomf() {
 }
 
 site=$(echo -e "imgur\npomf" | dmenu -p uploader)
-choice=$(echo -e "select\nwindow\nfull\nfile" | dmenu -p uploader)
+choice=$(echo -e "select\nfull\nfile" | dmenu -p uploader)
 file=$(mktemp /tmp/tmp.XXXXXXXXXX.png)
 
 case "$choice" in
