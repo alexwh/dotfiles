@@ -133,6 +133,11 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
 
 let g:airline_powerline_fonts = 1
+function! AirlineThemePatch(palette)
+	let a:palette.normal.airline_a   = [ '#ffffff', '#268bd2', 255, 33 ]
+	let a:palette.insert.airline_a   = [ '#ffffff', '#859900', 255, 64 ]
+endfunction
+let g:airline_theme_patch_func = 'AirlineThemePatch'
 
 " gui settings
 if has('gui_running')
