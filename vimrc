@@ -138,6 +138,7 @@ function! AirlineThemePatch(palette)
 	let a:palette.insert.airline_a   = [ '#ffffff', '#859900', 255, 64 ]
 endfunction
 let g:airline_theme_patch_func = 'AirlineThemePatch'
+let g:airline#extensions#tabline#enabled = 1
 
 " gui settings
 if has('gui_running')
