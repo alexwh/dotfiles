@@ -30,6 +30,8 @@ set number
 set mouse=
 set noruler
 set lazyredraw
+set list
+set listchars=tab:▸\ ,trail:←,nbsp:¬
 
 " search options
 set incsearch
@@ -49,14 +51,6 @@ set smarttab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
-" list options
-set list
-set listchars=tab:▸\ 
-set lcs+=trail:←
-set lcs+=extends:»
-set lcs+=precedes:«
-set lcs+=nbsp:¬
 
 
 " larger movements
