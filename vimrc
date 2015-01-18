@@ -19,6 +19,7 @@ set wildmenu
 set wildignore=*.pyc,*.jpg,*.gif,*.png
 set autoread
 set hidden
+set laststatus=2
 
 " graphical options
 set scrolloff=5
@@ -131,6 +132,8 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
 
+let g:airline_powerline_fonts = 1
+
 " gui settings
 if has('gui_running')
 	set guicursor+=a:blinkon0 " cursor doesn't blink
@@ -141,7 +144,7 @@ if has('gui_running')
 	set guioptions-=l
 	set guioptions-=L
 
-	set guifont=Cousine\ 11
+	set guifont=Liberation\ Mono\ for\ Powerline\ 11
 
 	set cursorline
 endif

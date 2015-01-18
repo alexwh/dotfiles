@@ -46,3 +46,6 @@
 [submodule "vim/bundle/vim-after-object"]
 	path = vim/bundle/vim-after-object
 	url = https://github.com/junegunn/vim-after-object.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
