@@ -4,11 +4,8 @@ execute pathogen#infect()
 " general options
 filetype plugin indent on
 syntax on
-colorscheme solarized
-set background=dark
 set encoding=utf-8
 set fileformat=unix
-"set modelines=0 " security issues
 set undofile
 set undodir=~/.vim/undo
 set noswapfile
@@ -22,6 +19,8 @@ set hidden
 set laststatus=2
 
 " graphical options
+colorscheme solarized
+set background=dark
 set scrolloff=5
 set showmode
 set showcmd
@@ -76,8 +75,7 @@ vnoremap <f1> <esc>
 
 " ex mode is useless, map it to something useful
 map Q @q
-map q: :q
-" inoremap jj <esc>
+map q: :q " doesn't fully work
 nnoremap Y y$
 nnoremap U <c-r>
 
