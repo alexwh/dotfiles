@@ -154,6 +154,9 @@ bindsym $mod+ctrl+shift+r restart
 # jump to flashed windows
 bindsym $mod+x [urgent=latest] focus
 
+# release all keyboard grabs
+bindsym $mod+shift+k exec xdotool key XF86Ungrab
+
 mode "resize" {
 	# These bindings trigger as soon as you enter the resize mode
 
