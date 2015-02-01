@@ -51,7 +51,7 @@ alias ubcr='sudo unbound-control reload'
 alias nh='sudo nethogs'
 
 alias orphans='sudo pacman -Rs $(pacman -Qdtq)'
-alias pac='sudo pacman'
+alias pac='pacman'
 alias pacup='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
 alias pacrm='sudo pacman -Rns'
