@@ -87,6 +87,7 @@ nmap <leader>w :w<cr>
 nmap <leader><leader> V
 nmap <silent> <leader>s :set spell!<cr>
 nmap <silent> <leader>l :set nu!<cr>:set list!<cr>
+nmap <silent> <leader>u :UndotreeToggle<cr>
 
 " fast system clipboard pastes
 vmap <leader>y "+y
