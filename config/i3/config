@@ -70,6 +70,7 @@ for_window [class="mpv"]                  floating enable
 for_window [class="Qjackctl"]             floating enable
 for_window [class="Pavucontrol"]          floating enable
 for_window [class="Simplescreenrecorder"] floating enable
+for_window [class="Virt-manager"]         floating enable
 
 # fullscreen games
 for_window [class="hl2_linux"]  fullscreen enable
