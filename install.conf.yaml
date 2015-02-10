@@ -3,7 +3,6 @@
     ~/.dotfiles: ''
     ~/.tmux.conf: tmux.conf
     ~/.cvsignore: cvsignore
-    ~/.gitconfig: gitconfig
     ~/.makepkg.conf: makepkg.conf
     ~/.vimperatorrc: vimperatorrc
     ~/.vim: vim/
@@ -14,6 +13,7 @@
     ~/.config/dunst:
         create: true
         path: config/dunst/
+    ~/.config/git: config/git/
     ~/.config/hexchat: config/hexchat/
     ~/.config/i3: config/i3/
     ~/.config/i3blocks: config/i3blocks/
