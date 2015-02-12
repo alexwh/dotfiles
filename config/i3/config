@@ -59,7 +59,7 @@ bindsym $mod+z workspace back_and_forth
 # move container to last workspace and then go to it
 bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
 
-font pango:Arimo Regular 10
+font pango:LiberationSans Regular 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -218,7 +218,7 @@ bar {
 	# status_command $HOME/scripts/conky-i3bar
 	status_command i3blocks
 	position top
-	# font pango:Arimo Regular 10
+	# font pango:LiberationSans Regular 10
 
 	mode hide
 	modifier $mod
