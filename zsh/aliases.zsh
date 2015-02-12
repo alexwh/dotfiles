@@ -39,7 +39,7 @@ alias hd='hexdump'
 alias rg='ranger'
 
 alias ffp='firefox -P private -new-instance &> /dev/null &'
-alias cf='wget -O /dev/null cachefly.cachefly.net/10mb.test'
+alias cf='wget -O /dev/null cachefly.cachefly.net/100mb.test'
 alias tombe='tomb open ~/sync/safe/e -k ~/.tomb/e.key'
 alias ovpn='sudo openvpn --cd ~/.openvpn --config client.conf'
 
