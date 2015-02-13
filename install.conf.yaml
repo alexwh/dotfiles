@@ -10,6 +10,7 @@
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
     ~/.zprofile: zprofile
+    ~/.config/cower: config/cower/
     ~/.config/dunst:
         create: true
         path: config/dunst/
