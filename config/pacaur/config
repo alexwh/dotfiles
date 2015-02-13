@@ -1,0 +1,4 @@
+editinstall=false
+editpkgbuild=false
+editor=vim
+clean=false

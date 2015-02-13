@@ -20,6 +20,7 @@
     ~/.config/i3blocks: config/i3blocks/
     ~/.config/mpd: config/mpd/
     ~/.config/mpv: config/mpv/
+    ~/.config/pacaur: config/pacaur/
     ~/.config/ranger: config/ranger/
     ~/.config/sxiv: config/sxiv/
     ~/.config/systemd: config/systemd/
