@@ -42,6 +42,7 @@ alias ffp='firefox -P private -new-instance &> /dev/null &'
 alias cf='wget -O /dev/null cachefly.cachefly.net/100mb.test'
 alias tombe='tomb open ~/sync/safe/e -k ~/.tomb/e.key'
 alias ovpn='sudo openvpn --cd ~/.openvpn --config client.conf'
+alias s3up='aws s3 cp --acl public-read --storage-class REDUCED_REDUNDANCY'
 
 alias sctl='sudo systemctl '
 alias sctlu='systemctl --user '
