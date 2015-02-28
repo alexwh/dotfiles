@@ -50,6 +50,7 @@ assign [class="Hexchat"]            5
 assign [class="hl2_linux"]          6
 assign [class="dota_linux"]         6
 assign [class="(?i)minecraft"]      6
+assign [class="openarena.x86_64"]   6
 assign [class="^Wine$" instance="^osu!.exe$"] 6
 
 # if trying to switch to current workspace, switch to last used one
@@ -73,8 +74,9 @@ for_window [class="Simplescreenrecorder"] floating enable
 for_window [class="Virt-manager"]         floating enable
 
 # fullscreen games
-for_window [class="hl2_linux"]  fullscreen enable
-for_window [class="dota_linux"] fullscreen enable
+for_window [class="hl2_linux"]        fullscreen enable
+for_window [class="dota_linux"]       fullscreen enable
+for_window [class="openarena.x86_64"] fullscreen enable
 
 # amixer
 # volumeicon does this now
