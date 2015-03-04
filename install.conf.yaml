@@ -1,4 +1,4 @@
-- clean: ['~']
+- clean: ['~', '~/.config']
 - link:
     ~/.dotfiles: ''
     ~/.tmux.conf: tmux.conf
