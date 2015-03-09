@@ -1,4 +1,6 @@
 - clean: ['~', '~/.config']
+- shell:
+    - mkdir -p ~/.config
 - link:
     ~/.dotfiles: ''
     ~/.tmux.conf: tmux.conf
@@ -11,9 +13,7 @@
     ~/.zshrc: zshrc
     ~/.zprofile: zprofile
     ~/.config/cower: config/cower/
-    ~/.config/dunst:
-        create: true
-        path: config/dunst/
+    ~/.config/dunst: config/dunst/
     ~/.config/git: config/git/
     ~/.config/hexchat: config/hexchat/
     ~/.config/i3: config/i3/
@@ -27,4 +27,4 @@
     ~/.config/termite: config/termite/
     ~/.config/htop: config/htop/
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
+    - git subup
