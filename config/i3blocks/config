@@ -2,7 +2,7 @@ separator_block_width=15
 
 [download]
 label=D: 
-command=~/scripts/bandwidth.sh rx
+command=~/bin/bandwidth.sh rx
 min_width=0000 kB/s
 align=right
 color=#ff5000
@@ -10,7 +10,7 @@ interval=1 # IMPORTANT
 
 [upload]
 label=U: 
-command=~/scripts/bandwidth.sh tx
+command=~/bin/bandwidth.sh tx
 min_width=0000 kB/s
 align=right
 color=#3491ed
