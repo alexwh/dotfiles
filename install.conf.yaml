@@ -3,6 +3,7 @@
     - mkdir -p ~/.config
 - link:
     ~/.dotfiles: ''
+    ~/bin: bin/
     ~/.tmux.conf: tmux.conf
     ~/.cvsignore: cvsignore
     ~/.makepkg.conf: makepkg.conf
