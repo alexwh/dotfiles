@@ -75,7 +75,6 @@ vnoremap <f1> <esc>
 
 " ex mode is useless, map it to something useful
 map Q @q
-map q: :q " doesn't fully work
 nnoremap Y y$
 nnoremap U <c-r>
 
