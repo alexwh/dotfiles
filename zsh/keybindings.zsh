@@ -40,7 +40,3 @@ bindkey '^[[Z' reverse-menu-complete # shift-tab
 bindkey '^[[1;5C' forward-word # ctrl+right
 bindkey '^[[1;5D' backward-word # ctrl+left
 bindkey '^R' history-incremental-search-backward
-
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '\C-x\C-e' edit-command-line
