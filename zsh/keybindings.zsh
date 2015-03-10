@@ -1,43 +1,45 @@
 bindkey -e # I don't like vim bindings in my terminal
 
 # from http://zshwiki.org/home/zle/bindkeys
-autoload zkbd
-function zkbd_file() {
-	[[ -f ~/.zkbd/${TERM}-${VENDOR}-${OSTYPE} ]] && printf '%s' ~/".zkbd/${TERM}-${VENDOR}-${OSTYPE}" && return 0
-	[[ -f ~/.zkbd/${TERM}-${DISPLAY}          ]] && printf '%s' ~/".zkbd/${TERM}-${DISPLAY}"          && return 0
-	return 1
+# create a zkbd compatible hash;
+# to add other keys to this hash, see: man 5 terminfo
+typeset -A key
+
+key[Home]=${terminfo[khome]}
+key[End]=${terminfo[kend]}
+key[Insert]=${terminfo[kich1]}
+key[Delete]=${terminfo[kdch1]}
+key[Up]=${terminfo[kcuu1]}
+key[Down]=${terminfo[kcud1]}
+key[Left]=${terminfo[kcub1]}
+key[Right]=${terminfo[kcuf1]}
+key[PageUp]=${terminfo[kpp]}
+key[PageDown]=${terminfo[knp]}
+
+# setup key accordingly
+[[ -n "${key[Home]}"   ]] && bindkey "${key[Home]}"   beginning-of-line
+[[ -n "${key[End]}"    ]] && bindkey "${key[End]}"    end-of-line
+[[ -n "${key[Delete]}" ]] && bindkey "${key[Delete]}" delete-char
+[[ -n "${key[Up]}"     ]] && bindkey "${key[Up]}"     up-line-or-search
+[[ -n "${key[Down]}"   ]] && bindkey "${key[Down]}"   down-line-or-search
+[[ -n "${key[Left]}"   ]] && bindkey "${key[Left]}"   backward-char
+[[ -n "${key[Right]}"  ]] && bindkey "${key[Right]}"  forward-char
+
+# Finally, make sure the terminal is in application mode, when zle is
+# active. Only then are the values from $terminfo valid.
+function zle-line-init () {
+    echoti smkx
 }
-[[ ! -d ~/.zkbd ]] && mkdir ~/.zkbd
-keyfile=$(zkbd_file)
-ret=$?
-if [[ ${ret} -ne 0 ]]; then
-	zkbd
-	keyfile=$(zkbd_file)
-	ret=$?
-fi
-if [[ ${ret} -eq 0 ]] ; then
-	source "${keyfile}"
-else
-	printf 'Failed to setup keys using zkbd.\n'
-fi
-unfunction zkbd_file; unset keyfile ret
+function zle-line-finish () {
+    echoti rmkx
+}
+zle -N zle-line-init
+zle -N zle-line-finish
 
-bindkey '^r' history-incremental-search-backward
-[[ -n ${key[Backspace]} ]] && bindkey "${key[Backspace]}" backward-delete-char
-[[ -n ${key[Home]}      ]] && bindkey "${key[Home]}"      beginning-of-line
-[[ -n ${key[PageUp]}    ]] && bindkey "${key[PageUp]}"    up-line-or-history
-[[ -n ${key[Delete]}    ]] && bindkey "${key[Delete]}"    delete-char
-[[ -n ${key[End]}       ]] && bindkey "${key[End]}"       end-of-line
-[[ -n ${key[PageDown]}  ]] && bindkey "${key[PageDown]}"  down-line-or-history
-[[ -n ${key[Up]}        ]] && bindkey "${key[Up]}"        up-line-or-search
-[[ -n ${key[Left]}      ]] && bindkey "${key[Left]}"      backward-char
-[[ -n ${key[Down]}      ]] && bindkey "${key[Down]}"      down-line-or-search
-[[ -n ${key[Right]}     ]] && bindkey "${key[Right]}"     forward-char
-
-bindkey '^[[Z' reverse-menu-complete
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
-
+bindkey '^[[Z' reverse-menu-complete # shift-tab
+bindkey '^[[1;5C' forward-word # ctrl+right
+bindkey '^[[1;5D' backward-word # ctrl+left
+bindkey '^R' history-incremental-search-backward
 
 autoload -U edit-command-line
 zle -N edit-command-line
