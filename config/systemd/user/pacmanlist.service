@@ -4,6 +4,3 @@ Description=Send pacman packages to a synced folder
 [Service]
 Type=simple
 ExecStart=/home/alex/bin/pacmanlistbackup.sh
-
-[Install]
-WantedBy=userscripts.target
