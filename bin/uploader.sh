@@ -14,7 +14,6 @@ imgur() {
 	echo "$deleteurl" >> ~/sync/misc/txt/imguruploads/${uploadtime}.txt
 }
 pomf() {
-	# TODO: allow multiple file uploads?
 	url=$(curl -sF "files[]=@$1" "http://pomf.se/upload.php?output=gyazo")
 }
 # TODO: s3 upload
