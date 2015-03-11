@@ -1,56 +1,27 @@
 #!/usr/bin/env bash
-
-notify() {
-	notify-send "uploader" "$1"
-}
+set -o nounset # ie set -u
+set -o errexit # ie set -e
 imgur() {
-	# API Key provided by Alan@imgur.com
-	# apikey="b3625162d3418ac51a9ee805b1840452"
-	imgurclientid="fdd3b8a687cc481"
+	# TODO: use imgur account instead of app secret
+	response=$(curl -sH "Authorization: Client-ID fdd3b8a687cc481" -F "image=@$1" "https://api.imgur.com/3/upload.xml")
 
-	response=$(curl -sH "Authorization: Client-ID $imgurclientid" -F "image=@$1" https://api.imgur.com/3/upload.xml)
-
-	# parse the response and save our stuff
-	# TODO: don't hardcode to png
+	# TODO: don't hardcode to png - imgur auto jpgs over 1mb
 	url="http://i.imgur.com/$(sed -r 's|.*<id>(.*)</id>.*|\1|' <<< $response).png"
 	deleteurl="http://imgur.com/delete/$(sed -r 's|.*<deletehash>(.*)</deletehash>.*|\1|' <<< $response)"
+	uploadtime=$(date +%F_%T)
 
-	echo "$url"       >> ~/sync/misc/txt/imguruploads/$(date +%F_%T).txt
-	echo "$deleteurl" >> ~/sync/misc/txt/imguruploads/$(date +%F_%T).txt
+	echo "$url"       >> ~/sync/misc/txt/imguruploads/${uploadtime}.txt
+	echo "$deleteurl" >> ~/sync/misc/txt/imguruploads/${uploadtime}.txt
 }
 pomf() {
 	# TODO: allow multiple file uploads?
-	url=$(curl --retry 3 -s -F files[]="@${1}" "http://pomf.se/upload.php?output=gyazo")
+	url=$(curl -sF "files[]=@$1" "http://pomf.se/upload.php?output=gyazo")
 }
+# TODO: s3 upload
 
-site=$(echo -e "imgur\npomf" | dmenu -p uploader)
-choice=$(echo -e "select\nfull\nfile" | dmenu -p uploader)
-file=$(mktemp /tmp/tmp.XXXXXXXXXX.png)
+site="$1";shift
 
-case "$choice" in
-	select)
-		maim -s -b 1 $file ;;
-	full)
-		maim $file ;;
-	file)
-		file=$(zenity --file-selection) ;;
-	*)
-		exit 1 ;;
-esac
-
-# fail and don't upload if selection canceled by keypress or no file selected
-# (or some other cosmic incident that causes a failure)
-[[ $? != 0 ]] && exit 1
-notify "uploading"
-
-$site "$file"
-
-if [[ $? != 0 ]]; then
-	notify "Upload failed"
-	exit 2
-fi
-
-echo -n "$url" | xclip -i -selection clipboard
-notify "Copied link for $url to clipboard"
-
-[[ $choice != "file" ]] && rm "$file"
+# the rest of the args are now only files
+for i;do
+	$site "$i"
+done

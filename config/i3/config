@@ -92,7 +92,7 @@ bindsym XF86AudioStop exec /home/alex/bin/mrm.sh
 bindsym $mod+shift+n exec /home/alex/bin/nowplaying.sh
 
 bindsym $mod+l exec xautolock -locknow
-bindsym $mod+shift+s exec /home/alex/bin/uploader.sh
+bindsym $mod+shift+s exec /home/alex/bin/img.sh
 bindsym $mod+shift+a exec /home/alex/bin/at-pass -up
 bindsym $mod+shift+ctrl+a exec /home/alex/bin/at-pass -p
 bindsym $mod+shift+l exec /home/alex/bin/random.sh
