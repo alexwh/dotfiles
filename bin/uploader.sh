@@ -12,9 +12,10 @@ imgur() {
 
 	echo "$url"       >> ~/sync/misc/txt/imguruploads/${uploadtime}.txt
 	echo "$deleteurl" >> ~/sync/misc/txt/imguruploads/${uploadtime}.txt
+	echo $url
 }
 pomf() {
-	url=$(curl -sF "files[]=@$1" "http://pomf.se/upload.php?output=gyazo")
+	curl -sF "files[]=@$1" "http://pomf.se/upload.php?output=gyazo"
 }
 # TODO: s3 upload
 
