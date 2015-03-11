@@ -10,3 +10,5 @@ export WINEARCH=win32 # no disadvantages
 export SSH_ASKPASS=
 
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # Like default, but without / -- ^W must be useful in paths, like it is in vim, bash, tcsh
+
+export PURE_GIT_PULL=0
