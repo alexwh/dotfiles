@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-set -o nounset # ie set -u
 set -o errexit # ie set -e
 notify() {
 	notify-send "uploader" "$1"
 }
 
 # any command fails, we fail (set -e). notify about that
-trap "notify 'Upload failed'" EXIT
+trap '[[ $url ]] || notify "Upload failed"' EXIT
 
 uploadtype=$(echo -e "selection\nfull\nfile" | dmenu -p uploader)
 file=$(mktemp /tmp/tmp.XXXXXXXXXX.png)
