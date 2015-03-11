@@ -88,14 +88,14 @@ for_window [class="openarena.x86_64"] fullscreen enable
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioStop exec /home/alex/bin/mrm.sh
-bindsym $mod+shift+n exec /home/alex/bin/nowplaying.sh
+bindsym XF86AudioStop exec mrm.sh
+bindsym $mod+shift+n exec nowplaying.sh
 
 bindsym $mod+l exec xautolock -locknow
-bindsym $mod+shift+s exec /home/alex/bin/img.sh
-bindsym $mod+shift+a exec /home/alex/bin/at-pass -up
-bindsym $mod+shift+ctrl+a exec /home/alex/bin/at-pass -p
-bindsym $mod+shift+l exec /home/alex/bin/random.sh
+bindsym $mod+shift+s exec img.sh
+bindsym $mod+shift+a exec at-pass -up
+bindsym $mod+shift+ctrl+a exec at-pass -p
+bindsym $mod+shift+l exec random.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
