@@ -3,7 +3,7 @@ set -o nounset # ie set -u
 set -o errexit # ie set -e
 imgur() {
 	# TODO: use imgur account instead of app secret
-	response=$(curl -sH "Authorization: Client-ID fdd3b8a687cc481" -F "image=@$1" "https://api.imgur.com/3/upload.xml")
+	response=$(curl -sw '\n' -H "Authorization: Client-ID fdd3b8a687cc481" -F "image=@$1" "https://api.imgur.com/3/upload.xml")
 
 	# TODO: don't hardcode to png - imgur auto jpgs over 1mb
 	url="http://i.imgur.com/$(sed -r 's|.*<id>(.*)</id>.*|\1|' <<< $response).png"
@@ -15,7 +15,7 @@ imgur() {
 	echo $url
 }
 pomf() {
-	curl -sF "files[]=@$1" "http://pomf.se/upload.php?output=gyazo"
+	curl -sw '\n' -F "files[]=@$1" "http://pomf.se/upload.php?output=gyazo"
 }
 # TODO: s3 upload
 
