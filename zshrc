@@ -1,3 +1,4 @@
+source ~/.zsh/tmux.zsh
 source ~/.zsh/setopt.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/keybindings.zsh

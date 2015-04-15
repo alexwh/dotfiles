@@ -10,7 +10,7 @@ exec --no-startup-id udiskie
 # will not lock if mouse is in top right of screen, will activate lock if in bottom left
 exec --no-startup-id xautolock -locker "i3lock -c 242424 --dpms" -notify 5 -notifier "notify-send i3lock 5s" -corners 0-+0
 
-exec i3-sensible-terminal -e tmux
+exec i3-sensible-terminal
 exec deluge-gtk
 exec google-musicmanager
 exec dropboxd
