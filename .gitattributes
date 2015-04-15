@@ -1,3 +1,2 @@
 bin/entrydyndns.sh filter=edns-clean
-bin/uploader.sh filter=imgur-clean
 bin/random.sh filter=random-clean
