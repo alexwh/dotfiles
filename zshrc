@@ -1,3 +1,5 @@
+[[ -f ~/.zshrc_local_pre ]] && source ~/.zshrc_local_pre
+
 source ~/.zsh/tmux.zsh
 source ~/.zsh/setopt.zsh
 source ~/.zsh/completion.zsh
