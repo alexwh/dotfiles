@@ -10,13 +10,13 @@
     ~/.vimperatorrc: vimperatorrc
     ~/.vim: vim/
     ~/.vimrc: vimrc
+    ~/.weechat: weechat/
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
     ~/.zprofile: zprofile
     ~/.config/cower: config/cower/
     ~/.config/dunst: config/dunst/
     ~/.config/git: config/git/
-    ~/.config/hexchat: config/hexchat/
     ~/.config/i3: config/i3/
     ~/.config/i3blocks: config/i3blocks/
     ~/.config/mpd: config/mpd/

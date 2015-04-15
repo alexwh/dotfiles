@@ -13,7 +13,9 @@ config/sxiv/tags
 # don't force enabling services
 config/systemd/user/default.target.wants
 
-# contains passwords
-config/hexchat/servlist.conf
-# changes often
-config/hexchat/chanopt.conf
+weechat/logs
+weechat/weechat.log
+weechat/irc.conf
+weechat/perl
+weechat/python
+weechat/script

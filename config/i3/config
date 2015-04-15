@@ -19,7 +19,6 @@ exec gtk-youtube-viewer
 exec teamspeak3
 exec steam
 exec trackma-qt
-exec hexchat
 exec syncthing-gtk
 
 
@@ -42,9 +41,6 @@ assign [class="Gtk-youtube-viewer"] 4
 assign [class="Trackma-gtk"]        4
 assign [class="Trackma-qt"]         4
 assign [class="mpv"]                4
-
-# misc
-assign [class="Hexchat"]            5
 
 # games
 assign [class="hl2_linux"]          6
