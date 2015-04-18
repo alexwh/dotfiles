@@ -57,3 +57,18 @@ alias pacse='pacman -Ss'
 alias pakin='pacaur -S'
 alias pakup='pacaur -Syu'
 alias pakse='cower -s --sort=votes'
+
+alias -s txt=vim
+alias -s php=vim
+alias -s html=vim
+alias -s css=vim
+alias -s lua=vim
+alias -s jpg=sx
+alias -s png=sx
+alias -s gif=sx
+alias -s py=python
+alias -s sh=bash
+alias -s avi=mpv
+alias -s mp4=mpv
+alias -s flv=mpv
+alias -s mkv=mpv
