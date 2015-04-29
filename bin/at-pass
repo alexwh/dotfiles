@@ -7,7 +7,7 @@ password_files=("$prefix"/**/*.gpg)
 password_files=("${password_files[@]#"$prefix"/}")
 password_files=("${password_files[@]%.gpg}")
 
-password_data=$(pass show "$(printf '%s\n' "${password_files[@]}" | dmenu)")
+password_data=$(pass show "$(printf '%s\n' "${password_files[@]}" | dmenu -i)")
 username=$(grep '^username: ' <<< "$password_data" | cut -c 11-)
 password=$(head -n 1 <<< "$password_data")
 
