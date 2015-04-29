@@ -1,65 +1,20 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
+shopt -s nullglob globstar
+set -o errexit # ie set -e
 
-password_store="$HOME/.password-store"
+prefix=${PASSWORD_STORE_DIR-~/.password-store}
+password_files=("$prefix"/**/*.gpg)
+password_files=("${password_files[@]#"$prefix"/}")
+password_files=("${password_files[@]%.gpg}")
 
-while getopts "up" opt;do
-	case $opt in
-		u) TYPE_USERNAME="1" ;;
-		p) TYPE_PASSWORD="1" ;;
-	esac
-done
-shift $((OPTIND-1))
+password_data=$(pass show "$(printf '%s\n' "${password_files[@]}" | dmenu)")
+username=$(grep '^username: ' <<< "$password_data" | cut -c 11-)
+password=$(head -n 1 <<< "$password_data")
 
-# make sure the password store exists
-if [[ ! -d "$password_store" ]]; then
-	echo "The password store at $password_store doesn't exist"
-	exit 1
+# piping commands avoids leaking passwords via process snooping
+if [[ $1 == "--user" && -n "$username" ]];then
+	xdotool - <<< "type --clearmodifiers -- "$username""
+	xdotool key "Tab"
 fi
-
-# discern a list of possibilities
-candidates="$(find "$password_store" -name '*gpg' -print0 |
-tr "\0" "\n" |
-sed "s#$password_store/##;s#\.gpg\$##")"
-
-# ask which
-choice="$(echo -n "$candidates" | sort | dmenu -i -p 'autotype')"
-
-# fail if they didn't supply anything
-if [[ -z "$choice" ]]; then
-	exit 2
-fi
-
-# notify which we found, using stderr so it isn't piped to anything else
-echo "Using $choice." 1>&2
-
-# get the deets
-output="$(pass "$choice")"
-
-# fail fast if it doesn't exist
-exit_code="$?"
-if [[ "$exit_code" -gt 0 ]]; then
-	exit "$exit_code" # $? is the result of [[ now
-fi
-
-# extract the junk we want
-# we assume password is on its own on line one
-# and the username is on any line beginning with "username: "
-password="$(printf "%s" "$output" | head -n 1)"
-username="$(printf "%s" "$output" | grep '^username: ' | cut -c 11-)"
-
-# send those key presses to the active window
-active_window_id="$(xdotool getactivewindow)"
-
-# need at least a password
-if [[ -n "$password" && $TYPE_PASSWORD = "1" ]]; then
-	if [[ -n "$username" && $TYPE_USERNAME = "1" ]]; then
-		xdotool type --window "$active_window_id" -- "$username"
-		xdotool key --window "$active_window_id" "Tab"
-	fi
-	# security risk - password shows up in process list. is there any alternative?
-	xdotool type --window "$active_window_id" -- "$password"
-	xdotool key --window "$active_window_id" "Return"
-else
-	notify-send "no pass to type"
-	exit 1
-fi
+xdotool - <<< "type --clearmodifiers -- "$password""
+xdotool key "Return"

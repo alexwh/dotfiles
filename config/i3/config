@@ -89,8 +89,8 @@ bindsym $mod+shift+n exec nowplaying.sh
 
 bindsym $mod+l exec xautolock -locknow
 bindsym $mod+shift+s exec img.sh
-bindsym $mod+shift+a exec at-pass -up
-bindsym $mod+shift+ctrl+a exec at-pass -p
+bindsym $mod+shift+a exec at-pass --user
+bindsym $mod+shift+ctrl+a exec at-pass
 bindsym $mod+shift+l exec random.sh
 
 # kill focused window
