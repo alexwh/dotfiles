@@ -14,8 +14,8 @@ password=$(head -n 1 <<< "$password_data")
 
 # piping commands avoids leaking passwords via process snooping
 if [[ $1 == "--user" && -n "$username" ]];then
-	xdotool - <<< "type --clearmodifiers -- "$username""
+	xdotool - <<< "type --clearmodifiers -- $username"
 	xdotool key "Tab"
 fi
-xdotool - <<< "type --clearmodifiers -- "$password""
+xdotool - <<< "type --clearmodifiers -- $password"
 xdotool key "Return"
