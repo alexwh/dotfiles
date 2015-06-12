@@ -14,9 +14,6 @@ imgur() {
 	echo "$deleteurl" >> ~/sync/misc/txt/imguruploads/${uploadtime}.txt
 	echo $url
 }
-pomf() {
-	curl -sw '\n' -F "files[]=@$1" "http://pomf.se/upload.php?output=gyazo"
-}
 # TODO: s3 upload
 
 site="$1";shift
