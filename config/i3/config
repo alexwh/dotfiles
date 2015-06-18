@@ -13,12 +13,9 @@ exec --no-startup-id xautolock -locker "i3lock -c 242424 --dpms" -notify 5 -noti
 exec i3-sensible-terminal
 exec deluge-gtk
 exec google-musicmanager
-exec dropboxd
 exec firefox
-exec gtk-youtube-viewer
 exec teamspeak3
 exec steam
-exec trackma-qt
 exec syncthing-gtk
 
 
