@@ -13,3 +13,43 @@ sshp() {
 	ps x | grep '[s]sh -D 5123 -f -N'| awk '{print $1}'|xargs -r kill && \
 	[[ -n "$1" ]] && ssh -D 5123 -f -N "$1" || echo killed all
 }
+
+# from https://gist.github.com/jpouellet/5278239
+zbell_duration=15
+zbell_ignore=($EDITOR $PAGER)
+
+# initialize it because otherwise we compare a date and an empty string
+# the first time we see the prompt. it's fine to have lastcmd empty on the
+# initial run because it evaluates to an empty string, and splitting an
+# empty string just results in an empty array.
+zbell_timestamp=$EPOCHSECONDS
+
+# right before we begin to execute something, store the time it started at
+zbell_begin() {
+	zbell_timestamp=$EPOCHSECONDS
+	zbell_lastcmd=$1
+}
+
+# when it finishes, if it's been running longer than $zbell_duration,
+# and we dont have an ignored command in the line, then print a bell.
+zbell_end() {
+	ran_long=$(( $EPOCHSECONDS - $zbell_timestamp >= $zbell_duration ))
+
+	has_ignored_cmd=0
+	for cmd in ${(s:;:)zbell_lastcmd//|/;}; do
+		words=(${(z)cmd})
+		util=${words[1]}
+		if (( ${zbell_ignore[(i)$util]} <= ${#zbell_ignore} )); then
+			has_ignored_cmd=1
+			break
+		fi
+	done
+
+	if (( ! $has_ignored_cmd )) && (( ran_long )); then
+		print -n "\a"
+	fi
+}
+
+# register the functions as hooks
+add-zsh-hook preexec zbell_begin
+add-zsh-hook precmd zbell_end
