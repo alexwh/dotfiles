@@ -15,8 +15,15 @@ sshp() {
 }
 
 # from https://gist.github.com/jpouellet/5278239
-zbell_duration=15
-zbell_ignore=($EDITOR $PAGER)
+# get $EPOCHSECONDS. builtins are faster than date(1)
+zmodload zsh/datetime || return
+
+# make sure we can register hooks
+autoload -Uz add-zsh-hook || return
+
+# initialize zbell_duration and zbell_ignore if not set
+(( ${+zbell_duration} )) || zbell_duration=15
+(( ${+zbell_ignore} )) || zbell_ignore=($EDITOR $PAGER)
 
 # initialize it because otherwise we compare a date and an empty string
 # the first time we see the prompt. it's fine to have lastcmd empty on the
