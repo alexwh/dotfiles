@@ -49,5 +49,5 @@ alias pacrm='sudo pacman -Rns'
 alias pacse='pacman -Ss'
 
 alias pakin='pacaur -S'
-alias pakup='pacaur -Syu'
+alias pakup='pacaur -Syu --devel'
 alias pakse='cower -s --sort=votes'
