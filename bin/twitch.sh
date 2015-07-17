@@ -8,4 +8,4 @@ if [[ -z $2 ]];then
 else
 	qual=$2
 fi
-livestreamer -p mpv twitch.tv/$1 $qual || die "$@"
+livestreamer -p "mpv -vo=xv" twitch.tv/$1 $qual || die "$@"
