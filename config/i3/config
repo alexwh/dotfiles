@@ -4,7 +4,6 @@ set $mod Mod4
 exec --no-startup-id redshift -l 53.95:1.0833 -t 5700:4800 -r
 exec --no-startup-id dunst
 exec --no-startup-id clipit
-exec --no-startup-id volumeicon
 exec --no-startup-id udiskie
 #exec --no-startup-id mpd # systemd handled
 # will not lock if mouse is in top right of screen, will activate lock if in bottom left
