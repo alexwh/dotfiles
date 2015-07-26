@@ -49,3 +49,6 @@
 [submodule "vim/bundle/vim-exchange"]
 	path = vim/bundle/vim-exchange
 	url = https://github.com/tommcdo/vim-exchange.git
+[submodule "config/mpv/scripts/25ea7ae77b30af959be0"]
+	path = config/mpv/scripts/25ea7ae77b30af959be0
+	url = https://gist.github.com/25ea7ae77b30af959be0.git
