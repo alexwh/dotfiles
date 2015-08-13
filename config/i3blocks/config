@@ -17,17 +17,17 @@ color=#3491ed
 interval=1 # IMPORTANT
 
 [cpu]
-command=/usr/libexec/i3blocks/cpu_usage
+command=/usr/lib/i3blocks/cpu_usage
 color=#0ff0ff
 interval=10
 
 [memory]
-command=/usr/libexec/i3blocks/memory
+command=/usr/lib/i3blocks/memory
 color=#00ff00
 interval=30
 
 [disk]
-command=/usr/libexec/i3blocks/disk /
+command=/usr/lib/i3blocks/disk /
 color=#999999
 interval=30
 
