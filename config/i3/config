@@ -59,6 +59,8 @@ floating_modifier $mod
 
 for_window [window_role="pop-up"]         floating enable
 for_window [window_role="Preferences"]    floating enable
+for_window [window_role="About"]          floating enable
+for_window [window_role="^Manager"]       floating enable
 for_window [class="mpv"]                  floating enable
 for_window [class="Qjackctl"]             floating enable
 for_window [class="Pavucontrol"]          floating enable
