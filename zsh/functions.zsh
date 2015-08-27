@@ -24,7 +24,7 @@ autoload -Uz add-zsh-hook || return
 
 # initialize zbell_duration and zbell_ignore if not set
 (( ${+zbell_duration} )) || zbell_duration=15
-(( ${+zbell_ignore} )) || zbell_ignore=($EDITOR $PAGER mutt weechat mpv)
+(( ${+zbell_ignore} )) || zbell_ignore=($EDITOR $PAGER mutt weechat mpv sxiv)
 
 # initialize it because otherwise we compare a date and an empty string
 # the first time we see the prompt. it's fine to have lastcmd empty on the
