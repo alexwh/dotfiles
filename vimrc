@@ -21,7 +21,7 @@ set hidden
 set laststatus=2
 
 " graphical options
-colorscheme solarized
+colorscheme gruvbox
 set background=dark
 set scrolloff=5
 set showmode
