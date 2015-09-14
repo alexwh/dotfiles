@@ -11,7 +11,7 @@ ccc() { # Convert CurenCy
 }
 
 sshp() {
-	ps x | grep '[s]sh -D 5123 -f -N'| awk '{print $1}'|xargs -r kill && \
+	ps x | awk '/[s]sh -D 5123 -f -N/ {print $1}'|xargs -r kill && \
 	[[ -n "$1" ]] && ssh -D 5123 -f -N "$1" || echo killed all
 }
 
