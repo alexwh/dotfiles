@@ -4,8 +4,7 @@ set $mod Mod4
 exec --no-startup-id redshift -l 53.95:1.0833 -t 5700:4800 -r
 exec --no-startup-id dunst
 exec --no-startup-id clipit
-exec --no-startup-id udiskie
-#exec --no-startup-id mpd # systemd handled
+exec --no-startup-id udiskie -s
 # will not lock if mouse is in top right of screen, will activate lock if in bottom left
 exec --no-startup-id xautolock -locker "i3lock -c 282828 --dpms" -notify 5 -notifier "notify-send i3lock" -corners 0-00
 
