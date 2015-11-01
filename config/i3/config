@@ -26,6 +26,7 @@ assign [class="Termite"]            1
 assign [class="Firefox"]            2
 
 # chats
+assign [class="^Wine$" instance="^Steam.exe$"] 3
 assign [class="Steam"]              3
 assign [class="Mumble"]             3
 assign [class="TeamSpeak 3"]        3
