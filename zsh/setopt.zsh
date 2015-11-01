@@ -7,6 +7,7 @@ autoload -Uz zmv
 autoload -Uz colors && colors
 autoload -Uz url-quote-magic
 zle -N self-insert url-quote-magic
+unset zle_bracketed_paste
 
 unsetopt flowcontrol
 
