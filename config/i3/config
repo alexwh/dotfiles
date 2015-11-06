@@ -1,6 +1,7 @@
 set $mod Mod4
+font pango:LiberationSans Regular 10
 
-# autostart
+## autostart
 exec --no-startup-id redshift -l 53.95:1.0833 -t 5700:4800 -r
 exec --no-startup-id dunst
 exec --no-startup-id clipit
@@ -15,12 +16,8 @@ exec steam
 exec syncthing-gtk
 
 
-# workspace assignments
-# terminals
-assign [class="Xfce4-terminal"]     1
+## workspace assignments
 assign [class="Termite"]            1
-
-# browsers
 assign [class="Firefox"]            2
 
 # chats
@@ -29,7 +26,7 @@ assign [class="Steam"]              3
 assign [class="Mumble"]             3
 assign [class="TeamSpeak 3"]        3
 
-# videos
+# media
 assign [class="Gtk-youtube-viewer"] 4
 assign [class="Trackma-gtk"]        4
 assign [class="Trackma-qt"]         4
@@ -42,18 +39,10 @@ assign [class="(?i)minecraft"]      6
 assign [class="openarena.x86_64"]   6
 assign [class="^Wine$" instance="^osu!.exe$"] 6
 
-# if trying to switch to current workspace, switch to last used one
-# workspace_auto_back_and_forth yes
-# move to last workspace
-bindsym $mod+z workspace back_and_forth
-# move container to last workspace and then go to it
-bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
 
-font pango:LiberationSans Regular 10
-
-# Use Mouse+$mod to drag floating windows to their wanted position
+## for_windows
+# floats
 floating_modifier $mod
-
 for_window [window_role="pop-up"]         floating enable
 for_window [window_role="Preferences"]    floating enable
 for_window [window_role="About"]          floating enable
@@ -64,59 +53,18 @@ for_window [class="Pavucontrol"]          floating enable
 for_window [class="Simplescreenrecorder"] floating enable
 for_window [class="Virt-manager"]         floating enable
 
-# fullscreen games
-for_window [class="hl2_linux"]        fullscreen enable
-for_window [class="dota_linux"]       fullscreen enable
-for_window [class="openarena.x86_64"] fullscreen enable
 
-# amixer
-# volumeicon does this now
-# bindsym XF86AudioLowerVolume exec amixer set Master 1%-
-# bindsym XF86AudioRaiseVolume exec amixer set Master 1%+
-# bindsym XF86AudioMute exec amixer sset Master toggle
+## binds
+# movement
+bindsym $mod+left focus left
+bindsym $mod+down focus down
+bindsym $mod+up focus up
+bindsym $mod+right focus right
 
-# mpd
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioStop exec mrm.sh
-bindsym $mod+shift+n exec nowplaying.sh
-
-bindsym $mod+l exec i3lock -c 282828 --dpms
-bindsym $mod+shift+s exec img.sh
-bindsym $mod+shift+a exec at-pass --user
-bindsym $mod+shift+ctrl+a exec at-pass
-bindsym $mod+shift+l exec random.sh
-
-# kill focused window
-bindsym $mod+Shift+q kill
-
-bindsym $mod+d exec dmenu_run
-
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-bindsym $mod+h split h
-bindsym $mod+v split v
-bindsym $mod+f fullscreen
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-bindsym $mod+space focus mode_toggle
-bindsym $mod+Shift+space floating toggle
-
-bindsym $mod+a focus parent
-#bindsym $mod+d focus child
+bindsym $mod+shift+left move left
+bindsym $mod+shift+down move down
+bindsym $mod+shift+up move up
+bindsym $mod+shift+right move right
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -140,16 +88,41 @@ bindsym $mod+shift+8 move container to workspace 8
 bindsym $mod+shift+9 move container to workspace 9
 bindsym $mod+shift+0 move container to workspace 10
 
-# reload the configuration file
-bindsym $mod+shift+r reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+ctrl+shift+r restart
-
+# move to last workspace
+bindsym $mod+z workspace back_and_forth
+# move container to last workspace and then go to it
+bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
 # jump to flashed windows
 bindsym $mod+x [urgent=latest] focus
 
-# release all keyboard grabs
-bindsym $mod+shift+k exec xdotool key XF86Ungrab
+# layouts
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen
+bindsym $mod+shift+space floating toggle
+bindsym $mod+a focus parent
+bindsym $mod+d focus child
+
+# utility
+bindsym $mod+space exec dmenu_run
+bindsym $mod+shift+q kill
+bindsym $mod+shift+r reload
+bindsym $mod+ctrl+shift+r restart
+
+# scripty stuff
+bindsym $mod+l exec i3lock -c 282828 --dpms
+bindsym $mod+shift+s exec img.sh
+bindsym $mod+shift+a exec at-pass --user
+bindsym $mod+shift+ctrl+a exec at-pass
+
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioStop exec mrm.sh
+bindsym $mod+shift+n exec nowplaying.sh
 
 mode "resize" {
 	# These bindings trigger as soon as you enter the resize mode
@@ -180,25 +153,23 @@ bindsym $mod+shift+backslash mode "resize"
 
 set $mode_power power (l) logout, (r) reboot, (s) shutdown
 mode "$mode_power" {
-    bindsym l exec --no-startup-id power.sh logout,   mode "default"
-    bindsym r exec --no-startup-id power.sh reboot,   mode "default"
-    bindsym s exec --no-startup-id power.sh shutdown, mode "default"
+	bindsym l exec --no-startup-id power.sh logout,   mode "default"
+	bindsym r exec --no-startup-id power.sh reboot,   mode "default"
+	bindsym s exec --no-startup-id power.sh shutdown, mode "default"
 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 # backspace doesn't work with modes for some reason
 bindsym $mod+shift+plus       mode "$mode_power"
 bindsym $mod+shift+underscore mode "$mode_power"
 
-
 # hide title bars
 hide_edge_borders horizontal
 for_window [class="^.*"] border none
-# for_window [class="^.*"] border pixel 2
 
-# colors                border  backgr. text    indicator
+## colors               border  backgr. text    indicator
 client.focused          #0088CC #0088CC #ffffff #dddddd
 client.focused_inactive #333333 #333333 #888888 #292d2e
 client.unfocused        #333333 #333333 #888888 #292d2e
@@ -210,7 +181,6 @@ client.urgent           #2f343a #900000 #ffffff #900000
 bar {
 	status_command i3blocks
 	position top
-	# font pango:LiberationSans Regular 10
 
 	mode hide
 	modifier $mod
