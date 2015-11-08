@@ -56,15 +56,15 @@ for_window [class="Virt-manager"]         floating enable
 
 ## binds
 # movement
-bindsym $mod+left focus left
-bindsym $mod+down focus down
-bindsym $mod+up focus up
-bindsym $mod+right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
-bindsym $mod+shift+left move left
-bindsym $mod+shift+down move down
-bindsym $mod+shift+up move up
-bindsym $mod+shift+right move right
+bindsym $mod+shift+Left move left
+bindsym $mod+shift+Down move down
+bindsym $mod+shift+Up move up
+bindsym $mod+shift+Right move right
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
