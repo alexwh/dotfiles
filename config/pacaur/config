@@ -1,4 +1,3 @@
-editinstall=false
-editpkgbuild=false
-editor=vim
-clean=false
+clonedir="$HOME/.cache/aurclone"       # clone directory
+displaybuildfiles=none                 # display build files (none|diff|full)
+sudoloop=true                          # prevent sudo timeout
