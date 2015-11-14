@@ -103,11 +103,9 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen
 bindsym $mod+shift+space floating toggle
-bindsym $mod+a focus parent
-bindsym $mod+d focus child
 
 # utility
-bindsym $mod+space exec dmenu_run
+bindsym $mod+d exec dmenu_run
 bindsym $mod+shift+q kill
 bindsym $mod+shift+r reload
 bindsym $mod+ctrl+shift+r restart
