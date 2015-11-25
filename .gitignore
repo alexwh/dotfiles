@@ -19,3 +19,5 @@ weechat/irc.conf
 weechat/perl
 weechat/python
 weechat/script
+
+bin/scpupload.sh
