@@ -14,7 +14,7 @@ imgur() {
 	echo $url
 }
 scp() {
-	echo $(scpupload.sh "$@")
+	scpupload.sh "$@"
 }
 
 site="$1";shift
