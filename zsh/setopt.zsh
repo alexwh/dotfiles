@@ -19,7 +19,6 @@ setopt extended_history
 setopt hist_expire_dups_first
 setopt prompt_subst
 setopt transient_rprompt
-setopt extended_glob
 setopt menu_complete
 setopt complete_in_word
 setopt always_to_end
