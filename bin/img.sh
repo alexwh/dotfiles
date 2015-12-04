@@ -8,7 +8,7 @@ notify() {
 trap '[[ $url ]] || notify "Upload failed"' EXIT
 
 uploadtype=$(echo -e "selection\nfull\nfile" | dmenu -p uploader)
-file=$(mktemp /tmp/tmp.XXXXXXXXXX.png)
+file=$(mktemp /tmp/$(date +%s)_XXXXXX.png)
 
 case "$uploadtype" in
 	selection)
@@ -19,7 +19,7 @@ case "$uploadtype" in
 		file=$(zenity --file-selection) ;;
 esac
 
-site=$(echo -e "imgur\npomf" | dmenu -p uploader)
+site=$(echo -e "scp\nimgur" | dmenu -p uploader)
 
 notify "uploading"
 url=$(~/bin/uploader.sh $site "$file")

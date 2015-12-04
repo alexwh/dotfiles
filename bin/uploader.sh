@@ -13,7 +13,9 @@ imgur() {
 	echo "$deleteurl" >> ~/sync/misc/txt/imguruploads/${uploadtime}.txt
 	echo $url
 }
-# TODO: s3 upload
+scp() {
+	scpupload.sh "$@"
+}
 
 site="$1";shift
 

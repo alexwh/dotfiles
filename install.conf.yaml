@@ -6,7 +6,6 @@
     ~/bin: bin/
     ~/.tmux.conf: tmux.conf
     ~/.cvsignore: cvsignore
-    ~/.makepkg.conf: makepkg.conf
     ~/.vimperatorrc: vimperatorrc
     ~/.vim: vim/
     ~/.vimrc: vimrc
