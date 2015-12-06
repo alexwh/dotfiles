@@ -19,6 +19,7 @@ exec syncthing-gtk
 ## workspace assignments
 assign [class="Termite"]            1
 assign [class="Firefox"]            2
+assign [class="private"]            5
 
 # chats
 assign [class="^Wine$" instance="^Steam.exe$"] 3
