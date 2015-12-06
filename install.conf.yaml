@@ -26,6 +26,5 @@
     ~/.config/sxiv: config/sxiv/
     ~/.config/systemd: config/systemd/
     ~/.config/termite: config/termite/
-    ~/.config/htop: config/htop/
 - shell:
     - git subup
