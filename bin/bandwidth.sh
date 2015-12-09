@@ -15,7 +15,7 @@ PREV=$(cat $FILE)
 CUR=0
 
 NETDIR=/sys/class/net
-for IFACE in $(ls -1 $NETDIR); do
+for IFACE in $(ls -1 $NETDIR | grep -v tun); do
     # Skip the loopback interface
     if [ "$IFACE" == "lo" ]; then
         continue
