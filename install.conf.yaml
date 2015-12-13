@@ -2,30 +2,30 @@
 - shell:
     - mkdir -p ~/.config
 - link:
-    ~/.dotfiles: ''
-    ~/bin: bin/
-    ~/.tmux.conf: tmux.conf
-    ~/.cvsignore: cvsignore
-    ~/.vimperatorrc: vimperatorrc
-    ~/.vim: vim/
-    ~/.vimrc: vimrc
-    ~/.weechat: weechat/
-    ~/.zsh: zsh/
-    ~/.zshrc: zshrc
-    ~/.zprofile: zprofile
+    ~/.dotfiles:         ''
+    ~/bin:               bin/
+    ~/.tmux.conf:        tmux.conf
+    ~/.cvsignore:        cvsignore
+    ~/.vimperatorrc:     vimperatorrc
+    ~/.vim:              vim/
+    ~/.vimrc:            vimrc
+    ~/.weechat:          weechat/
+    ~/.zsh:              zsh/
+    ~/.zshrc:            zshrc
+    ~/.zprofile:         zprofile
     ~/.config/paxd.conf: config/paxd.conf
-    ~/.config/cower: config/cower/
-    ~/.config/dunst: config/dunst/
-    ~/.config/git: config/git/
-    ~/.config/i3: config/i3/
-    ~/.config/i3blocks: config/i3blocks/
-    ~/.config/mpd: config/mpd/
-    ~/.config/mpv: config/mpv/
-    ~/.config/ncmpcpp: config/ncmpcpp/
-    ~/.config/pacaur: config/pacaur/
-    ~/.config/ranger: config/ranger/
-    ~/.config/sxiv: config/sxiv/
-    ~/.config/systemd: config/systemd/
-    ~/.config/termite: config/termite/
+    ~/.config/cower:     config/cower/
+    ~/.config/dunst:     config/dunst/
+    ~/.config/git:       config/git/
+    ~/.config/i3:        config/i3/
+    ~/.config/i3blocks:  config/i3blocks/
+    ~/.config/mpd:       config/mpd/
+    ~/.config/mpv:       config/mpv/
+    ~/.config/ncmpcpp:   config/ncmpcpp/
+    ~/.config/pacaur:    config/pacaur/
+    ~/.config/ranger:    config/ranger/
+    ~/.config/sxiv:      config/sxiv/
+    ~/.config/systemd:   config/systemd/
+    ~/.config/termite:   config/termite/
 - shell:
     - git subup
