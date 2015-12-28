@@ -28,6 +28,7 @@ set showmode
 set showcmd
 set ttyfast
 set number
+set relativenumber
 set mouse=
 set noruler
 set lazyredraw
