@@ -13,7 +13,6 @@ exec google-musicmanager
 exec firefox
 exec teamspeak3
 exec steam
-exec syncthing-gtk
 
 
 ## workspace assignments
@@ -28,14 +27,11 @@ assign [class="Mumble"]             3
 assign [class="TeamSpeak 3"]        3
 
 # media
-assign [class="Gtk-youtube-viewer"] 4
-assign [class="Trackma-gtk"]        4
 assign [class="Trackma-qt"]         4
 assign [class="mpv"]                4
 
 # games
 assign [class="hl2_linux"]          6
-assign [class="dota_linux"]         6
 assign [class="(?i)minecraft"]      6
 assign [class="openarena.x86_64"]   6
 assign [class="^Wine$" instance="^osu!.exe$"] 6
