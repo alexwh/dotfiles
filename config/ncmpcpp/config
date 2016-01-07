@@ -6,3 +6,4 @@ cyclic_scrolling = yes
 allow_for_physical_item_deletion = yes
 display_bitrate = yes
 ignore_leading_the = yes
+startup_slave_screen = browser
