@@ -22,7 +22,7 @@ esac
 site=$(echo -e "scp\nimgur" | dmenu -p uploader)
 
 notify "uploading"
-url=$(~/bin/uploader.sh $site "$file")
+url=$(uploader.sh $site "$file")
 
 echo -n "$url" | xclip -i -selection clipboard
 notify "Copied link $url to clipboard"
