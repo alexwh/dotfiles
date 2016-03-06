@@ -9,6 +9,7 @@ trap '[[ $url ]] || notify "Upload failed"' EXIT
 
 uploadtype=$(echo -e "selection\nfull\nfile" | dmenu -p uploader)
 file=$(mktemp /tmp/$(date +%s)_XXXXXX.png)
+sleep 0.1
 
 case "$uploadtype" in
 	selection)
