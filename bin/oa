@@ -1,2 +1,2 @@
 #!/bin/bash
-ssr-glinject openarena
+vblank_mode=0 ssr-glinject openarena
