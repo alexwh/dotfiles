@@ -125,6 +125,10 @@ augroup END
 " tpope style markdown runtime detection
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" check flake8 on .py write
+autocmd BufWritePost *.py call Flake8()
+
+" plugin settings
 let g:airline_powerline_fonts = 1
 function! AirlineThemePatch(palette)
 	let a:palette.normal.airline_a   = [ '#ffffff', '#268bd2', 255, 33 ]
@@ -132,6 +136,8 @@ function! AirlineThemePatch(palette)
 endfunction
 let g:airline_theme_patch_func = 'AirlineThemePatch'
 let g:airline#extensions#tabline#enabled = 1
+
+let g:flake8_show_in_file=1
 
 " gui settings
 if has('gui_running')
