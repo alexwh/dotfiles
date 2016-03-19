@@ -125,9 +125,6 @@ augroup END
 " tpope style markdown runtime detection
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-" check flake8 on .py write
-autocmd BufWritePost *.py call Flake8()
-
 " plugin settings
 let g:airline_powerline_fonts = 1
 function! AirlineThemePatch(palette)
