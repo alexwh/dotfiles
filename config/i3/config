@@ -13,6 +13,7 @@ exec google-musicmanager
 exec firefox
 exec teamspeak3
 exec steam
+exec hexchat
 
 
 ## workspace assignments
@@ -35,6 +36,9 @@ assign [class="hl2_linux"]          6
 assign [class="(?i)minecraft"]      6
 assign [class="openarena.x86_64"]   6
 assign [class="^Wine$" instance="^osu!.exe$"] 6
+
+# misc
+assign [class="Hexchat"]            7
 
 
 ## for_windows
