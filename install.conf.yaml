@@ -15,7 +15,6 @@
     ~/.zprofile:         zprofile
     ~/.config/paxd.conf: config/paxd.conf
     ~/.config/flake8:    config/flake8
-    ~/.config/cower:     config/cower/
     ~/.config/dunst:     config/dunst/
     ~/.config/git:       config/git/
     ~/.config/i3:        config/i3/
