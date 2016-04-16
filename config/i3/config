@@ -152,9 +152,9 @@ bindsym $mod+shift+backslash mode "resize"
 
 set $mode_power power (l) logout, (r) reboot, (s) shutdown
 mode "$mode_power" {
-	bindsym l exec --no-startup-id power.sh logout,   mode "default"
-	bindsym r exec --no-startup-id power.sh reboot,   mode "default"
-	bindsym s exec --no-startup-id power.sh shutdown, mode "default"
+	bindsym l exec --no-startup-id i3-msg exit,        mode "default"
+	bindsym r exec --no-startup-id systemctl reboot,   mode "default"
+	bindsym s exec --no-startup-id systemctl poweroff, mode "default"
 
 	# back to normal: Enter or Escape
 	bindsym Return mode "default"
