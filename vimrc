@@ -19,6 +19,7 @@ set wildignore=*.pyc,*.jpg,*.gif,*.png
 set autoread
 set hidden
 set laststatus=2
+set nojoinspaces
 
 " graphical options
 colorscheme gruvbox
