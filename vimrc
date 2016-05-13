@@ -81,6 +81,7 @@ vnoremap <f1> <esc>
 map Q @q
 nnoremap Y y$
 nnoremap U <c-r>
+nmap S i<cr><esc>d^==kg_lD
 
 " leader shortcuts
 nmap <silent> <leader>h :noh<cr>
