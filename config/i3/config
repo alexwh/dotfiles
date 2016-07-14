@@ -11,9 +11,9 @@ exec i3-sensible-terminal
 exec deluge-gtk
 exec google-musicmanager
 exec firefox
-exec teamspeak3
 exec steam
 exec hexchat
+exec discord-canary
 
 
 ## workspace assignments
