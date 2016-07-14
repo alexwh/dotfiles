@@ -54,6 +54,17 @@ for_window [class="Pavucontrol"]          floating enable
 for_window [class="Simplescreenrecorder"] floating enable
 for_window [class="Virt-manager"]         floating enable
 
+## workspace assignments
+workspace 1 output DVI-0
+workspace 2 output DVI-1
+workspace 3 output DVI-0
+workspace 4 output DVI-0
+workspace 5 output DVI-0
+workspace 6 output DVI-1
+workspace 7 output DVI-1
+workspace 8 output DVI-1
+workspace 9 output DVI-1
+workspace 0 output DVI-1
 
 ## binds
 # movement
@@ -66,6 +77,9 @@ bindsym $mod+shift+Left move left
 bindsym $mod+shift+Down move down
 bindsym $mod+shift+Up move up
 bindsym $mod+shift+Right move right
+
+bindsym $mod+shift+ctrl+Left move to output left
+bindsym $mod+shift+ctrl+Right move to output right
 
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
