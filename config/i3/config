@@ -26,6 +26,7 @@ assign [class="^Wine$" instance="^Steam.exe$"] 3
 assign [class="Steam"]              3
 assign [class="Mumble"]             3
 assign [class="TeamSpeak 3"]        3
+assign [class="discord"]            3
 
 # media
 assign [class="Trackma-qt"]         4
