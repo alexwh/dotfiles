@@ -6,7 +6,6 @@ let mapleader=","
 
 set titlestring=Firefox
 set gui=addons,nobookmarks,nomenu,nonavigation,tabs
-set statuslinevisibility=visible
 
 nmap <C-j> <C-d>
 nmap <C-k> <C-u>
