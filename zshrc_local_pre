@@ -1,0 +1,6 @@
+# xorg autostart stuff. press y to cancel and drop into a tty
+if [[ -z $DISPLAY && $XDG_VTNR -eq 1 && $UID -ne 0 ]]; then
+	# zsh read returns 0 if y pressed, 2 if timeout
+	read -q -t 0.25
+	[[ $? -eq 2 ]] && exec xinit -- vt$XDG_VTNR -keeptty > ~/.xorg.log 2>&1
+fi
