@@ -1,0 +1,5 @@
+alias pacup='sudo apt-get update && sudo apt-get dist-upgrade'
+alias pacin='sudo apt-get install'
+alias pacrm='sudo apt-get autoremove'
+alias pacse='aptitude search'
+alias rsync='rsync --progress --stats -hP'
