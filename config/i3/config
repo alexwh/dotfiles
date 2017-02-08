@@ -12,7 +12,6 @@ exec deluge-gtk
 exec google-musicmanager
 exec firefox
 exec steam-native
-exec hexchat
 exec discord-canary
 
 
