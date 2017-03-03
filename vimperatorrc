@@ -32,6 +32,8 @@ nnoremap <leader>m :mpvp
 nnoremap <leader>h :noh<cr>
 nnoremap <leader># :emenu History.Show All History<cr>
 nnoremap <leader>p :emenu Edit.Preferences<cr>
+nnoremap <leader>b :set gui!=bookmarks,nobookmarks<cr>
+nnoremap <leader>n :set gui!=navigation,nonavigation<cr>
 
 js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"
 
