@@ -15,6 +15,10 @@ sshp() {
 	[[ -n "$1" ]] && ssh -D 5123 -f -N "$1" || echo killed all
 }
 
+maimc() {
+    maim -s | xclip -selection clipboard -t image/png
+}
+
 # from https://gist.github.com/jpouellet/5278239
 # get $EPOCHSECONDS. builtins are faster than date(1)
 zmodload zsh/datetime || return
