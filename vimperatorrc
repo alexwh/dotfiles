@@ -25,8 +25,8 @@ nnoremap Q @q
 
 highlight Hint font-size:125%;color:white;background-color:green;padding:2px;
 
-nnoremap <leader>h :noh<cr>
-nnoremap <leader># :emenu History.Show All History<cr>
+nnoremap <leader># :noh<cr>
+nnoremap <leader>h :emenu History.Show All History<cr>
 nnoremap <leader>p :emenu Edit.Preferences<cr>
 nnoremap <leader>b :set gui!=bookmarks,nobookmarks<cr>
 nnoremap <leader>n :set gui!=navigation,nonavigation<cr>
