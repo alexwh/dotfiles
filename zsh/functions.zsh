@@ -4,6 +4,7 @@ checkip() { dig +short myip.opendns.com @resolver1.opendns.com }
 cx () { xclip -i < "$1" }
 pss() { ps ax | grep $(sed "s/^\(.\)/[\1]/g" <<< "$1") }
 pb() { curl -F "c=@${1:--}" https://ptpb.pw/ }
+findi() { find -iname "*${1}*" }
 
 ccc() { # Convert CurenCy
 	[[ $# -ge 3 ]] && curl -s "http://www.google.com/finance/converter?a=${1}&from=${2}&to=${3}" | sed '/res/!d;s/<[^>]*>//g' || \
