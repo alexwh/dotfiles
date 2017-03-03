@@ -25,10 +25,6 @@ nnoremap Q @q
 
 highlight Hint font-size:125%;color:white;background-color:green;padding:2px;
 
-" maybe use https://github.com/Earnestly/dotfiles/blob/master/.config/pentadactyl/plugins/launchv.js instead
-command mpvp execute "silent !(mpv '" + window.content.location.href + "' &)"
-nnoremap <leader>m :mpvp
-
 nnoremap <leader>h :noh<cr>
 nnoremap <leader># :emenu History.Show All History<cr>
 nnoremap <leader>p :emenu Edit.Preferences<cr>
