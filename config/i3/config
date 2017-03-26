@@ -11,7 +11,7 @@ exec i3-sensible-terminal
 exec deluge-gtk
 exec google-musicmanager
 exec firefox
-exec steam-native
+exec steam-native -silent
 exec discord-canary
 exec syncthing-gtk
 
