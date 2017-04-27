@@ -13,7 +13,7 @@ exec google-musicmanager
 exec firefox
 exec steam-native -silent
 exec discord-canary
-exec syncthing-gtk
+exec syncthing-gtk -m
 
 
 ## workspace assignments
