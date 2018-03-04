@@ -11,7 +11,7 @@
 	ci      = commit -vv
 	co      = checkout
 	cob     = checkout -b
-	diff    = diff --word-diff
+	diff    = diff --color-words
 	dc      = diff --cached
 	ds      = diff --staged
 	addi    = add --interactive
