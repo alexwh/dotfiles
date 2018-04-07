@@ -58,3 +58,6 @@
 [submodule "vim/bundle/targets.vim"]
 	path = vim/bundle/targets.vim
 	url = https://github.com/wellle/targets.vim
+[submodule "vim/bundle/ranger.vim"]
+	path = vim/bundle/ranger.vim
+	url = https://github.com/francoiscabrol/ranger.vim.git
