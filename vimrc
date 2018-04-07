@@ -139,6 +139,8 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:flake8_show_in_file=1
 
+let g:ranger_replace_netrw = 1
+
 " gui settings
 if has('gui_running')
 	set guicursor+=a:blinkon0 " cursor doesn't blink
