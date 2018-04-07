@@ -2,7 +2,7 @@
 resize_grip = false
 scroll_on_output = false
 scroll_on_keystroke = true
-audible_bell = true
+audible_bell = false
 visible_bell = true
 mouse_autohide = true
 allow_bold = true
@@ -13,7 +13,7 @@ font = Liberation Mono for Powerline 11
 scrollback_lines = 0
 search_wrap = true
 #icon_name = terminal
-#geometry = 640x480
+geometry = 1100x850
 
 # 0.0: opaque, 1.0: transparent
 transparency = 0.0
