@@ -20,6 +20,7 @@ alias ex='dtrx'
 alias udu='udiskie-umount -a'
 alias wsk='wineserver -k'
 alias objdump='objdump -M intel'
+alias ip='ip --color --brief'
 
 alias xclip='xclip -selection clipboard '
 alias xc='xclip'
