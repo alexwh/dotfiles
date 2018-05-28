@@ -11,5 +11,6 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export FZF_TMUX=1
 export FZF_TMUX_HEIGHT="35%"
 export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_OPTIONS="--reverse"
 
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # Like default, but without / -- ^W must be useful in paths, like it is in vim, bash, tcsh
