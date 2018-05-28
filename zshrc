@@ -10,4 +10,6 @@ source ~/.zsh/functions.zsh
 
 [[ -f /etc/zsh_command_not_found ]] && source /etc/zsh_command_not_found # Debian/Ubuntu (install the command-not-found package)
 [[ -f /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh # Arch Linux (install the pkgfile package)
+[[ -f /usr/share/fzf/completion.zsh ]] && source /usr/share/fzf/completion.zsh
+[[ -f /usr/share/fzf/key-bindings.zsh ]] && source /usr/share/fzf/key-bindings.zsh
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
