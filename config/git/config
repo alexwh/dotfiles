@@ -1,7 +1,7 @@
 [core]
 	excludesfile = ~/.cvsignore
 [user]
-	email = git@alexwh.com
+	email = alexwh@users.noreply.github.com
 	name = Alex W
 [push]
 	default = simple
