@@ -27,5 +27,6 @@
     ~/.config/sxiv:      config/sxiv
     ~/.config/systemd:   config/systemd
     ~/.config/termite:   config/termite
+    ~/.config/yay:       config/yay
 - shell:
     - git subup
