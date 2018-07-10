@@ -48,9 +48,9 @@ alias pacin='sudo pacman -S'
 alias pacrm='sudo pacman -Rns'
 alias pacse='pacman -Ss'
 
-alias pakin='pacaur -S'
-alias pakup='pacaur -Syu --devel --needed'
-alias pakse='cower -s --sort=votes'
+alias pakin='yay -S'
+alias pakup='yay'
+alias pakse='yay -Ss'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
