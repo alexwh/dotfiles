@@ -49,7 +49,7 @@ alias pacrm='sudo pacman -Rns'
 alias pacse='pacman -Ss'
 
 alias pakin='yay -S'
-alias pakup='yay'
+alias pakup='yay -Syu'
 alias pakse='yay -Ssa'
 
 # Add an "alert" alias for long running commands.  Use like so:
