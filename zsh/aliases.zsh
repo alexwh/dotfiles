@@ -5,7 +5,14 @@ alias si='sudo -i'
 alias mrm='mpc del $(mpc -f %position% | head -1)'
 alias ncmpc='ncmpcpp'
 
-alias ls='ls -h --color=auto'
+if [[ $(command -v exa) ]];then
+    alias ls='exa --git --group --grid'
+else
+    alias ls='ls -h --color=auto'
+fi
+if [[ $(command -v bat) ]];then
+    alias cat='bat'
+fi
 alias grep='grep --color=auto'
 alias cp='cp --reflink=auto'
 alias dc='cd'
