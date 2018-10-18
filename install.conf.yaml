@@ -30,4 +30,4 @@
     ~/.config/yay:       config/yay
 - shell:
     - git subup
-    - mkdir ~/.vim/undo
+
