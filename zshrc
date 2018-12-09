@@ -13,4 +13,5 @@ source ~/.zsh/functions.zsh
 [[ -f /usr/share/fzf/completion.zsh ]] && source /usr/share/fzf/completion.zsh
 [[ -f /usr/share/fzf/key-bindings.zsh ]] && source /usr/share/fzf/key-bindings.zsh
 [[ -f /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
+[[ -f ~/.dotfiles/ranger-autojump/ranger-autojump.plugin.zsh ]] && source ~/.dotfiles/ranger-autojump/ranger-autojump.plugin.zsh
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local

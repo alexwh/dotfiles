@@ -11,6 +11,9 @@ unset zle_bracketed_paste
 
 unsetopt flowcontrol
 
+# for wting/autojump#474
+unsetopt bg_nice
+
 setopt inc_append_history
 setopt share_history
 setopt hist_ignore_space

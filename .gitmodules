@@ -67,3 +67,6 @@
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
 	url = https://github.com/w0rp/ale
+[submodule "ranger-autojump"]
+	path = ranger-autojump
+	url = https://github.com/fdw/ranger-autojump.git
