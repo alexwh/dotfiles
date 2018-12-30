@@ -1,2 +1,0 @@
-clonedir="$HOME/.cache/aurclone" # clone directory
-displaybuildfiles=none           # display build files (none|diff|full)
