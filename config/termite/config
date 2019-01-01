@@ -4,8 +4,7 @@ font = Liberation Mono for Powerline 11
 scrollback_lines = 0
 
 # constrain WM resize operations to character size
-size_hints = false
-
+size_hints = true
 
 [colors]
 # DarkGrey
