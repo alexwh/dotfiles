@@ -2,6 +2,7 @@
 mouse_autohide = true
 font = Liberation Mono for Powerline 11
 scrollback_lines = 0
+hyperlinks = true
 
 # constrain WM resize operations to character size
 size_hints = true
