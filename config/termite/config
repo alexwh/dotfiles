@@ -1,42 +1,17 @@
 [options]
-resize_grip = false
-scroll_on_output = false
-scroll_on_keystroke = true
-audible_bell = false
-visible_bell = true
 mouse_autohide = true
-allow_bold = true
-dynamic_title = true
-urgent_on_bell = true
-clickable_url = true
 font = Liberation Mono for Powerline 11
 scrollback_lines = 0
-search_wrap = true
-#icon_name = terminal
-geometry = 1100x850
 
-# 0.0: opaque, 1.0: transparent
-transparency = 0.0
-pseudo_transparency = false
-
-# "system", "on" or "off"
-cursor_blink = system
-
-# "block", "underline" or "ibeam"
-cursor_shape = block
-
-# word characters used for word selection
-# (default if unset: all graphic non-punctuation/space characters)
-#word_chars = -A-Za-z0-9,./?%&#:_=+@~
-
-# set size hints for the window
+# constrain WM resize operations to character size
 size_hints = false
 
 
 [colors]
-# hard contrast: background = #1d2021
-# soft contrast: background = #32302f
+# DarkGrey
 background = #282828
+
+# White
 foreground = #ebdbb2
 foreground_bold = #ebdbb2
 
@@ -71,14 +46,5 @@ color14 = #8ec07c
 # LightGrey + White
 color7 = #a89984
 color15 = #ebdbb2
-
-[hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
 
 # vim: ft=dosini cms=#%s
