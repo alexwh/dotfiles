@@ -128,6 +128,9 @@ augroup END
 " tpope style markdown runtime detection
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" gofmt enforces tabs
+autocmd BufNewFile,BufReadPost *.go set noexpandtab
+
 " plugin settings
 let g:airline_powerline_fonts = 1
 function! AirlineThemePatch(palette)
