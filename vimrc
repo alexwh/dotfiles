@@ -93,6 +93,7 @@ nmap <leader><leader> V
 nmap <silent> <leader>s :set spell!<cr>
 nmap <silent> <leader>l :set nu!<cr>:set rnu!<cr>:set list!<cr>
 nmap <silent> <leader>u :UndotreeToggle<cr>
+nmap <silent> <leader>r :RainbowLevelsToggle<cr>
 
 " fast system clipboard pastes
 vmap <leader>y "+y
