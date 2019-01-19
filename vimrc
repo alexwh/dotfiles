@@ -155,7 +155,7 @@ let g:ale_lint_delay = 0
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'go': ['gofmt', 'goimports'],
-\   'python': ['flake8', 'isort'],
+\   'python': ['isort'],
 \}
 
 " gui settings
