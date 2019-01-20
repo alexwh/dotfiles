@@ -58,8 +58,6 @@ set shiftwidth=4
 
 
 " larger movements
-map <c-j> <c-d>
-map <c-k> <c-u>
 map <c-l> g_
 map <c-h> ^
 
@@ -110,6 +108,9 @@ nmap <leader>dd "+dd
 vmap <enter> <plug>(EasyAlign)
 nmap <leader>a <plug>(EasyAlign)
 
+" vim-ale gutter movement
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " autocmds
 augroup reloadvimrc
