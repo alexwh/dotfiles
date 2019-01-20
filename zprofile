@@ -10,7 +10,6 @@ export WINEARCH=win32 # no disadvantages
 export NO_AT_BRIDGE=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export BAT_THEME="Monokai Extended Origin"
-export GO111MODULE=on
 
 export FZF_TMUX=1
 export FZF_TMUX_HEIGHT="35%"
