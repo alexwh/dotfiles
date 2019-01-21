@@ -1,26 +1,26 @@
 [core]
-	excludesfile = ~/.cvsignore
+    excludesfile = ~/.cvsignore
 [user]
-	email = alexwh@users.noreply.github.com
-	name = Alex W
+    email = alexwh@users.noreply.github.com
+    name = Alex W
 [push]
-	default = simple
+    default = simple
 [alias]
     a       = add -A
-	st      = status -s
-	ci      = commit -vv
-	co      = checkout
-	cob     = checkout -b
-	diff    = diff --color-words
-	dc      = diff --cached
-	ds      = diff --staged
-	addi    = add --interactive
-	addp    = add --patch
-	grep    = grep -iI
-	subup   = submodule update --init --recursive
-	subpull = submodule update --init --remote
-	le      = log --oneline --decorate
-	ls      = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-	lgr     = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    st      = status -s
+    ci      = commit -vv
+    co      = checkout
+    cob     = checkout -b
+    diff    = diff --color-words
+    dc      = diff --cached
+    ds      = diff --staged
+    addi    = add --interactive
+    addp    = add --patch
+    grep    = grep -iI
+    subup   = submodule update --init --recursive
+    subpull = submodule update --init --remote
+    le      = log --oneline --decorate
+    ls      = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    lgr     = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
 [pull]
-	rebase = true
+    rebase = true
