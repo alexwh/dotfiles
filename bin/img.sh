@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -o errexit # ie set -e
 notify() {
-	notify-send "uploader" "$1"
+    notify-send "uploader" "$1"
 }
 
 # any command fails, we fail (set -e). notify about that
@@ -12,12 +12,12 @@ file=$(mktemp /tmp/$(date +%s)_XXXXXX.png)
 sleep 0.1
 
 case "$uploadtype" in
-	selection)
-		maim -s -b 1 $file ;;
-	full)
-		maim $file ;;
-	file)
-		file=$(zenity --file-selection) ;;
+    selection)
+        maim -s -b 1 $file ;;
+    full)
+        maim $file ;;
+    file)
+        file=$(zenity --file-selection) ;;
 esac
 
 site=$(echo -e "scp\nimgur" | dmenu -p uploader)

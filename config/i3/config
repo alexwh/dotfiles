@@ -140,41 +140,41 @@ bindsym XF86AudioStop exec mrm.sh
 bindsym $mod+shift+n exec nowplaying.sh
 
 mode "resize" {
-	# These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-	# Pressing arrows will adjust the window’s width.
-	bindsym Left resize shrink width 10 px or 10 ppt
-	bindsym Down resize grow height 10 px or 10 ppt
-	bindsym Up resize shrink height 10 px or 10 ppt
-	bindsym Right resize grow width 10 px or 10 ppt
+    # Pressing arrows will adjust the window’s width.
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-	bindsym shift+Left resize shrink width 50 px or 50 ppt
-	bindsym shift+Down resize grow height 50 px or 50 ppt
-	bindsym shift+Up resize shrink height 50 px or 50 ppt
-	bindsym shift+Right resize grow width 50 px or 50 ppt
+    bindsym shift+Left resize shrink width 50 px or 50 ppt
+    bindsym shift+Down resize grow height 50 px or 50 ppt
+    bindsym shift+Up resize shrink height 50 px or 50 ppt
+    bindsym shift+Right resize grow width 50 px or 50 ppt
 
-	bindsym ctrl+Left resize shrink width 1 px or 1 ppt
-	bindsym ctrl+Down resize grow height 1 px or 1 ppt
-	bindsym ctrl+Up resize shrink height 1 px or 1 ppt
-	bindsym ctrl+Right resize grow width 1 px or 1 ppt
+    bindsym ctrl+Left resize shrink width 1 px or 1 ppt
+    bindsym ctrl+Down resize grow height 1 px or 1 ppt
+    bindsym ctrl+Up resize shrink height 1 px or 1 ppt
+    bindsym ctrl+Right resize grow width 1 px or 1 ppt
 
 
-	# back to normal: Enter or Escape
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym $mod+shift+backslash mode "resize"
 
 
 set $mode_power power (l) logout, (r) reboot, (s) shutdown
 mode "$mode_power" {
-	bindsym l exec --no-startup-id i3-msg exit,        mode "default"
-	bindsym r exec --no-startup-id systemctl reboot,   mode "default"
-	bindsym s exec --no-startup-id systemctl poweroff, mode "default"
+    bindsym l exec --no-startup-id i3-msg exit,        mode "default"
+    bindsym r exec --no-startup-id systemctl reboot,   mode "default"
+    bindsym s exec --no-startup-id systemctl poweroff, mode "default"
 
-	# back to normal: Enter or Escape
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 # backspace doesn't work with modes for some reason
 bindsym $mod+shift+plus       mode "$mode_power"
@@ -194,20 +194,20 @@ client.urgent           #2f343a #900000 #ffffff #900000
 
 # i3bar settings
 bar {
-	status_command i3blocks
-	position top
+    status_command i3blocks
+    position top
 
-	mode hide
-	modifier $mod
+    mode hide
+    modifier $mod
 
-	colors {
-		background #222222
-		statusline #dddddd
-		separator #666666
+    colors {
+        background #222222
+        statusline #dddddd
+        separator #666666
 
-		focused_workspace  #0088cc #0088cc #ffffff
-		active_workspace   #333333 #333333 #888888
-		inactive_workspace #333333 #333333 #888888
-		urgent_workspace   #2f343a #900000 #ffffff
-	}
+        focused_workspace  #0088cc #0088cc #ffffff
+        active_workspace   #333333 #333333 #888888
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace   #2f343a #900000 #ffffff
+    }
 }

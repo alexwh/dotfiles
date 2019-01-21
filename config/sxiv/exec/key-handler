@@ -14,8 +14,8 @@
 
 readonly KEY="$1";
 case "$KEY" in
-	"C-c")      tr '\n' ' ' | xclip -selection clipboard ;;
-	"C-d")      tr '\n' '\0' | xargs -0 trash ;;
-	"C-r")      tr '\n' '\0' | xargs -0 rm ;;
-	"C-g")      tr '\n' '\0' | xargs -0 gimp & ;;
+    "C-c")      tr '\n' ' ' | xclip -selection clipboard ;;
+    "C-d")      tr '\n' '\0' | xargs -0 trash ;;
+    "C-r")      tr '\n' '\0' | xargs -0 rm ;;
+    "C-g")      tr '\n' '\0' | xargs -0 gimp & ;;
 esac

@@ -114,17 +114,17 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " autocmds
 augroup reloadvimrc
-	au!
-	au BufWritePost .vimrc source $MYVIMRC
+    au!
+    au BufWritePost .vimrc source $MYVIMRC
 augroup END
 
 augroup notmpundos
-	au!
-	au BufReadPre /tmp/*     set noundofile
-	" sudo -e makes random file names in /var/tmp, tracking undo state is useless
-	au BufReadPre /var/tmp/* set noundofile
-	" pass edits files in /dev/shm
-	au BufReadPre /dev/shm/* set noundofile
+    au!
+    au BufReadPre /tmp/*     set noundofile
+    " sudo -e makes random file names in /var/tmp, tracking undo state is useless
+    au BufReadPre /var/tmp/* set noundofile
+    " pass edits files in /dev/shm
+    au BufReadPre /dev/shm/* set noundofile
 augroup END
 
 " tpope style markdown runtime detection
@@ -136,8 +136,8 @@ autocmd BufNewFile,BufReadPost *.go set noexpandtab
 " plugin settings
 let g:airline_powerline_fonts = 1
 function! AirlineThemePatch(palette)
-	let a:palette.normal.airline_a   = [ '#ffffff', '#268bd2', 255, 33 ]
-	let a:palette.insert.airline_a   = [ '#ffffff', '#859900', 255, 64 ]
+    let a:palette.normal.airline_a   = [ '#ffffff', '#268bd2', 255, 33 ]
+    let a:palette.insert.airline_a   = [ '#ffffff', '#859900', 255, 64 ]
 endfunction
 let g:airline_theme_patch_func = 'AirlineThemePatch'
 let g:airline#extensions#tabline#enabled = 1
@@ -161,15 +161,15 @@ let g:ale_fixers = {
 
 " gui settings
 if has('gui_running')
-	set guicursor+=a:blinkon0 " cursor doesn't blink
-	" remove menu bar, toolbar and scrollbar (in order)
-	set guioptions-=m
-	set guioptions-=T
-	set guioptions-=r
-	set guioptions-=l
-	set guioptions-=L
+    set guicursor+=a:blinkon0 " cursor doesn't blink
+    " remove menu bar, toolbar and scrollbar (in order)
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=l
+    set guioptions-=L
 
-	set guifont=Liberation\ Mono\ for\ Powerline\ 11
+    set guifont=Liberation\ Mono\ for\ Powerline\ 11
 
-	set cursorline
+    set cursorline
 endif
