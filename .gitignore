@@ -21,3 +21,5 @@ weechat/python
 weechat/script
 
 bin/scpupload.sh
+
+docker/.buildNodeID
