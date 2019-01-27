@@ -47,6 +47,7 @@ bindkey '^N' down-history
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
+bindkey '^[.' insert-last-word
 
 # Change prompt icon + color based on insert/normal vim mode in prompt
 export PURE_PROMPT_SYMBOL="[I] ❯"
