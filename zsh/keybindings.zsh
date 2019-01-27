@@ -1,4 +1,4 @@
-bindkey -e # I don't like vim bindings in my terminal
+bindkey -v
 
 # from http://zshwiki.org/home/zle/bindkeys
 # create a zkbd compatible hash;
@@ -39,3 +39,50 @@ zle -N zle-line-finish
 bindkey '^[[Z' reverse-menu-complete # shift-tab
 bindkey '^[[1;5C' forward-word # ctrl+right
 bindkey '^[[1;5D' backward-word # ctrl+left
+
+
+# Restore some keymaps removed by vim keybind mode
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+
+# Change prompt icon + color based on insert/normal vim mode in prompt
+export PURE_PROMPT_SYMBOL="[I] ❯"
+export PURE_PROMPT_VICMD_SYMBOL="[N] ❮"
+
+# By default, we have insert mode shown on right hand side
+export RPROMPT="%{$fg[blue]%}[INSERT]%{$reset_color%}"
+
+# And also a beam as the cursor
+echo -ne '\e[5 q'
+
+# Callback for vim mode change
+function zle-keymap-select () {
+    # Only supported in these terminals
+    if [ "$TERM" = "xterm-256color" ] || [ "$TERM" = "screen-256color" ]; then
+        if [ $KEYMAP = vicmd ]; then
+            # Command mode
+            export RPROMPT="%{$fg[green]%}[NORMAL]%{$reset_color%}"
+
+            # Set block cursor
+            echo -ne '\e[1 q'
+        else
+            # Insert mode
+            export RPROMPT="%{$fg[blue]%}[INSERT]%{$reset_color%}"
+
+            # Set beam cursor
+            echo -ne '\e[5 q'
+        fi
+    fi
+
+    # Refresh prompt and call Pure super function
+    prompt_pure_update_vim_prompt_widget
+}
+
+# Bind the callback
+zle -N zle-keymap-select
+
+# Reduce latency when pressing <Esc>
+export KEYTIMEOUT=1
