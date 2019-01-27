@@ -20,6 +20,9 @@ set autoread
 set hidden
 set laststatus=2
 set nojoinspaces
+" timeout on keybindings can be low
+set ttimeout
+set ttimeoutlen=50
 
 " graphical options
 colorscheme gruvbox
