@@ -48,6 +48,10 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^[.' insert-last-word
+bindkey -M vicmd "k" up-line-or-beginning-search
+bindkey -M vicmd "j" down-line-or-beginning-search
+bindkey -M vicmd '?' history-incremental-search-backward
+bindkey -M vicmd '/' history-incremental-search-forward
 
 # Change prompt icon + color based on insert/normal vim mode in prompt
 export PURE_PROMPT_VICMD_SYMBOL="%{$fg[green]%}❮%{$reset_color%}"
@@ -75,5 +79,5 @@ function zle-keymap-select () {
 # Bind the callback
 zle -N zle-keymap-select
 
-# Reduce latency when pressing <Esc>
+# Reduce latency when pressing <Esc> (100ms)
 export KEYTIMEOUT=1
