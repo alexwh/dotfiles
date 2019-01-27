@@ -61,7 +61,7 @@ function zle-keymap-select () {
     if [ "$TERM" = "xterm-256color" ] || [ "$TERM" = "screen-256color" ]; then
         if [ $KEYMAP = vicmd ]; then
             # Set block cursor
-            echo -ne '\e[1 q'
+            echo -ne '\e[2 q'
         else
             # Set beam cursor
             echo -ne '\e[5 q'
