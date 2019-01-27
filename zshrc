@@ -15,3 +15,4 @@ source ~/.zsh/functions.zsh
 [[ -f /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.zsh
 [[ -f ~/.dotfiles/ranger-autojump/ranger-autojump.plugin.zsh ]] && source ~/.dotfiles/ranger-autojump/ranger-autojump.plugin.zsh
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
