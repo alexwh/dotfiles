@@ -5,10 +5,12 @@
     name = Alex W
 [push]
     default = simple
+[commit]
+    verbose = 2
 [alias]
     a       = add -A
     st      = status -s
-    ci      = commit -vv
+    ci      = commit
     co      = checkout
     cob     = checkout -b
     diff    = diff --color-words
