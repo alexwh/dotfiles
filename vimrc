@@ -133,6 +133,16 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " gofmt enforces tabs
 autocmd BufNewFile,BufReadPost *.go set noexpandtab
 
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[2 q"
+
+" optional reset cursor on start:
+augroup resetCursor
+au!
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+autocmd VimLeave * silent !echo -ne "\e[5 q"
+augroup END
+
 " plugin settings
 let g:airline_powerline_fonts = 1
 function! AirlineThemePatch(palette)
