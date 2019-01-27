@@ -108,5 +108,5 @@ function zle-keymap-select () {
 # Bind the callback
 zle -N zle-keymap-select
 
-# Reduce latency when pressing <Esc> (100ms)
-export KEYTIMEOUT=1
+# Reduce latency when pressing <Esc> (500ms)
+export KEYTIMEOUT=5
