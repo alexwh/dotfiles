@@ -136,14 +136,18 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " gofmt enforces tabs
 autocmd BufNewFile,BufReadPost *.go set noexpandtab
 
+
+" change xterm cursor style depending on mode
+" insert mode, blinking thin line cursor
 let &t_SI = "\e[5 q"
+" normal mode, block cursor
 let &t_EI = "\e[2 q"
 
-" optional reset cursor on start:
+" reset cursor on start and exit (shell is insert by default)
 augroup resetCursor
-au!
-autocmd VimEnter * silent !echo -ne "\e[2 q"
-autocmd VimLeave * silent !echo -ne "\e[5 q"
+    au!
+    autocmd VimEnter * silent !echo -ne "\e[2 q"
+    autocmd VimLeave * silent !echo -ne "\e[5 q"
 augroup END
 
 " plugin settings
