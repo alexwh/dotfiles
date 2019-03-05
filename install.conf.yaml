@@ -4,6 +4,7 @@
 - link:
     ~/.dotfiles:         ''
     ~/bin:               bin
+    ~/.ansible.cfg:      ansible.cfg
     ~/.tmux.conf:        tmux.conf
     ~/.cvsignore:        cvsignore
     ~/.vimperatorrc:     vimperatorrc
