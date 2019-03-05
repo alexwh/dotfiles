@@ -2,8 +2,11 @@ export BROWSER=firefox
 export EDITOR=vim
 export TERMINAL=termite
 
-export GOPATH=$(go env GOPATH)
-export PATH="$PATH:$HOME/bin:$GOPATH/bin"
+export PATH="$PATH:$HOME/bin"
+if command -v go 2>&1 > /dev/null;then
+    export GOPATH=$(go env GOPATH)
+    export PATH="$PATH:$GOPATH/bin"
+fi
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export QT_STYLE_OVERRIDE=gtk
 export WINEARCH=win32 # no disadvantages
