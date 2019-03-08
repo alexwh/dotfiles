@@ -1,4 +1,4 @@
-bindkey -v
+bindkey -e
 
 # from http://zshwiki.org/home/zle/bindkeys
 # create a zkbd compatible hash;
@@ -39,74 +39,3 @@ zle -N zle-line-finish
 bindkey '^[[Z' reverse-menu-complete # shift-tab
 bindkey '^[[1;5C' forward-word # ctrl+right
 bindkey '^[[1;5D' backward-word # ctrl+left
-
-# extra vim textobjects
-# ci"
-autoload -U select-quoted
-zle -N select-quoted
-for m in visual viopp; do
-  for c in {a,i}{\',\",\`}; do
-    bindkey -M $m $c select-quoted
-  done
-done
-
-# ci{, ci(
-autoload -U select-bracketed
-zle -N select-bracketed
-for m in visual viopp; do
-  for c in {a,i}${(s..)^:-'()[]{}<>bB'}; do
-    bindkey -M $m $c select-bracketed
-  done
-done
-
-# surround
-autoload -Uz surround
-zle -N delete-surround surround
-zle -N add-surround surround
-zle -N change-surround surround
-bindkey -a cs change-surround
-bindkey -a ds delete-surround
-bindkey -a ys add-surround
-bindkey -M visual S add-surround
-
-# Restore some keymaps removed by vim keybind mode
-bindkey '^P' up-history
-bindkey '^N' down-history
-bindkey '^?' backward-delete-char
-bindkey '^h' backward-delete-char
-bindkey '^w' backward-kill-word
-bindkey '^[.' insert-last-word
-
-bindkey -M vicmd "k" up-line-or-search
-bindkey -M vicmd "j" down-line-or-search
-bindkey -M vicmd '?' history-incremental-search-backward
-bindkey -M vicmd '/' history-incremental-search-forward
-
-# Change prompt icon + color based on insert/normal vim mode in prompt
-export PURE_PROMPT_VICMD_SYMBOL="%{$fg[green]%}❮%{$reset_color%}"
-
-# And also a beam as the cursor
-echo -ne '\e[5 q'
-
-# Callback for vim mode change
-function zle-keymap-select () {
-    # Only supported in these terminals
-    if [ "$TERM" = "xterm-256color" ] || [ "$TERM" = "screen-256color" ]; then
-        if [ $KEYMAP = vicmd ]; then
-            # Set block cursor
-            echo -ne '\e[2 q'
-        else
-            # Set beam cursor
-            echo -ne '\e[5 q'
-        fi
-    fi
-
-    # Refresh prompt and call Pure super function
-    prompt_pure_update_vim_prompt_widget
-}
-
-# Bind the callback
-zle -N zle-keymap-select
-
-# Reduce latency when pressing <Esc> (500ms)
-export KEYTIMEOUT=5
