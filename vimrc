@@ -114,6 +114,9 @@ nmap <leader>a <plug>(EasyAlign)
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+" vim-vinegar style ranger.vim map
+nnoremap - :RangerWorkingDirectory<cr>
+
 " autocmds
 augroup reloadvimrc
     au!
