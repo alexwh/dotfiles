@@ -29,7 +29,7 @@ alias xclip='xclip -selection clipboard '
 alias xc='xclip'
 alias rsync='rsync --info=progress2 --stats -hP'
 alias hd='hexdump'
-alias rg='r'
+alias rg='ranger'
 alias ag='\rg'
 
 alias ffp='firefox -P private -new-instance --class="private" &> /dev/null &'
