@@ -67,9 +67,6 @@
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
 	url = https://github.com/w0rp/ale
-[submodule "vim/bundle/rainbow_levels.vim"]
-	path = vim/bundle/rainbow_levels.vim
-	url = https://github.com/thiagoalessio/rainbow_levels.vim.git
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
