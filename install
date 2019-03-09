@@ -12,4 +12,17 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" --plugin-dir "${BASEDIR}/dotbot-yay" "${@}"
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+
+source /etc/os-release
+case $ID in
+    arch)
+        "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}.conf.yaml" --plugin-dir "${BASEDIR}/dotbot-yay" "${@}"
+        ;;
+    debian)
+        echo "debian"
+        ;;
+    *)
+        echo "unknown distro ID: $ID, not doing anything special"
+        ;;
+esac
