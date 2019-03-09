@@ -5,17 +5,17 @@
 - clean: ['~', '~/.config']
 
 - link:
-    ~/.dotfiles:         ''
-    ~/bin:               bin
-    ~/.ansible.cfg:      ansible.cfg
-    ~/.tmux.conf:        tmux.conf
-    ~/.cvsignore:        cvsignore
-    ~/.vim:              vim
-    ~/.vimrc:            vimrc
-    ~/.zsh:              zsh
-    ~/.zshrc:            zshrc
-    ~/.zprofile:         zprofile
-    ~/.docker:           docker
+    ~/.dotfiles: ''
+    ~/bin:
+    ~/.ansible.cfg:
+    ~/.tmux.conf:
+    ~/.cvsignore:
+    ~/.vim:
+    ~/.vimrc:
+    ~/.zsh:
+    ~/.zshrc:
+    ~/.zprofile:
+    ~/.docker:
     ~/.config/:
         glob: true
         path: config/*
