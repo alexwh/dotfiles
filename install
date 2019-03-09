@@ -23,7 +23,7 @@ case $ID in
         ;;
     debian)
         echo "debian"
-        "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot_plugin_aptget" "${@}"
+        sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot_plugin_aptget" "${@}"
         ;;
     *)
         echo "unknown distro ID: $ID, not doing anything special"
