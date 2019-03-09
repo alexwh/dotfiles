@@ -19,18 +19,13 @@
     - fdupes
     - fzf
     - hdparm
-    - hping
     - htop
-    - httpie
-    - iperf
-    - jq
+    - iperf3
     - lsof
     - ltrace
     - moreutils
     - mtr
     - ncdu
-    - nethogs
-    - nmap
     - p7zip
     - pacgraph
     - pacman-contrib
@@ -50,6 +45,7 @@
     - unarchiver
     - units
     - unrar
+    - vim
     - vnstat
     - wget
     - zip
