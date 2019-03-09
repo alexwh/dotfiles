@@ -3,18 +3,40 @@
       force: true
       path: zshrc_local_debian
 - aptget:
-    - git
-    - lsof
-    - vim
+    - aptitude
+    - atool
     - bc
+    - command-not-found
     - curl
-    - wget
     - di
+    - dos2unix
+    - fd-find
+    - fdupes
+    - fzf
+    - hdparm
     - htop
+    - iperf3
+    - lsof
+    - ltrace
+    - moreutils
+    - mtr-tiny
     - ncdu
+    - p7zip
+    - parallel
+    - progress
+    - psmisc
     - pv
     - ranger
+    - ripgrep
     - rsync
+    - socat
+    - strace
+    - tcpdump
     - tmux
+    - theunarchiver
+    - vim
+    - vnstat
+    - wget
+    - zip
     - zsh
-    - aptitude
+    - zsh-syntax-highlighting
