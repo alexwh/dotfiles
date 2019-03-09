@@ -14,7 +14,6 @@
     ~/.zshrc:            zshrc
     ~/.zprofile:         zprofile
     ~/.docker:           docker
-    ~/.config/paxd.conf: config/paxd.conf
     ~/.config/flake8:    config/flake8
     ~/.config/dunst:     config/dunst
     ~/.config/git:       config/git
