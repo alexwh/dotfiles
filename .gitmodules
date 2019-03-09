@@ -73,3 +73,6 @@
 [submodule "dotbot-yay"]
 	path = dotbot-yay
 	url = https://github.com/alexwh/dotbot-yay
+[submodule "dotbot_plugin_aptget"]
+	path = dotbot_plugin_aptget
+	url = https://github.com/dein0s/dotbot_plugin_aptget
