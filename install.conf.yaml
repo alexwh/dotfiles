@@ -10,7 +10,6 @@
     ~/.vimperatorrc:     vimperatorrc
     ~/.vim:              vim
     ~/.vimrc:            vimrc
-    ~/.weechat:          weechat
     ~/.zsh:              zsh
     ~/.zshrc:            zshrc
     ~/.zprofile:         zprofile
