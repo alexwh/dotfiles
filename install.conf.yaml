@@ -16,18 +16,9 @@
     ~/.zshrc:            zshrc
     ~/.zprofile:         zprofile
     ~/.docker:           docker
-    ~/.config/flake8:    config/flake8
-    ~/.config/dunst:     config/dunst
-    ~/.config/git:       config/git
-    ~/.config/i3:        config/i3
-    ~/.config/i3blocks:  config/i3blocks
-    ~/.config/mpd:       config/mpd
-    ~/.config/mpv:       config/mpv
-    ~/.config/ncmpcpp:   config/ncmpcpp
-    ~/.config/ranger:    config/ranger
-    ~/.config/sxiv:      config/sxiv
-    ~/.config/termite:   config/termite
-    ~/.config/yay:       config/yay
+    ~/.config/:
+        glob: true
+        path: config/*
 
 - shell:
     - git subup
