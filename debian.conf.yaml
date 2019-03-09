@@ -7,7 +7,6 @@
     - apt install python3-apt
 
 - aptget:
-    - aptitude
     - atool
     - bc
     - command-not-found
