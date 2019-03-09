@@ -1,6 +1,9 @@
+- defaults:
+    link:
+        create: true
+
 - clean: ['~', '~/.config']
-- shell:
-    - mkdir -p ~/.config
+
 - link:
     ~/.dotfiles:         ''
     ~/bin:               bin
@@ -25,5 +28,6 @@
     ~/.config/sxiv:      config/sxiv
     ~/.config/termite:   config/termite
     ~/.config/yay:       config/yay
+
 - shell:
     - git subup
