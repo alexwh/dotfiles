@@ -2,6 +2,10 @@
     ~/.zshrc_local:
       force: true
       path: zshrc_local_debian
+
+- shell:
+    - apt install python3-apt
+
 - aptget:
     - aptitude
     - atool
