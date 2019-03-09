@@ -7,7 +7,6 @@
     ~/.ansible.cfg:      ansible.cfg
     ~/.tmux.conf:        tmux.conf
     ~/.cvsignore:        cvsignore
-    ~/.vimperatorrc:     vimperatorrc
     ~/.vim:              vim
     ~/.vimrc:            vimrc
     ~/.zsh:              zsh
