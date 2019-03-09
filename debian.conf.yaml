@@ -44,3 +44,7 @@
     - zip
     - zsh
     - zsh-syntax-highlighting
+
+- shell:
+    - apt-file update
+    - update-command-not-found
