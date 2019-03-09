@@ -25,7 +25,6 @@
     ~/.config/ncmpcpp:   config/ncmpcpp
     ~/.config/ranger:    config/ranger
     ~/.config/sxiv:      config/sxiv
-    ~/.config/systemd:   config/systemd
     ~/.config/termite:   config/termite
     ~/.config/yay:       config/yay
 - shell:
