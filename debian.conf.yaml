@@ -1,0 +1,20 @@
+- link:
+    ~/.zshrc_local:
+      force: true
+      path: zshrc_local_debian
+- aptget:
+    - git
+    - lsof
+    - vim
+    - bc
+    - curl
+    - wget
+    - di
+    - htop
+    - ncdu
+    - pv
+    - ranger
+    - rsync
+    - tmux
+    - zsh
+    - aptitude
