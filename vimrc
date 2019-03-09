@@ -145,13 +145,6 @@ let &t_SI = "\e[5 q"
 " normal mode, block cursor
 let &t_EI = "\e[2 q"
 
-" reset cursor on start and exit (shell is insert by default)
-augroup resetCursor
-    au!
-    autocmd VimEnter * silent !echo -ne "\e[2 q"
-    autocmd VimLeave * silent !echo -ne "\e[5 q"
-augroup END
-
 " plugin settings
 let g:airline_powerline_fonts = 1
 function! AirlineThemePatch(palette)
