@@ -37,7 +37,7 @@
     - strace
     - tcpdump
     - tmux
-    - theunarchiver
+    - unar
     - vim
     - vnstat
     - wget
