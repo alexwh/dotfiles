@@ -7,8 +7,6 @@ if command -v go 2>&1 > /dev/null;then
     export GOPATH=$(go env GOPATH)
     export PATH="$PATH:$GOPATH/bin"
 fi
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-export QT_STYLE_OVERRIDE=gtk
 export WINEARCH=win32 # no disadvantages
 export NO_AT_BRIDGE=1
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
