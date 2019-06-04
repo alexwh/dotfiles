@@ -1,9 +1,8 @@
 - yay:
-    - dtrx
     - localepurge
     - pacman-cleanup-hook
-    - sxiv-rifle
     - systemd-boot-pacman-hook
+    - sxiv-rifle
     - unzip-natspec
     - vim-vi
     - whatmp3
