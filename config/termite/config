@@ -6,6 +6,7 @@ hyperlinks = true
 
 # constrain WM resize operations to character size
 size_hints = true
+urgent_on_bell = true
 
 [colors]
 # DarkGrey
