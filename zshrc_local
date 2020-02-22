@@ -1,3 +1,3 @@
 if [[ $USER = "alex" && -n $DISPLAY ]];then
-    eval $(keychain --eval --agents ssh -Q --quiet --systemd id_ed25519)
+    eval $(keychain --eval --agents ssh -Q --quiet --systemd)
 fi
