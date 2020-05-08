@@ -13,7 +13,7 @@
     c       = commit
     ci      = commit
     co      = checkout
-    diff    = diff --color-words
+    diff    = diff --color-words --ignore-space-at-eol
     ds      = diff --staged
     grep    = grep -iI
     subup   = submodule update --init --recursive
