@@ -9,6 +9,9 @@ alias ls='ls -h --color=auto'
 if [[ $(command -v bat) ]];then
     alias cat='bat'
 fi
+if [[ $(command -v nvim) ]];then
+    alias vim='nvim'
+fi
 alias grep='grep --color=auto'
 alias cp='cp --reflink=auto'
 alias dc='cd'
