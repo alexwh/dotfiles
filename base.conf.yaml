@@ -13,6 +13,8 @@
     ~/.cvsignore:
     ~/.vim:
     ~/.vimrc:
+    ~/.config/nvim: vim
+    ~/.config/nvim/init.vim: vimrc
     ~/.zsh:
     ~/.zshrc:
     ~/.zprofile:

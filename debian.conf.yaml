@@ -24,6 +24,7 @@
     - moreutils
     - mtr-tiny
     - ncdu
+    - neovim
     - p7zip
     - parallel
     - progress

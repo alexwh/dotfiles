@@ -25,6 +25,7 @@
     - moreutils
     - mtr
     - ncdu
+    - neovim
     - p7zip
     - pacgraph
     - pacman-contrib
