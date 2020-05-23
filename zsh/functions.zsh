@@ -2,7 +2,7 @@
 chpwd() { ls }
 checkip() { dig +short myip.opendns.com @resolver1.opendns.com }
 cx () { xclip -i < "$1" }
-pss() { ps ax | grep $(sed "s/^\(.\)/[\1]/g" <<< "$1") }
+pss() { ps aux | grep $(sed "s/^\(.\)/[\1]/g" <<< "$1") }
 pb() { curl -F "c=@${1:--}" https://ptpb.pw/ }
 findi() { find -iname "*${1}*" }
 rand() { echo $((($RANDOM % ${1:-2})+1)) }
