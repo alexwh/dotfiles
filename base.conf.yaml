@@ -18,6 +18,7 @@
     ~/.zshrc:
     ~/.zprofile:
     ~/.docker:
+    ~/.ipython:
     ~/.config/:
         glob: true
         path: config/*

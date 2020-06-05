@@ -23,3 +23,5 @@ weechat/script
 bin/scpupload.sh
 
 docker/.buildNodeID
+
+ipython/profile_default/history.sqlite
