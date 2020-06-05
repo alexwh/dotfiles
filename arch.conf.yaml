@@ -1,11 +1,10 @@
 - yay:
-    - localepurge
     - pacman-cleanup-hook
     - systemd-boot-pacman-hook
     - sxiv-rifle
     - unzip-natspec
-    - vim-vi
     - whatmp3
+    - zip-natspec
 - pacman:
     - atool
     - bat
@@ -37,6 +36,7 @@
     - pv
     - python-black
     - ranger
+    - rar
     - reflector
     - ripgrep
     - rsync
@@ -46,10 +46,7 @@
     - tmux
     - unarchiver
     - units
-    - unrar
-    - vim
     - vnstat
     - wget
-    - zip
     - zsh
     - zsh-syntax-highlighting
