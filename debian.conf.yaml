@@ -9,6 +9,7 @@
 - aptget:
     - atool
     - bc
+    - black
     - command-not-found
     - curl
     - di
@@ -19,6 +20,7 @@
     - hdparm
     - htop
     - iperf3
+    - ipython3
     - lsof
     - ltrace
     - moreutils
