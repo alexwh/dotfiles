@@ -12,6 +12,7 @@ yt_datetime="${yt_date}T${yt_time%:*}.${yt_time##*:}Z"
 tmpf=$(mktemp -d)
 cd "$tmpf"
 # trap 'rm -rf "$tmpf"' EXIT
+mkdir "${filepath}/{enc,done,failed}/"
 
 ffmpeg -sseof -1 -i "$file" -update 1 -q:v 1 results.png 2> /dev/null
 # vw
@@ -39,12 +40,17 @@ fi
 if [[ -z "${title// }" ]];then
     printf "%s\n" "\\\\wsl$\\Arch${tmpf//\//\\}"
     echo -ne '\aenter title: '
-    read -r title
+    read -e -r title
 fi
 
 start_time=$(ffmpeg -copyts -i "$file" -i "$find_frame" -filter_complex "[0]extractplanes=y[v];[1]extractplanes=y[i];[v][i]blend=difference,blackframe=0,metadata=select:key=lavfi.blackframe.pblack:value=98:function=greater,trim=duration=0.0001,metadata=print:file=-" -an -v 0 -vsync 0 -f null - | head -1 | sed 's/.*pts_time\:\(.*\)\.[0-9]\+/\1/')
+if [[ -z $start_time ]];then
+    mv "$file" "${filepath}/failed/"
+    echo "failed finding start_time on ${title}, moving ${file} to ${filepath}/failed"
+    exit 1
+fi
 
-ffmpeg -noaccurate_seek -i "$file" -ss "$start_time" -c copy -metadata:s:v:0 rotate=270 "${filepath}/enc/${title} ${score} ${desc_date}.mp4" && mv "$file" "$filepath/done"
+ffmpeg -noaccurate_seek -i "$file" -ss "$start_time" -c copy -metadata:s:v:0 rotate=270 "${filepath}/enc/${title} ${score} ${desc_date}.mp4" && mv "$file" "${filepath}/done/"
 
 # ~/youtube-upload/venv/bin/python3 ~/youtube-upload/bin/youtube-upload \
 #     --title="$title" \
