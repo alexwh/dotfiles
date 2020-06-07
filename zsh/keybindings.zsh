@@ -39,3 +39,5 @@ zle -N zle-line-finish
 bindkey '^[[Z' reverse-menu-complete # shift-tab
 bindkey '^[[1;5C' forward-word # ctrl+right
 bindkey '^[[1;5D' backward-word # ctrl+left
+
+bindkey -s '^Z' 'fg\n' # ctrl-z resumes
