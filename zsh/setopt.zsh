@@ -1,6 +1,8 @@
 HISTFILE=~/.histfile
 HISTSIZE="1000000"
 SAVEHIST="1000000"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8,underline"
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=200
 
 autoload -Uz zmv
 autoload -Uz colors && colors
