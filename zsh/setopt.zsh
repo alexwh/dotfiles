@@ -16,12 +16,10 @@ unsetopt flowcontrol
 # for wting/autojump#474
 unsetopt bg_nice
 
-setopt inc_append_history
 setopt share_history
 setopt hist_ignore_space
 setopt hist_verify
 setopt extended_history
-setopt hist_expire_dups_first
 setopt prompt_subst
 setopt transient_rprompt
 setopt menu_complete
