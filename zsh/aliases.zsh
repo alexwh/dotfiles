@@ -5,7 +5,7 @@ alias si='sudo -i'
 alias mrm='mpc del $(mpc -f %position% | head -1)'
 alias ncmpc='ncmpcpp'
 
-alias ls='ls -hFX --color=auto'
+alias ls='ls -hX --color=auto'
 if [[ $(command -v bat) ]];then
     alias cat='bat'
 fi
