@@ -5,3 +5,4 @@ alias pacse='apt search'
 alias rsync='rsync -hP --stats'
 alias ipython='ipython3'
 alias fd='fdfind'
+export PATH="$PATH:/home/alex/.local/bin"
