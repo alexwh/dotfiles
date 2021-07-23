@@ -102,9 +102,6 @@
     path = dotbot_plugin_aptget
     url = https://github.com/dein0s/dotbot_plugin_aptget
     shallow = true
-[submodule "vim/bundle/vim-fakeclip"]
-	path = vim/bundle/vim-fakeclip
-	url = https://github.com/kana/vim-fakeclip
 [submodule "zsh/zsh-autosuggestions"]
 	path = zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
