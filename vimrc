@@ -96,15 +96,15 @@ nmap <silent> <leader>l :set nu!<cr>:set rnu!<cr>:set list!<cr>
 nmap <silent> <leader>u :UndotreeToggle<cr>
 
 " fast system clipboard pastes
-vmap <leader>y <Plug>(fakeclip-y)
-vmap <leader>d <Plug>(fakeclip-d)
-vmap <leader>p <Plug>(fakeclip-p)
-vmap <leader>P <Plug>(fakeclip-P)
-nmap <leader>p <Plug>(fakeclip-p)
-nmap <leader>P <Plug>(fakeclip-P)
-nmap <leader>Y <Plug>(fakeclip-Y)
-nmap <leader>yy <Plug>(fakeclip-Y)
-nmap <leader>dd <Plug>(fakeclip-D)
+vmap <leader>y "+y
+vmap <leader>d "+d
+vmap <leader>p "+p
+vmap <leader>P "+P
+nmap <leader>p "+p
+nmap <leader>P "+P
+nmap <leader>Y "+Y
+nmap <leader>yy "+yy
+nmap <leader>dd "+dd
 
 " vim-easy-align plug binds
 vmap <enter> <plug>(EasyAlign)
