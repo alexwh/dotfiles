@@ -5,9 +5,9 @@
     - unzip-natspec
     - whatmp3
     - zip-natspec
+    - rar
 - pacman:
     - atool
-    - bat
     - bc
     - bind-tools
     - di
@@ -36,7 +36,6 @@
     - pv
     - python-black
     - ranger
-    - rar
     - reflector
     - ripgrep
     - rsync
@@ -49,3 +48,16 @@
     - vnstat
     - wget
     - zsh
+    - arch-audit
+    - aria2
+    - binwalk
+    - id3v2
+    - jq
+    - mediainfo
+    - openbsd-netcat
+    - pngcrush
+    - radare2
+    - recode
+    - sshfs
+    - wireguard-tools
+    - youtube-dl
