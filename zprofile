@@ -1,5 +1,5 @@
 export BROWSER=firefox
-export EDITOR=vim
+export EDITOR=nvim
 export TERMINAL=termite
 
 export PATH="$PATH:$HOME/bin"
