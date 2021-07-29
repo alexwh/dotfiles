@@ -105,3 +105,12 @@
 [submodule "zsh/zsh-autosuggestions"]
 	path = zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "vim/bundle/telescope.nvim"]
+	path = vim/bundle/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+[submodule "vim/bundle/popup.nvim"]
+	path = vim/bundle/popup.nvim
+	url = https://github.com/nvim-lua/popup.nvim
+[submodule "vim/bundle/plenary.nvim"]
+	path = vim/bundle/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim

@@ -117,6 +117,10 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " vim-vinegar style ranger.vim map
 nnoremap - :RangerWorkingDirectory<cr>
 
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+
 " autocmds
 augroup reloadvimrc
     au!
