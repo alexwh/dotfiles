@@ -2,14 +2,9 @@ alias s='sudo '
 alias se='sudo -e'
 alias si='sudo -i'
 
-alias mrm='mpc del $(mpc -f %position% | head -1)'
-alias ncmpc='ncmpcpp'
-
 alias ls='ls -hX --color=auto'
-if [[ $(command -v bat) ]];then
-    alias cat='bat'
-fi
 if [[ $(command -v nvim) ]];then
+    alias vi='nvim'
     alias vim='nvim'
 fi
 alias grep='grep --color=auto'
@@ -23,8 +18,6 @@ alias top='htop'
 alias sxiv='sxiv -a '
 alias sx='sxiv -tfq '
 alias ex='unar'
-alias udu='udiskie-umount -a'
-alias wsk='wineserver -k'
 alias objdump='objdump -M intel'
 alias ip='ip --color --brief'
 
@@ -33,20 +26,12 @@ alias xc='xclip'
 alias rsync='rsync --info=progress2 --stats -hP'
 alias hd='hexdump'
 alias rg='ranger'
-alias ag='\rg'
+alias ag='\rg' # ripgrep
 
-alias ffp='firefox -P private -new-instance --class="private" &> /dev/null &'
 alias cf='wget -O /dev/null cachefly.cachefly.net/100mb.test'
-alias tombe='tomb open ~/sync/safe/e -k ~/.tomb/e.key'
-alias ovpn='sudo openvpn --cd ~/.openvpn --config client.conf'
-alias s3up='aws s3 cp --acl public-read --storage-class REDUCED_REDUNDANCY'
 
 alias sctl='sudo systemctl'
 alias sctlu='systemctl --user'
-
-alias ubc='sudo unbound-control'
-alias ubcr='sudo unbound-control reload'
-alias nh='sudo nethogs'
 
 alias orphans='sudo pacman -Rs $(pacman -Qdtq)'
 alias pac='pacman'
@@ -58,7 +43,3 @@ alias pacse='pacman -Ss'
 alias pakin='yay -S'
 alias pakup='yay -Syu'
 alias pakse='yay -Ssa'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
