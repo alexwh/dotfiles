@@ -27,6 +27,7 @@ alias rsync='rsync --info=progress2 --stats -hP'
 alias hd='hexdump'
 alias rg='ranger'
 alias ag='\rg' # ripgrep
+alias ncdu='gdu'
 
 alias cf='wget -O /dev/null cachefly.cachefly.net/100mb.test'
 

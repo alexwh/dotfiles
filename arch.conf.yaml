@@ -6,6 +6,7 @@
     - whatmp3
     - zip-natspec
     - rar
+    - gdu-bin
 - pacman:
     - atool
     - bc
