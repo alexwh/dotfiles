@@ -10,7 +10,7 @@ fi
 alias grep='grep --color=auto'
 alias cp='cp --reflink=auto'
 alias dc='cd'
-alias ffmpeg='ffmpeg -hide_banner'
+alias ffmpeg='ffmpeg -hide_banner -loglevel fatal'
 alias bc='bc -qil'
 alias df='di -x tmpfs -f sMbuvpT'
 alias mkdir='mkdir -p -v'
