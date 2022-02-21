@@ -12,7 +12,6 @@
     - atool
     - bc
     - bind-tools
-    - di
     - docker
     - dos2unix
     - fd
@@ -63,3 +62,4 @@
     - sshfs
     - wireguard-tools
     - youtube-dl
+    - lfs
