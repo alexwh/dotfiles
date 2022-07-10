@@ -29,7 +29,7 @@ alias rg='ranger'
 alias ag='\rg' # ripgrep
 alias ncdu='gdu'
 
-alias cf='wget -O /dev/null cachefly.cachefly.net/100mb.test'
+alias cf='wget -O /dev/null https://speedtest.wtnet.de/files/1000mb.bin'
 
 alias sctl='sudo systemctl'
 alias sctlu='systemctl --user'
