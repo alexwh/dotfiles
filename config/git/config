@@ -5,6 +5,7 @@
     name = Alex W
 [push]
     default = simple
+	autoSetupRemote = true
 [commit]
     verbose = 2
 [alias]
