@@ -16,7 +16,4 @@ source ~/.zsh/functions.zsh
 [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]] && source /usr/share/doc/fzf/examples/key-bindings.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-if [[ $(command -v zoxide) ]];then
-    eval "$(zoxide init zsh --cmd cd)"
-fi
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
