@@ -24,6 +24,7 @@ alias ip='ip --color --brief'
 alias xclip='xclip -selection clipboard '
 alias xc='xclip'
 alias rsync='rsync --info=progress2 --stats -hP'
+alias hexdump='hexyl '
 alias hd='hexdump'
 alias rg='ranger'
 alias ag='\rg' # ripgrep

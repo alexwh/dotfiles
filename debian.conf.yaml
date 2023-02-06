@@ -45,6 +45,7 @@
     - wget
     - zip
     - zsh
+    - hexyl
 
 - shell:
     - apt-file update
