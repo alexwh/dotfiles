@@ -2,7 +2,8 @@ alias s='sudo '
 alias se='sudo -e'
 alias si='sudo -i'
 
-alias ls='ls -hX --color=auto'
+alias ls='exa -s extension --git'
+alias latr='exa -lastime --git'
 if [[ $(command -v nvim) ]];then
     alias vi='nvim'
     alias vim='nvim'

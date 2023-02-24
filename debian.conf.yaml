@@ -46,6 +46,7 @@
     - zip
     - zsh
     - hexyl
+    - exa
 
 - shell:
     - apt-file update
