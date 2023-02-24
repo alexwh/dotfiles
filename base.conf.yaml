@@ -33,6 +33,5 @@
     - cargo install fd-find
     - cargo install lfs
     - cargo install hexyl
-    - cargo install starship
     - cargo install cargo-update
     - cargo install-update -a
