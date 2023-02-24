@@ -14,7 +14,6 @@
     - curl
     - di
     - dos2unix
-    - fd-find
     - fdupes
     - fzf
     - hdparm
@@ -32,7 +31,6 @@
     - psmisc
     - pv
     - ranger
-    - ripgrep
     - rsync
     - socat
     - strace
@@ -45,7 +43,6 @@
     - zip
     - zsh
     - hexyl
-    - exa
 
 - shell:
     - apt-file update

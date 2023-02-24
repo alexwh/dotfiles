@@ -12,7 +12,6 @@
     - bind-tools
     - docker
     - dos2unix
-    - fd
     - fdupes
     - fzf
     - hdparm
@@ -35,7 +34,6 @@
     - python-black
     - ranger
     - reflector
-    - ripgrep
     - rsync
     - socat
     - strace
@@ -59,7 +57,4 @@
     - sshfs
     - wireguard-tools
     - yt-dlp
-    - lfs
     - hexyl
-    - exa
-    - dust
