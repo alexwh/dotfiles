@@ -42,7 +42,6 @@
     - wget
     - zip
     - zsh
-    - hexyl
     - build-essential
 
 - shell:
