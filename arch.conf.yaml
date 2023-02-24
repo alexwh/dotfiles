@@ -6,6 +6,7 @@
     - zip-natspec
     - rar
     - gdu-bin
+    - yt-dlp-drop-in
 - pacman:
     - atool
     - bc
@@ -59,6 +60,6 @@
     - recode
     - sshfs
     - wireguard-tools
-    - youtube-dl
+    - yt-dlp
     - lfs
     - hexyl
