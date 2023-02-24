@@ -43,6 +43,7 @@
     - zip
     - zsh
     - hexyl
+    - build-essential
 
 - shell:
     - apt-file update
