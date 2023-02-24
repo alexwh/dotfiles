@@ -3,7 +3,6 @@
     - systemd-boot-pacman-hook
     - unzip-natspec
     - whatmp3
-    - zip-natspec
     - rar
     - gdu-bin
     - yt-dlp-drop-in
