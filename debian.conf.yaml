@@ -7,6 +7,9 @@
     - apt install python3-apt
 
 - aptget:
+    - build-essential
+    - pkg-config
+    - libssl-dev
     - atool
     - bc
     - black
@@ -42,7 +45,6 @@
     - wget
     - zip
     - zsh
-    - build-essential
 
 - shell:
     - apt-file update
