@@ -1,7 +1,6 @@
 - yay:
     - pacman-cleanup-hook
     - systemd-boot-pacman-hook
-    - sxiv-rifle
     - unzip-natspec
     - whatmp3
     - zip-natspec
