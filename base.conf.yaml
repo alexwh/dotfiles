@@ -26,7 +26,6 @@
 - shell:
     - git subup
     - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --component rust-src
-    - cargo install nu --features=dataframe
     - cargo install exa
     - cargo install du-dust
     - cargo install ripgrep
