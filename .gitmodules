@@ -114,3 +114,27 @@
 [submodule "vim/bundle/plenary.nvim"]
 	path = vim/bundle/plenary.nvim
 	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "vim/bundle/nvim-treesitter"]
+	path = vim/bundle/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "vim/bundle/lsp-zero.nvim"]
+	path = vim/bundle/lsp-zero.nvim
+	url = https://github.com/VonHeikemen/lsp-zero.nvim
+[submodule "vim/bundle/nvim-lspconfig"]
+	path = vim/bundle/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig
+[submodule "vim/bundle/mason.nvim"]
+	path = vim/bundle/mason.nvim
+	url = https://github.com/williamboman/mason.nvim
+[submodule "vim/bundle/mason-lspconfig.nvim"]
+	path = vim/bundle/mason-lspconfig.nvim
+	url = https://github.com/williamboman/mason-lspconfig.nvim
+[submodule "vim/bundle/nvim-cmp"]
+	path = vim/bundle/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp
+[submodule "vim/bundle/cmp-nvim-lsp"]
+	path = vim/bundle/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp
+[submodule "vim/bundle/LuaSnip"]
+	path = vim/bundle/LuaSnip
+	url = https://github.com/L3MON4D3/LuaSnip

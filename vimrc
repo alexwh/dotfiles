@@ -79,6 +79,9 @@ inoremap <f1> <esc>
 nnoremap <f1> <esc>
 vnoremap <f1> <esc>
 
+vnoremap J :m '>+1<CR>gv=gv'
+vnoremap K :m '<-2<CR>gv=gv'
+
 " ex mode is useless, map it to something useful
 map Q @q
 nnoremap Y y$
@@ -120,6 +123,7 @@ nnoremap - :RangerWorkingDirectory<cr>
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <C-p> <cmd>Telescope git_files<cr>
 
 " autocmds
 augroup reloadvimrc
@@ -186,4 +190,9 @@ if has('gui_running')
     set guifont=Liberation\ Mono\ for\ Powerline\ 11
 
     set cursorline
+endif
+
+if has("nvim")
+    lua require('treesitter')
+    lua require('lsp')
 endif
