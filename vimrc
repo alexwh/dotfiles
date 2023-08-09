@@ -30,7 +30,6 @@ set showcmd
 set ttyfast
 set number
 set relativenumber
-set mouse=
 set noruler
 set lazyredraw
 set list
@@ -70,7 +69,6 @@ inoremap <up>    <nop>
 inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
-
 
 inoremap <f1> <esc>
 nnoremap <f1> <esc>
