@@ -1,3 +1,4 @@
 if [[ $USER = "alex" && -n $DISPLAY ]];then
     eval $(keychain --eval --agents ssh -Q --quiet --systemd)
 fi
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
