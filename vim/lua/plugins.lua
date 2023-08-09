@@ -12,6 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup {
+  checker = {
+    enabled = true,
+  },
   -- the colorscheme should be available when starting Neovim
   {"morhetz/gruvbox",
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
