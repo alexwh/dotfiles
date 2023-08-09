@@ -25,3 +25,6 @@
 [submodule "zsh/zsh-autosuggestions"]
 	path = zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "config/kitty/kitty-themes"]
+	path = config/kitty/kitty-themes
+	url = https://github.com/dexpota/kitty-themes.git
