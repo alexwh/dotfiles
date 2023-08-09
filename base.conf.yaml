@@ -28,12 +28,12 @@
     - nvim --headless "+Lazy! sync" +qa
     - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --component rust-src,rust-analyzer
     - curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
-    - cargo binstall exa
-    - cargo binstall du-dust
-    - cargo binstall ripgrep
-    - cargo binstall fd-find
-    - cargo binstall lfs
-    - cargo binstall hexyl
-    - cargo binstall bottom
-    - cargo binstall cargo-update
+    - cargo binstall -y exa
+    - cargo binstall -y du-dust
+    - cargo binstall -y ripgrep
+    - cargo binstall -y fd-find
+    - cargo binstall -y lfs
+    - cargo binstall -y hexyl
+    - cargo binstall -y bottom
+    - cargo binstall -y cargo-update
     - cargo install-update -a
