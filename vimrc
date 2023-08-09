@@ -116,6 +116,10 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <C-p> <cmd>Telescope git_files<cr>
 
+nnoremap <leader>ds <cmd>Gdiff<cr>
+nnoremap <leader>gc <cmd>Git commit<cr>
+nnoremap <leader>gp <cmd>Git push<cr>
+
 " autocmds
 augroup reloadvimrc
     au!
