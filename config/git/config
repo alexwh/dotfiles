@@ -7,7 +7,7 @@
     default = simple
 	autoSetupRemote = true
 [commit]
-    verbose = 2
+    verbose = 1
 [alias]
     s       = status -s
     st      = status -s
