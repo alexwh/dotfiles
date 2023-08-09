@@ -124,6 +124,9 @@ nnoremap <leader>gp <cmd>Git push<cr>
 augroup reloadvimrc
     au!
     au BufWritePost .vimrc source $MYVIMRC
+    au BufWritePost vimrc source $MYVIMRC
+    au BufWritePost init.vim source $MYVIMRC
+    au BufWritePost init.nvim source $MYVIMRC
 augroup END
 
 augroup notmpundos

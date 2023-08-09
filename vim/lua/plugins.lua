@@ -137,9 +137,10 @@ require("lazy").setup {
   },
   "saadparwaiz1/cmp_luasnip",
 
+  {'numToStr/Comment.nvim', lazy = false, opts = {}},
+
   "tpope/vim-unimpaired",
   "tpope/vim-surround",
-  "tpope/vim-commentary",
   "tpope/vim-repeat",
   "tpope/vim-speeddating",
   "tpope/vim-eunuch",
