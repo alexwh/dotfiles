@@ -135,13 +135,6 @@ augroup notmpundos
     au BufReadPre /dev/shm/* set noundofile
 augroup END
 
-" tpope style markdown runtime detection
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
-" gofmt enforces tabs
-autocmd BufNewFile,BufReadPost *.go set noexpandtab
-
-
 " change xterm cursor style depending on mode
 " insert mode, blinking thin line cursor
 let &t_SI = "\e[5 q"
