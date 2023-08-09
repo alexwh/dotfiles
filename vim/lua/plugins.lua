@@ -115,6 +115,8 @@ require("lazy").setup {
     }
   },
 
+  {"j-hui/fidget.nvim", tag = "legacy", event = "LspAttach"},
+
   {"L3MON4D3/LuaSnip",
     dependencies = {"rafamadriz/friendly-snippets"}
   },
