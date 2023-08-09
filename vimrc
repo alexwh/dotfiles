@@ -1,6 +1,3 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
 " general options
 filetype plugin indent on
 syntax on
@@ -25,8 +22,8 @@ set ttimeout
 set ttimeoutlen=50
 
 " graphical options
-colorscheme gruvbox
 set background=dark
+set termguicolors
 set scrolloff=5
 set showmode
 set showcmd
@@ -149,16 +146,6 @@ let &t_SI = "\e[5 q"
 " normal mode, block cursor
 let &t_EI = "\e[2 q"
 
-" plugin settings
-let g:airline_powerline_fonts = 1
-function! AirlineThemePatch(palette)
-    let a:palette.normal.airline_a   = [ '#ffffff', '#268bd2', 255, 33 ]
-    let a:palette.insert.airline_a   = [ '#ffffff', '#859900', 255, 64 ]
-endfunction
-let g:airline_theme_patch_func = 'AirlineThemePatch'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#ale#enabled = 1
-
 let g:ranger_replace_netrw = 1
 
 " gui settings
@@ -177,6 +164,6 @@ if has('gui_running')
 endif
 
 if has("nvim")
-    lua require('treesitter')
+    lua require('plugins')
     lua require('lsp')
 endif

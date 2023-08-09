@@ -2,46 +2,6 @@
     path = dotbot
     url = https://github.com/anishathalye/dotbot
     shallow = true
-[submodule "vim/bundle/vim-unimpaired"]
-    path = vim/bundle/vim-unimpaired
-    url = https://github.com/tpope/vim-unimpaired.git
-    shallow = true
-[submodule "vim/bundle/vim-surround"]
-    path = vim/bundle/vim-surround
-    url = https://github.com/tpope/vim-surround.git
-    shallow = true
-[submodule "vim/bundle/vim-commentary"]
-    path = vim/bundle/vim-commentary
-    url = https://github.com/tpope/vim-commentary.git
-    shallow = true
-[submodule "vim/bundle/vim-repeat"]
-    path = vim/bundle/vim-repeat
-    url = https://github.com/tpope/vim-repeat.git
-    shallow = true
-[submodule "vim/bundle/vim-easy-align"]
-    path = vim/bundle/vim-easy-align
-    url = https://github.com/junegunn/vim-easy-align.git
-    shallow = true
-[submodule "vim/bundle/vim-pathogen"]
-    path = vim/bundle/vim-pathogen
-    url = https://github.com/tpope/vim-pathogen.git
-    shallow = true
-[submodule "vim/bundle/vim-speeddating"]
-    path = vim/bundle/vim-speeddating
-    url = https://github.com/tpope/vim-speeddating.git
-    shallow = true
-[submodule "vim/bundle/vim-eunuch"]
-    path = vim/bundle/vim-eunuch
-    url = https://github.com/tpope/vim-eunuch.git
-    shallow = true
-[submodule "vim/bundle/vim-vinegar"]
-    path = vim/bundle/vim-vinegar
-    url = https://github.com/tpope/vim-vinegar.git
-    shallow = true
-[submodule "vim/bundle/vim-fugitive"]
-    path = vim/bundle/vim-fugitive
-    url = https://github.com/tpope/vim-fugitive.git
-    shallow = true
 [submodule "zsh/pure"]
     path = zsh/pure
     url = https://github.com/sindresorhus/pure.git
@@ -50,49 +10,9 @@
     path = zsh/zsh-syntax-highlighting
     url = https://github.com/zsh-users/zsh-syntax-highlighting.git
     shallow = true
-[submodule "vim/bundle/vim-airline"]
-    path = vim/bundle/vim-airline
-    url = https://github.com/bling/vim-airline
-    shallow = true
-[submodule "vim/bundle/undotree"]
-    path = vim/bundle/undotree
-    url = https://github.com/mbbill/undotree.git
-    shallow = true
-[submodule "vim/bundle/vim-exchange"]
-    path = vim/bundle/vim-exchange
-    url = https://github.com/tommcdo/vim-exchange.git
-    shallow = true
 [submodule "config/mpv/scripts/25ea7ae77b30af959be0"]
     path = config/mpv/scripts/25ea7ae77b30af959be0
     url = https://gist.github.com/25ea7ae77b30af959be0.git
-    shallow = true
-[submodule "vim/bundle/gruvbox"]
-    path = vim/bundle/gruvbox
-    url = https://github.com/morhetz/gruvbox.git
-    shallow = true
-[submodule "vim/bundle/vim-flake8"]
-    path = vim/bundle/vim-flake8
-    url = https://github.com/nvie/vim-flake8
-    shallow = true
-[submodule "vim/bundle/targets.vim"]
-    path = vim/bundle/targets.vim
-    url = https://github.com/wellle/targets.vim
-    shallow = true
-[submodule "vim/bundle/ranger.vim"]
-    path = vim/bundle/ranger.vim
-    url = https://github.com/francoiscabrol/ranger.vim.git
-    shallow = true
-[submodule "vim/bundle/ale"]
-    path = vim/bundle/ale
-    url = https://github.com/w0rp/ale
-    shallow = true
-[submodule "vim/bundle/vim-colors-solarized"]
-    path = vim/bundle/vim-colors-solarized
-    url = https://github.com/altercation/vim-colors-solarized
-    shallow = true
-[submodule "vim/bundle/bclose.vim"]
-    path = vim/bundle/bclose.vim
-    url = https://github.com/rbgrouleff/bclose.vim
     shallow = true
 [submodule "dotbot-yay"]
     path = dotbot-yay
@@ -105,42 +25,3 @@
 [submodule "zsh/zsh-autosuggestions"]
 	path = zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "vim/bundle/telescope.nvim"]
-	path = vim/bundle/telescope.nvim
-	url = https://github.com/nvim-telescope/telescope.nvim
-[submodule "vim/bundle/popup.nvim"]
-	path = vim/bundle/popup.nvim
-	url = https://github.com/nvim-lua/popup.nvim
-[submodule "vim/bundle/plenary.nvim"]
-	path = vim/bundle/plenary.nvim
-	url = https://github.com/nvim-lua/plenary.nvim
-[submodule "vim/bundle/nvim-treesitter"]
-	path = vim/bundle/nvim-treesitter
-	url = https://github.com/nvim-treesitter/nvim-treesitter
-[submodule "vim/bundle/lsp-zero.nvim"]
-	path = vim/bundle/lsp-zero.nvim
-	url = https://github.com/VonHeikemen/lsp-zero.nvim
-[submodule "vim/bundle/nvim-lspconfig"]
-	path = vim/bundle/nvim-lspconfig
-	url = https://github.com/neovim/nvim-lspconfig
-[submodule "vim/bundle/mason.nvim"]
-	path = vim/bundle/mason.nvim
-	url = https://github.com/williamboman/mason.nvim
-[submodule "vim/bundle/mason-lspconfig.nvim"]
-	path = vim/bundle/mason-lspconfig.nvim
-	url = https://github.com/williamboman/mason-lspconfig.nvim
-[submodule "vim/bundle/nvim-cmp"]
-	path = vim/bundle/nvim-cmp
-	url = https://github.com/hrsh7th/nvim-cmp
-[submodule "vim/bundle/cmp-nvim-lsp"]
-	path = vim/bundle/cmp-nvim-lsp
-	url = https://github.com/hrsh7th/cmp-nvim-lsp
-[submodule "vim/bundle/LuaSnip"]
-	path = vim/bundle/LuaSnip
-	url = https://github.com/L3MON4D3/LuaSnip
-[submodule "vim/bundle/friendly-snippets"]
-	path = vim/bundle/friendly-snippets
-	url = https://github.com/rafamadriz/friendly-snippets
-[submodule "vim/bundle/cmp_luasnip"]
-	path = vim/bundle/cmp_luasnip
-	url = https://github.com/saadparwaiz1/cmp_luasnip
