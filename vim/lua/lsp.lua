@@ -1,6 +1,18 @@
 local lsp = require('lsp-zero')
 lsp.preset("recommended")
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+local lspconfig = require('lspconfig')
+lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+lspconfig.yamlls.setup({
+  schemaStore = {
+    url = "https://www.schemastore.org/api/json/catalog.json",
+    enable = true,
+  },
+  schemas = {
+    ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
+    ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.0/all.json"] = "k8s/**",
+  },
+})
+
 lsp.setup()
 
 -- Make sure you setup `cmp` after lsp-zero
