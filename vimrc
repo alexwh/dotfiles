@@ -111,7 +111,7 @@ nnoremap <C-p> <cmd>Telescope git_files<cr>
 nnoremap <leader>ds <cmd>Gdiff<cr>
 nnoremap <leader>gc <cmd>Git commit --quiet<cr>
 nnoremap <leader>gp <cmd>Git push --quiet<cr>
-nnoremap <leader>gb <cmd>GBrowse<cr>
+nnoremap <leader>gb <cmd>.GBrowse<cr>
 
 " autocmds
 augroup reloadvimrc
