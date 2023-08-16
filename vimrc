@@ -147,6 +147,19 @@ let &t_EI = "\e[2 q"
 
 let g:ranger_replace_netrw = 1
 
+function! IsWSL()
+    if has("linux")
+        let lines = readfile("/proc/version")
+        if lines[0] =~ "Microsoft"
+            return 1
+        endif
+    endif
+endfunction
+
+if IsWSL()
+    let g:netrw_browsex_viewer = "firefox.exe"
+endif
+
 " gui settings
 if has('gui_running')
     set guicursor+=a:blinkon0 " cursor doesn't blink
