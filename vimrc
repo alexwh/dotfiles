@@ -55,11 +55,6 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-
-" larger movements
-map <c-l> g_
-map <c-h> ^
-
 nnoremap <up>     <c-y>
 nnoremap <down>   <c-e>
 nnoremap <silent> <left>  :bprev<cr>
@@ -73,9 +68,6 @@ inoremap <right> <nop>
 inoremap <f1> <esc>
 nnoremap <f1> <esc>
 vnoremap <f1> <esc>
-
-vnoremap J :m '>+1<CR>gv=gv'
-vnoremap K :m '<-2<CR>gv=gv'
 
 " ex mode is useless, map it to something useful
 map Q @q
