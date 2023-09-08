@@ -56,4 +56,5 @@
     - recode
     - sshfs
     - wireguard-tools
+    - yaml-language-server
     - yt-dlp
