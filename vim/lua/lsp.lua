@@ -12,6 +12,17 @@ lspconfig.yamlls.setup({
     ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.0/all.json"] = "k8s/**",
   },
 })
+lspconfig.pylsp.setup{
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {"E226","E302","E501","E111","E114","E221","E241","E305"}
+        }
+      }
+    }
+  }
+}
 
 lsp.setup()
 
