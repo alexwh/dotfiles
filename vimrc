@@ -86,6 +86,7 @@ nmap <silent> <leader>l :set nu!<cr>:set rnu!<cr>:set list!<cr>
 nmap <silent> <leader>u :UndotreeToggle<cr>
 
 " fast system clipboard pastes
+vmap <cs-C> "+y
 vmap <leader>y "+y
 vmap <leader>d "+d
 vmap <leader>p "+p
