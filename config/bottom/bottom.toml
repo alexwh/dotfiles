@@ -68,7 +68,7 @@ show_table_scroll_position = true
 # Displays the network widget with binary prefixes.
 #network_use_binary_prefix = false
 # Displays the network widget using bytes.
-#network_use_bytes = false
+network_use_bytes = true
 # Displays the network widget with a log scale.
 #network_use_log = false
 # Hides advanced options to stop a process on Unix-like systems.
