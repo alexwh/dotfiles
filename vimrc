@@ -20,6 +20,7 @@ set nojoinspaces
 " timeout on keybindings can be low
 set ttimeout
 set ttimeoutlen=50
+set mouse=n
 
 " graphical options
 set background=dark
