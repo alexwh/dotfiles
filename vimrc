@@ -61,6 +61,8 @@ nnoremap <down>   <c-e>
 nnoremap <silent> <left>  :bprev<cr>
 nnoremap <silent> <right> :bnext<cr>
 
+nnoremap <silent> ZZ :xa<cr>
+
 inoremap <up>    <nop>
 inoremap <down>  <nop>
 inoremap <left>  <nop>
