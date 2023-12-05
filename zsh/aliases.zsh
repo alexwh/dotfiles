@@ -21,6 +21,7 @@ alias sx='sxiv -tfq '
 alias ex='unar'
 alias objdump='objdump -M intel'
 alias ip='ip --color --brief'
+alias fd='fd -u'
 
 alias xclip='xclip -selection clipboard '
 alias xc='xclip'
