@@ -4,6 +4,7 @@ zmodload zsh/complist
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors '' # use ls colors
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' file-sort modification
 
 compdef -d mpv
 
