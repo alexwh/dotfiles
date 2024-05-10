@@ -11,6 +11,7 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
 unsetopt flowcontrol
+unsetopt nomatch
 
 # for wting/autojump#474
 unsetopt bg_nice
