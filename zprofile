@@ -2,7 +2,7 @@ export BROWSER=firefox
 export EDITOR=nvim
 export TERMINAL=termite
 
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 if command -v go 2>&1 > /dev/null;then
     export GOPATH=$(go env GOPATH)
     export PATH="$PATH:$GOPATH/bin"
