@@ -15,7 +15,7 @@ alias ffmpeg='ffmpeg -hide_banner -loglevel warning -stats'
 alias bc='bc -qil'
 alias df='lfs'
 alias mkdir='mkdir -p -v'
-alias top='btm'
+alias top='htop'
 alias sxiv='sxiv -a '
 alias sx='sxiv -tfq '
 alias ex='unar'
@@ -30,7 +30,7 @@ alias hexdump='hexyl '
 alias hd='hexdump'
 alias rg='ranger'
 alias ag='\rg -uu' # ripgrep
-alias du='dust'
+alias du='ncdu'
 
 alias cf='wget -O /dev/null https://speedtest.wtnet.de/files/1000mb.bin'
 
