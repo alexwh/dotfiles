@@ -1,27 +1,18 @@
 [submodule "dotbot"]
     path = dotbot
     url = https://github.com/anishathalye/dotbot
-    shallow = true
 [submodule "zsh/pure"]
     path = zsh/pure
     url = https://github.com/sindresorhus/pure.git
-    shallow = true
 [submodule "zsh/zsh-syntax-highlighting"]
     path = zsh/zsh-syntax-highlighting
     url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-    shallow = true
 [submodule "config/mpv/scripts/25ea7ae77b30af959be0"]
     path = config/mpv/scripts/25ea7ae77b30af959be0
     url = https://gist.github.com/25ea7ae77b30af959be0.git
-    shallow = true
 [submodule "dotbot-yay"]
     path = dotbot-yay
     url = https://github.com/alexwh/dotbot-yay
-    shallow = true
-[submodule "dotbot_plugin_aptget"]
-    path = dotbot_plugin_aptget
-    url = https://github.com/dein0s/dotbot_plugin_aptget
-    shallow = true
 [submodule "zsh/zsh-autosuggestions"]
 	path = zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
