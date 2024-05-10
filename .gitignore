@@ -3,6 +3,7 @@ vim/undo
 vim/.netrwhist
 
 config/mpv/watch_later
+config/mpv/shaders
 
 config/ranger/history
 config/ranger/bookmarks

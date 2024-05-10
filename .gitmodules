@@ -16,3 +16,6 @@
 [submodule "zsh/zsh-autosuggestions"]
 	path = zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "config/mpv/scripts/mpv-youtube-chat"]
+	path = config/mpv/scripts/mpv-youtube-chat
+	url = https://github.com/BanchouBoo/mpv-youtube-chat
