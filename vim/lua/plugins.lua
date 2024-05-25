@@ -25,14 +25,6 @@ require("lazy").setup {
     end,
   },
 
-  {"folke/which-key.nvim", event = "VeryLazy",
-    init = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-    end,
-    opts = { }
-  },
-
   {"folke/neoconf.nvim", cmd = "Neoconf"},
 
   "folke/neodev.nvim",
@@ -157,5 +149,4 @@ require("lazy").setup {
   "mbbill/undotree",
   "tommcdo/vim-exchange",
   "wellle/targets.vim",
-  "francoiscabrol/ranger.vim",
 }
