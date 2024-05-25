@@ -108,8 +108,8 @@ nmap <leader>a <plug>(EasyAlign)
 nnoremap - :RangerWorkingDirectory<cr>
 
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>f <cmd>Telescope find_files<cr>
+nnoremap <leader>g <cmd>Telescope live_grep<cr>
 nnoremap <C-p> <cmd>Telescope git_files<cr>
 
 nnoremap <leader>ds <cmd>Gdiff<cr>
