@@ -24,5 +24,8 @@ weechat/script
 bin/scpupload.sh
 
 docker/.buildNodeID
+docker/.token_seed
+docker/.token_seed.lock
+docker/buildx/
 
 ipython/profile_default/history.sqlite
