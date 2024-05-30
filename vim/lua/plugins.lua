@@ -141,6 +141,7 @@ require("lazy").setup {
         search = { enabled = true, },
       },
       label = {
+        style = "inline",
         rainbow = { enabled = true, },
       },
     },
@@ -153,21 +154,43 @@ require("lazy").setup {
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
   },
+
+  -- use opts = true to call setup()
+  { 'echasnovski/mini.ai',          version = false, opts = true },
+  { 'echasnovski/mini.align',       version = false, opts = true },
+  { 'echasnovski/mini.comment',     version = false, opts = {
+    options = {
+      ignore_blank_line = true,
+  }}},
+  { 'echasnovski/mini.extra',       version = false, opts = true },
+  { 'echasnovski/mini.files',       version = false,
+    opts = {
+      windows = { preview = true }
+    },
+    keys = {
+      --  open directory of current file (in a last used state) with focus on that file.
+      { "-", function() require("mini.files").open(vim.api.nvim_buf_get_name(0)) end }
+    },
+  },
+  { 'echasnovski/mini.indentscope', version = false, opts = {
+    draw = {
+      animation = function() return 10 end,
+    },
+    symbol = '┃',
+  }},
+  { 'echasnovski/mini.move',        version = false, opts = true },
+  { 'echasnovski/mini.operators',   version = false, opts = { evaluate = { prefix = '' } } },
+  { 'echasnovski/mini.splitjoin',   version = false, opts = true },
+  { 'echasnovski/mini.surround',    version = false, opts = true },
+  { 'echasnovski/mini.visits',      version = false, opts = true },
+
+
   "saadparwaiz1/cmp_luasnip",
-
-  {'numToStr/Comment.nvim', lazy = false, opts = {}},
-
-  "tpope/vim-unimpaired",
-  "tpope/vim-surround",
   "tpope/vim-repeat",
   "tpope/vim-speeddating",
-  "tpope/vim-eunuch",
   "tpope/vim-sleuth",
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
   "shumphrey/fugitive-gitlab.vim",
-  "junegunn/vim-easy-align",
   "mbbill/undotree",
-  "tommcdo/vim-exchange",
-  "wellle/targets.vim",
 }

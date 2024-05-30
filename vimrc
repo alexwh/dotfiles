@@ -104,9 +104,6 @@ nmap <leader>dd "+dd
 vmap <enter> <plug>(EasyAlign)
 nmap <leader>a <plug>(EasyAlign)
 
-" vim-vinegar style ranger.vim map
-nnoremap - :RangerWorkingDirectory<cr>
-
 " Find files using Telescope command-line sugar.
 nnoremap <leader>f <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
@@ -140,8 +137,6 @@ augroup END
 let &t_SI = "\e[5 q"
 " normal mode, block cursor
 let &t_EI = "\e[2 q"
-
-let g:ranger_replace_netrw = 1
 
 function! IsWSL()
     if has("linux")
