@@ -132,8 +132,7 @@ require("lazy").setup {
       }
     end
   },
-  {
-    "folke/flash.nvim",
+  {"folke/flash.nvim",
     event = "VeryLazy",
     ---@type Flash.Config
     opts = {
@@ -163,15 +162,9 @@ require("lazy").setup {
       ignore_blank_line = true,
   }}},
   { 'echasnovski/mini.extra',       version = false, opts = true },
-  { 'echasnovski/mini.files',       version = false,
-    opts = {
-      windows = { preview = true }
-    },
-    keys = {
-      --  open directory of current file (in a last used state) with focus on that file.
-      { "-", function() require("mini.files").open(vim.api.nvim_buf_get_name(0)) end }
-    },
-  },
+  { 'echasnovski/mini.files',       version = false, opts = {
+      windows = { preview = true },
+  }},
   { 'echasnovski/mini.indentscope', version = false, opts = {
     draw = {
       animation = function() return 10 end,

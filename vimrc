@@ -100,10 +100,6 @@ nmap <leader>Y "+Y
 nmap <leader>yy "+yy
 nmap <leader>dd "+dd
 
-" vim-easy-align plug binds
-vmap <enter> <plug>(EasyAlign)
-nmap <leader>a <plug>(EasyAlign)
-
 " Find files using Telescope command-line sugar.
 nnoremap <leader>f <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
@@ -113,6 +109,9 @@ nnoremap <leader>ds <cmd>Gdiff<cr>
 nnoremap <leader>gc <cmd>Git commit --quiet<cr>
 nnoremap <leader>gp <cmd>Git push --quiet<cr>
 nnoremap <leader>gb <cmd>.GBrowse<cr>
+
+" open directory of current file (in a last used state) with focus on that file.
+nnoremap - <cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<cr>
 
 " autocmds
 augroup reloadvimrc
