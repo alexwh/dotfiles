@@ -43,6 +43,7 @@ alias pacup='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
 alias pacrm='sudo pacman -Rns'
 alias pacse='pacman -Ss'
+alias paco='pacman -Qoq $(which $*)'
 
 alias pakin='yay -S'
 alias pakup='yay -Syu'
