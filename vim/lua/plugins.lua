@@ -161,7 +161,6 @@ require("lazy").setup {
     options = {
       ignore_blank_line = true,
   }}},
-  { 'echasnovski/mini.extra',       version = false, opts = true },
   { 'echasnovski/mini.files',       version = false, opts = {
       windows = { preview = true },
   }},
@@ -175,7 +174,6 @@ require("lazy").setup {
   { 'echasnovski/mini.operators',   version = false, opts = { evaluate = { prefix = '' } } },
   { 'echasnovski/mini.splitjoin',   version = false, opts = true },
   { 'echasnovski/mini.surround',    version = false, opts = true },
-  { 'echasnovski/mini.visits',      version = false, opts = true },
 
 
   "saadparwaiz1/cmp_luasnip",
