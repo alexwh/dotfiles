@@ -182,6 +182,7 @@ require("lazy").setup {
   "tpope/vim-sleuth",
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
+  "tpope/vim-unimpaired",
   "shumphrey/fugitive-gitlab.vim",
   "mbbill/undotree",
 }
