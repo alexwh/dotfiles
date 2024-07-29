@@ -20,7 +20,7 @@
     subup   = submodule update --init --recursive
     subpull = submodule update --init --remote
     blame   = blame -w -C -C -C
-    pushf   = push --force-with-lease
+    fpush   = push --force-with-lease
     ls      = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
     lgr     = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
 [pull]
