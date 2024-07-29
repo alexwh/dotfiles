@@ -19,3 +19,6 @@
 [submodule "config/mpv/scripts/mpv-youtube-chat"]
 	path = config/mpv/scripts/mpv-youtube-chat
 	url = https://github.com/BanchouBoo/mpv-youtube-chat
+[submodule "config/mpv/scripts/mpv-scripts"]
+	path = config/mpv/scripts/mpv-scripts
+	url = https://github.com/occivink/mpv-scripts
