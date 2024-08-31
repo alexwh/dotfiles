@@ -22,6 +22,7 @@ alias ex='unar'
 alias objdump='objdump -M intel'
 alias ip='ip --color --brief'
 alias fd='fd -u'
+alias nh='bandwhich'
 
 alias xclip='xclip -selection clipboard '
 alias xc='xclip'
