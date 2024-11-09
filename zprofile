@@ -22,3 +22,6 @@ export GTK_USE_PORTAL=1
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
+
+# for firefox hw decode
+export NVD_BACKEND=direct
