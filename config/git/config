@@ -33,3 +33,5 @@
 	ui = auto
 [branch]
 	sort = -committerdate
+[init]
+	defaultBranch = master
