@@ -58,3 +58,4 @@
     - wireguard-tools
     - yaml-language-server
     - yt-dlp
+    - btop
