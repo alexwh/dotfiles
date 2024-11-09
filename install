@@ -13,19 +13,19 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-source /etc/os-release
-case $ID in
-    arch)
-        echo "arch"
-        "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-yay" "${@}"
-        ;;
-    debian)
-        echo "debian"
-        sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot_plugin_aptget" "${@}"
-        ;;
-    *)
-        echo "unknown distro ID: $ID, not doing anything special"
-        ;;
-esac
+# source /etc/os-release
+# case $ID in
+#     arch)
+#         echo "arch"
+#         "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot-yay" "${@}"
+#         ;;
+#     debian)
+#         echo "debian"
+#         sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${ID}${SUFFIX}" --plugin-dir "${BASEDIR}/dotbot_plugin_aptget" "${@}"
+#         ;;
+#     *)
+#         echo "unknown distro ID: $ID, not doing anything special"
+#         ;;
+# esac
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}${SUFFIX}" "${@}"
