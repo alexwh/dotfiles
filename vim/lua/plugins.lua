@@ -95,49 +95,75 @@ require("lazy").setup {
     end
   },
 
-  {'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
-    dependencies = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {'williamboman/mason.nvim'},           -- Optional
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+  {
+    {'williamboman/mason.nvim', opts = true},
+    {'williamboman/mason-lspconfig.nvim',
+      opts = {
+        automatic_installation = true,
+        ensure_installed = {
+          "ansiblels",
+          "asm_lsp",
+          "awk_ls",
+          "bashls",
+          "clangd",
+          "cmake",
+          "cssls",
+          "dockerls",
+          "docker_compose_language_service",
+          "gopls",
+          "templ",
+          "html",
+          "htmx",
+          "java_language_server",
+          "eslint",
+          "jinja_lsp",
+          "jqls",
+          "jsonls",
+          "lua_ls",
+          "pylsp",
+          "terraformls"
+        },
+        handlers = {
+          -- The first entry (without a key) will be the default handler
+          -- and will be called for each installed server that doesn't have
+          -- a dedicated handler.
+          function (server_name) -- default handler (optional)
+              require("lspconfig")[server_name].setup {}
+          end,
 
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip', version = "2.*"},     -- Required
-    }
+          ["yamlls"] = function ()
+              require'lspconfig'.yamlls.setup{
+                schemaStore = {
+                  url = "https://www.schemastore.org/api/json/catalog.json",
+                  enable = true,
+                },
+                schemas = {
+                  ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
+                  ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.0/all.json"] = "k8s/**",
+                },
+              }
+          end,
+          ["pylsp"] = function ()
+            require'lspconfig'.pylsp.setup{
+              settings = { pylsp = { plugins = { pycodestyle = {
+                ignore = {"E226","E302","E501","E111","E114","E221","E241","E305"}
+              }}}}
+            }
+          end
+        }
+      }
+    },
+    {'neovim/nvim-lspconfig'}
   },
 
   {"j-hui/fidget.nvim", tag = "legacy", event = "LspAttach"},
 
-  {"L3MON4D3/LuaSnip",
-    dependencies = {"rafamadriz/friendly-snippets"}
-  },
-
-  {'hrsh7th/nvim-cmp',
-    config = function ()
-      require'cmp'.setup {
-        snippet = {
-          expand = function(args)
-            require'luasnip'.lsp_expand(args.body)
-          end
-        },
-
-        sources = {
-          { name = 'luasnip' },
-          -- more sources
-        },
-      }
-    end
-  },
   {"folke/flash.nvim",
     event = "VeryLazy",
     ---@type Flash.Config
     opts = {
       modes = {
-        search = { enabled = true, },
+        search = { enabled = false, },
       },
       label = {
         style = "inline",
@@ -176,7 +202,6 @@ require("lazy").setup {
   { 'echasnovski/mini.surround',    version = false, opts = true },
 
 
-  "saadparwaiz1/cmp_luasnip",
   "tpope/vim-repeat",
   "tpope/vim-speeddating",
   "tpope/vim-sleuth",
