@@ -169,7 +169,7 @@ require("lazy").setup {
     -- use a release tag to download pre-built binaries
     version = 'v0.*',
     opts = {
-      keymap = { preset = 'enter' },
+      keymap = { preset = 'super-tab' },
       appearance = {
         -- Sets the fallback highlight groups to nvim-cmp's highlight groups
         -- Useful for when your theme doesn't support blink.cmp
@@ -177,7 +177,6 @@ require("lazy").setup {
         use_nvim_cmp_as_default = true,
       },
       sources = {
-        -- add lazydev to your completion providers
         completion = {
           enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
         },
