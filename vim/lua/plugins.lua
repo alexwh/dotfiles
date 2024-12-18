@@ -176,6 +176,7 @@ require("lazy").setup {
         -- will be removed in a future release
         use_nvim_cmp_as_default = true,
       },
+      signature = { enabled = true },
       sources = {
         completion = {
           enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
