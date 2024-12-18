@@ -27,8 +27,6 @@ require("lazy").setup {
 
   {"folke/neoconf.nvim", cmd = "Neoconf"},
 
-  "folke/neodev.nvim",
-
   {'nvim-telescope/telescope.nvim', branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
@@ -154,6 +152,42 @@ require("lazy").setup {
       }
     },
     {'neovim/nvim-lspconfig'}
+  },
+
+  {"folke/lazydev.nvim",
+    ft = "lua",
+    opts = {
+      library = {
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
+  },
+
+  {'saghen/blink.cmp',
+    dependencies = 'rafamadriz/friendly-snippets',
+
+    -- use a release tag to download pre-built binaries
+    version = 'v0.*',
+    opts = {
+      keymap = { preset = 'enter' },
+      appearance = {
+        -- Sets the fallback highlight groups to nvim-cmp's highlight groups
+        -- Useful for when your theme doesn't support blink.cmp
+        -- will be removed in a future release
+        use_nvim_cmp_as_default = true,
+      },
+      sources = {
+        -- add lazydev to your completion providers
+        completion = {
+          enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
+        },
+        providers = {
+          -- dont show LuaLS require statements when lazydev has items
+          lsp = { fallback_for = { "lazydev" } },
+          lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
+        },
+      },
+    },
   },
 
   {"j-hui/fidget.nvim", tag = "legacy", event = "LspAttach"},
