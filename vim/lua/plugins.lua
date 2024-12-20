@@ -34,7 +34,13 @@ require("lazy").setup {
       {'nvim-tree/nvim-web-devicons', lazy = true},
     },
     config = function()
-      require('telescope').setup {}
+      require('telescope').setup {
+        pickers = {
+          find_files = { theme = "ivy" },
+          live_grep = { theme = "ivy" },
+          git_files = { theme = "ivy" }
+        },
+      }
       require('telescope').load_extension('fzf')
     end,
   },
