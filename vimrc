@@ -131,6 +131,9 @@ augroup notmpundos
     au BufReadPre /dev/shm/* set noundofile
 augroup END
 
+" bypass annoying "X files left to read" warning by rewriting :q to :qa
+:au QuitPre * qa
+
 " change xterm cursor style depending on mode
 " insert mode, blinking thin line cursor
 let &t_SI = "\e[5 q"
