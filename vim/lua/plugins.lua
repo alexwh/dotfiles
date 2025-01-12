@@ -125,6 +125,7 @@ require("lazy").setup {
           "jsonls",
           "lua_ls",
           "ruff",
+          "yamlls",
           "terraformls"
         },
         handlers = {
