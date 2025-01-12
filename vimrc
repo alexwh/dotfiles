@@ -110,9 +110,6 @@ nnoremap <leader>gc <cmd>Git commit --quiet<cr>
 nnoremap <leader>gp <cmd>Git push --quiet<cr>
 nnoremap <leader>gb <cmd>.GBrowse<cr>
 
-" open directory of current file (in a last used state) with focus on that file.
-nnoremap - <cmd>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<cr>
-
 " autocmds
 augroup reloadvimrc
     au!

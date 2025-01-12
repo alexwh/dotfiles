@@ -229,8 +229,13 @@ require("lazy").setup {
       ignore_blank_line = true,
   }}},
   { 'echasnovski/mini.files',       version = false, opts = {
-      windows = { preview = true },
-  }},
+    windows = { preview = true }},
+    keys = {
+      -- open directory of current file (in a last used state) with focus on that file.
+      { "-", mode = { "n" }, function() if not MiniFiles.close() then MiniFiles.open(vim.api.nvim_buf_get_name(0)) end end, desc = "Toggle MiniFiles" },
+    },
+    lazy = false
+  },
   { 'echasnovski/mini.indentscope', version = false, opts = {
     draw = {
       animation = function() return 10 end,
