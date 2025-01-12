@@ -4,7 +4,6 @@ alias si='sudo -i'
 
 alias ls='eza -s extension --git'
 alias latr='eza -lastime --git'
-alias nvim='nvim +only -o '
 if [[ $(command -v nvim) ]];then
     alias vi='nvim'
     alias vim='nvim'
