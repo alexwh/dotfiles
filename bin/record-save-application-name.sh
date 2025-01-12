@@ -12,4 +12,9 @@ mkdir -p "$video_dir"
 video="$(date +"Replay_${window_name}_%Y-%m-%d_%H-%M-%S.mp4")"
 mv "$1" "${video_dir}/${video}"
 # sleep 0.5
-notify-send -t 5000 -u low -- "GPU Screen Recorder" "Replay saved to $video"
+action=$(notify-send -t 5000 -u low --action "Open file" --action "Open folder" -- "GPU Screen Recorder" "Replay saved to $video")
+if [[ "$action" == "0" ]];then
+    xdg-open "${video_dir}/${video}"
+elif [[ "$action" == "1" ]];then
+    xdg-open "${video_dir}"
+fi
