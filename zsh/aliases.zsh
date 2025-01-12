@@ -10,6 +10,9 @@ if [[ $(command -v nvim) ]];then
     alias vim='nvim'
     alias vidir='nvim'
 fi
+if [[ $(command -v uv) ]];then
+    alias pip='uv pip'
+fi
 alias grep='grep --color=auto'
 alias cp='cp --reflink=auto'
 alias dc='cd'
