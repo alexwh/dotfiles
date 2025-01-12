@@ -124,7 +124,7 @@ require("lazy").setup {
           "jqls",
           "jsonls",
           "lua_ls",
-          "pylsp",
+          "ruff",
           "terraformls"
         },
         handlers = {
@@ -147,11 +147,11 @@ require("lazy").setup {
                 },
               }
           end,
-          ["pylsp"] = function ()
-            require'lspconfig'.pylsp.setup{
-              settings = { pylsp = { plugins = { pycodestyle = {
+          ["ruff"] = function ()
+            require'lspconfig'.ruff.setup{
+              init_options = { settings = { lint = {
                 ignore = {"E226","E302","E501","E111","E114","E221","E241","E305"}
-              }}}}
+              }}}
             }
           end
         }
