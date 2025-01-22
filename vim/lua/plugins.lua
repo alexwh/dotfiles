@@ -185,13 +185,10 @@ require("lazy").setup {
       },
       signature = { enabled = true },
       sources = {
-        completion = {
-          enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
-        },
+        default = { "lsp", "path", "snippets", "buffer", "lazydev" },
         providers = {
           -- dont show LuaLS require statements when lazydev has items
-          lsp = { fallback_for = { "lazydev" } },
-          lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
+          lazydev = { name = "LazyDev", module = "lazydev.integrations.blink", fallbacks = "lsp" },
         },
       },
     },
