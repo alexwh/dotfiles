@@ -4,12 +4,12 @@ alias si='sudo -i'
 
 alias ls='eza -s extension --git'
 alias latr='eza -lastime --git'
-if [[ $(command -v nvim) ]];then
+if [[ $(command -v nvim 2> /dev/null) ]];then
     alias vi='nvim'
     alias vim='nvim'
     alias vidir='nvim'
 fi
-if [[ $(command -v uv) ]];then
+if [[ $(command -v uv 2> /dev/null) ]];then
     alias pip='uv pip'
 fi
 alias grep='grep --color=auto'
