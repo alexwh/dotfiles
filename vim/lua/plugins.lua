@@ -109,7 +109,6 @@ require("lazy").setup {
           "awk_ls",
           "bashls",
           "clangd",
-          "cmake",
           "cssls",
           "dockerls",
           "docker_compose_language_service",
