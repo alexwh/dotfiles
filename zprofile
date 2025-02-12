@@ -20,8 +20,6 @@ export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' # Like default, but without / -- ^W mu
 export GTK_USE_PORTAL=1
 export GDK_DEBUG=portals
 
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
 # for firefox hw decode
