@@ -22,5 +22,4 @@ export GDK_DEBUG=portals
 
 export XMODIFIERS=@im=fcitx
 
-# for firefox hw decode
-export NVD_BACKEND=direct
+export VDPAU_DRIVER=radeonsi
