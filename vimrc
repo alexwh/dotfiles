@@ -2,7 +2,6 @@
 filetype plugin indent on
 syntax on
 set encoding=utf-8
-set termencoding=utf-8
 set fileencodings=ucs-bom,utf-8,default,shift-jis,latin1
 set fileformat=unix
 set undofile
