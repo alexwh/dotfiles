@@ -42,3 +42,7 @@ c.TerminalInteractiveShell.true_color = True
 ## If True, any %store-d variables will be automatically restored when IPython
 #  starts.
 c.StoreMagics.autorestore = True
+
+c.InteractiveShell.autoindent = True
+c.PlainTextFormatter.pprint = True
+c.TerminalInteractiveShell.confirm_exit = False
