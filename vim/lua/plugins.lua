@@ -237,8 +237,30 @@ require("lazy").setup {
   { 'echasnovski/mini.move',        version = false, opts = true },
   { 'echasnovski/mini.operators',   version = false, opts = { evaluate = { prefix = '' } } },
   { 'echasnovski/mini.splitjoin',   version = false, opts = true },
-  { 'echasnovski/mini.surround',    version = false, opts = true },
+  { 'echasnovski/mini.surround',    version = false,
+    opts = {
+      mappings = {
+        add = 'ys',
+        delete = 'ds',
+        find = '',
+        find_left = '',
+        highlight = '',
+        replace = 'cs',
+        update_n_lines = '',
 
+        -- Add this only if you don't want to use extended mappings
+        suffix_last = '',
+        suffix_next = '',
+      }
+    },
+    keys = {
+      -- Remap adding surrounding to Visual mode selection
+      { "ys", "", mode = "x" },
+      { "S", ":<C-u>lua MiniSurround.add('visual')<CR>", mode = "x", { silent = true } },
+      -- Make special mapping for "add surrounding for line"
+      { "yss", "ys_", { remap = true } },
+    },
+  },
 
   "tpope/vim-repeat",
   "tpope/vim-speeddating",
