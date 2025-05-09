@@ -37,7 +37,7 @@ alias hexdump='hexyl '
 alias hd='hexdump'
 alias rg='lf'
 alias ag='\rg -uu' # ripgrep
-alias du='ncdu'
+alias du='dust'
 
 alias cf='wget -O /dev/null https://speedtest.wtnet.de/files/1000mb.bin'
 
