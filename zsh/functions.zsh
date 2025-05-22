@@ -1,6 +1,7 @@
 # run ls every time pwd changes
 chpwd() { ls }
-checkip() { dig +short myip.opendns.com @resolver1.opendns.com }
+checkip() { curl ip.me }
+checkip4() { curl -4 ip.me }
 cx () { xclip -i < "$1" }
 pss() { ps aux | grep $(sed "s/^\(.\)/[\1]/g" <<< "$1") }
 pb() { curl -F "c=@${1:--}" https://ptpb.pw/ }
