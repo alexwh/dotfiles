@@ -3,7 +3,7 @@ export MOZ_USE_XINPUT2=1
 export EDITOR=nvim
 export TERMINAL=kitty
 
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH:$HOME/.dotnet/tools:$HOME/.cargo/bin"
 if command -v go 2>&1 > /dev/null;then
     export GOPATH=$(go env GOPATH)
     export PATH="$PATH:$GOPATH/bin"
@@ -23,3 +23,5 @@ export GDK_DEBUG=portals
 export XMODIFIERS=@im=fcitx
 
 export VDPAU_DRIVER=radeonsi
+export LIBVA_DRIVER_NAME=radeonsi
+export QT_QPA_PLATFORMTHEME=kvantum
