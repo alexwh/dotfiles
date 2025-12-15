@@ -215,13 +215,22 @@ require("lazy").setup {
 
   -- use opts = true to call setup()
   { 'echasnovski/mini.ai',          version = false, opts = true },
-  { 'echasnovski/mini.align',       version = false, opts = true },
-  { 'echasnovski/mini.comment',     version = false, opts = {
-    options = {
-      ignore_blank_line = true,
-  }}},
-  { 'echasnovski/mini.files',       version = false, opts = {
-    windows = { preview = true }},
+  { 'echasnovski/mini.align',       version = false, opts = {
+    mappings = {
+      start_with_preview = "<CR>"
+    }
+  }},
+  { 'echasnovski/mini.comment',     version = false,
+    opts = {
+      options = {
+        ignore_blank_line = true,
+      }
+    }
+  },
+  { 'echasnovski/mini.files',       version = false,
+    opts = {
+      windows = { preview = true }
+    },
     keys = {
       -- open directory of current file (in a last used state) with focus on that file.
       { "-", mode = { "n" }, function() if not MiniFiles.close() then MiniFiles.open(vim.api.nvim_buf_get_name(0)) end end, desc = "Toggle MiniFiles" },
