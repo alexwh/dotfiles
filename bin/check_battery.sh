@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 set -o pipefail
-headphones_mac=$(qdbus --system org.bluez|grep -E '^/org/bluez/hci.?/dev_80_C3_BA(_[A-F0-9]{2}){3}$')
-headphones_pct=$(dbus-send --print-reply=literal --system --dest=org.bluez "${headphones_mac}" org.freedesktop.DBus.Properties.Get string:"org.bluez.Battery1" string:"Percentage" | awk '{print $3}')
-if [[ $? -eq 0 && $headphones_pct -lt 31 ]]; then
-    notify-send --transient --icon /usr/share/icons/Tela-dark/symbolic/devices/headphones-symbolic.svg "Headphones low battery" "Plug in to charge"
-fi
-echo "${headphones_mac}: ${headphones_pct}%"
-
+sleeptime=0
 ret=0
 # mouse is connected
 while [[ $ret -eq 0 ]]; do
@@ -23,6 +17,20 @@ while [[ $ret -eq 0 ]]; do
     fi
 done
 if [[ $ret -eq 0 && $mouse_pct -lt 26 ]]; then
-    notify-send --transient --icon /usr/share/icons/Tela-dark/symbolic/devices/input-mouse-symbolic.svg "Mouse low battery" "Plug in to charge"
+    notify-send --transient --icon /usr/share/icons/Tela-dark/symbolic/devices/input-mouse-symbolic.svg -t 5800 "Mouse low battery" "Plug in to charge"
+    sleeptime=5
 fi
 echo "mouse: ${mouse_pct}%"
+
+headphones_mac=$(qdbus --system org.bluez|grep -E '^/org/bluez/hci.?/dev_80_C3_BA(_[A-F0-9]{2}){3}$')
+headphones_connected=$(qdbus --system org.bluez "${headphones_mac}" org.bluez.Device1.Connected)
+if [[ "${headphones_connected}" == "false" ]];then
+    qdbus --system org.bluez "${headphones_mac}" org.bluez.Device1.Connect
+fi
+headphones_pct=$(dbus-send --print-reply=literal --system --dest=org.bluez "${headphones_mac}" org.freedesktop.DBus.Properties.Get string:"org.bluez.Battery1" string:"Percentage" | awk '{print $3}')
+if [[ $? -eq 0 && $headphones_pct -lt 41 ]]; then
+    notify-send --transient --icon /usr/share/icons/Tela-dark/symbolic/devices/headphones-symbolic.svg -t 5800 "Headphones low battery" "Plug in to charge"
+    sleeptime=5
+fi
+echo "${headphones_mac}: ${headphones_pct}%"
+sleep "${sleeptime}"
