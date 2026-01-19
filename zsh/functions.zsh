@@ -10,8 +10,15 @@ rand() { echo $((($RANDOM % ${1:-2})+1)) }
 peek() { tmux split-window -p 33 $EDITOR $@ || exit }
 
 ccc() { # Convert CurenCy
-    [[ $# -ge 3 ]] && curl -s "http://www.google.com/finance/converter?a=${1}&from=${2}&to=${3}" | sed '/res/!d;s/<[^>]*>//g' || \
-    echo "usage: $0 amount from to"
+    if [[ $#  -ne 3 ]];then
+        echo "usage: $0 amount from to"
+        return
+    fi
+    # lowercase $2 and $3
+    _rate=$(curl -s "https://latest.currency-api.pages.dev/v1/currencies/${2:l}.json" | jq ".${2:l}.${3:l}")
+    # scale only works on div, not mul, so /1 at end
+    _ans=$(echo "scale=2; ${1}*${_rate} / 1" | bc | tail -1)
+    echo "${1} ${2} = ${_ans} ${3}"
 }
 
 sshp() {
