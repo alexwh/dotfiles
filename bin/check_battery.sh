@@ -2,16 +2,18 @@
 set -o pipefail
 sleeptime=0
 ret=0
+tries=0
 # mouse is connected
 while [[ $ret -eq 0 ]]; do
     # https://github.com/alexwh/vaxee-read-battery
     mouse_pct=$(vaxee-read-battery)
     ret=$?
     # mouse is asleep
-    if [[ $mouse_pct -eq 0 ]];then
+    if [[ $mouse_pct -eq 0 && $tries -lt 3 ]];then
         # 5800 is the number that kde actually shows this for to smoothly overlap for some reason
         notify-send --transient --icon /usr/share/icons/Tela-dark/symbolic/devices/input-mouse-symbolic.svg -t 5800 "Mouse unknown battery" "Move to wake for reading"
         sleep 5
+        tries=$((tries + 1))
     else
         break
     fi
