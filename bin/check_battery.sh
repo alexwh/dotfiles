@@ -16,7 +16,7 @@ while [[ $ret -eq 0 ]]; do
         break
     fi
 done
-if [[ $ret -eq 0 && $mouse_pct -lt 26 && $mouse_pct -gt 0 ]]; then
+if [[ $ret -eq 0 && $mouse_pct -le 30 && $mouse_pct -gt 0 ]]; then
     notify-send --transient --icon /usr/share/icons/Tela-dark/symbolic/devices/input-mouse-symbolic.svg -t 3000 "Mouse low battery" "Plug in to charge"
     sleeptime=3
 fi
