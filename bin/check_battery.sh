@@ -26,6 +26,7 @@ headphones_mac=$(qdbus --system org.bluez|grep -E '^/org/bluez/hci.?/dev_80_C3_B
 headphones_connected=$(qdbus --system org.bluez "${headphones_mac}" org.bluez.Device1.Connected)
 if [[ "${headphones_connected}" == "false" ]];then
     qdbus --system org.bluez "${headphones_mac}" org.bluez.Device1.Connect
+    sleep 1
 fi
 headphones_pct=$(dbus-send --print-reply=literal --system --dest=org.bluez "${headphones_mac}" org.freedesktop.DBus.Properties.Get string:"org.bluez.Battery1" string:"Percentage" | awk '{print $3}')
 if [[ $? -eq 0 && $headphones_pct -lt 41 ]]; then
