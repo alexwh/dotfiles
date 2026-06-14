@@ -27,5 +27,6 @@ docker/.buildNodeID
 docker/.token_seed
 docker/.token_seed.lock
 docker/buildx/
+docker/config.json
 
 ipython/profile_default/history.sqlite
