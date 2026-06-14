@@ -119,7 +119,7 @@ require("lazy").setup {
           "jqls",
           "jsonls",
           "lua_ls",
-          "ruff",
+          "basedpyright",
           "yamlls",
           "terraformls"
         },
@@ -143,11 +143,13 @@ require("lazy").setup {
                 },
               }
           end,
-          ["ruff"] = function ()
-            require'lspconfig'.ruff.setup{
-              init_options = { settings = { lint = {
-                ignore = {"E226","E302","E501","E111","E114","E221","E241","E305"}
-              }}}
+          ["basedpyright"] = function ()
+            require'lspconfig'.basedpyright.setup{
+                analysis = {
+                  autoSearchPaths = true,
+                  diagnosticMode = "workspace",
+                  typeCheckingMode = "standard"
+                }
             }
           end
         }
