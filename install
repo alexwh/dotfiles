@@ -13,6 +13,9 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
+echo "skipping docker/config.json from further worktree updates"
+git update-index --skip-worktree docker/config.json
+
 # source /etc/os-release
 # case $ID in
 #     arch)
