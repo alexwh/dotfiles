@@ -72,30 +72,43 @@ require("lazy").setup {
   },
 
   {"nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
     build = ":TSUpdate",
     config = function ()
-      local configs = require("nvim-treesitter.configs")
+      require("nvim-treesitter").setup {}
 
-      configs.setup {
-        ensure_installed = { "lua", "vim", "vimdoc", "query", "html" },
-        ignore_install = { "gitcommit" },
-        auto_install = true,
-        highlight = { enable = true },
-        indent = {
-          enable = true,
-          disable = function(lang, buf)
-            if lang == "yaml" then
-              return true
-            end
-            local max_filesize = 100 * 1024 -- 100 KB
-            local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-            if ok and stats and stats.size > max_filesize then
-              return true
-            end
-          end,
-
-        },
+      local ensure_installed = {
+        "bash", "html", "lua", "query", "vim", "vimdoc",
       }
+      require("nvim-treesitter").install(ensure_installed)
+
+      local max_filesize = 100 * 1024 -- 100 KB
+
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function(args)
+          -- highlighting ignores
+          local lang = vim.treesitter.language.get_lang(vim.bo[args.buf].filetype)
+          if not lang or not vim.treesitter.language.add(lang) then
+            return
+          end
+
+          -- highlighting
+          vim.treesitter.start(args.buf, lang)
+
+          -- indent ignores
+          if lang == "yaml" then
+            return true
+          end
+          local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(args.buf))
+          if ok and stats and stats.size > max_filesize then
+            return true
+          end
+
+          -- indent
+          vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
+      })
     end
   },
 
@@ -108,13 +121,11 @@ require("lazy").setup {
           "ansiblels",
           "awk_ls",
           "bashls",
-          "clangd",
           "cssls",
           "dockerls",
           "docker_compose_language_service",
           "gopls",
           "html",
-          "java_language_server",
           "eslint",
           "jqls",
           "jsonls",
