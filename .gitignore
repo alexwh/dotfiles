@@ -2,6 +2,8 @@ vim/swap
 vim/undo
 vim/.netrwhist
 
+config/git/config-*
+
 config/mpv/watch_later
 config/mpv/shaders
 

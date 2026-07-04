@@ -36,3 +36,5 @@
 	sort = -committerdate
 [init]
 	defaultBranch = master
+[include]
+	path = ~/.config/git/config-priv-repo
