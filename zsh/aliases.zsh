@@ -35,6 +35,7 @@ alias xc='xclip'
 alias rsync='rsync --info=progress2 --stats -hP'
 alias hexdump='hexyl '
 alias hd='hexdump'
+alias dec='(base64 -d - | hexdump -C)'
 alias rg='ranger'
 alias ag='\rg -uu' # ripgrep
 alias du='dua'
