@@ -8,7 +8,6 @@
 - link:
     ~/.dotfiles: ''
     ~/bin:
-    ~/.ansible.cfg:
     ~/.tmux.conf:
     ~/.cvsignore:
     ~/.vim:
