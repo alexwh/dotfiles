@@ -12,6 +12,8 @@
     ~/.cvsignore:
     ~/.vim:
     ~/.vimrc:
+    ~/.vimrc.local:
+        if: '[ -f vimrc.local ]'
     ~/.config/nvim: vim
     ~/.zsh:
     ~/.zshrc:

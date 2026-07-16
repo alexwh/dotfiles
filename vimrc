@@ -108,6 +108,7 @@ nnoremap <leader>ds <cmd>Gdiff<cr>
 nnoremap <leader>gc <cmd>Git commit --quiet<cr>
 nnoremap <leader>gp <cmd>Git push --quiet<cr>
 nnoremap <leader>gb <cmd>.GBrowse<cr>
+xnoremap <leader>gb :GBrowse<cr>
 
 " autocmds
 augroup reloadvimrc
@@ -166,4 +167,8 @@ endif
 
 if has("nvim")
     lua require('plugins')
+endif
+
+if filereadable(expand('~/.vimrc.local'))
+    source ~/.vimrc.local
 endif

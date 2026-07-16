@@ -1,6 +1,7 @@
 vim/swap
 vim/undo
 vim/.netrwhist
+vimrc.local
 
 config/git/config-*
 
