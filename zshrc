@@ -17,4 +17,5 @@ source ~/.zsh/overrides.zsh
 # equivalent to sourcing completion.zsh and key-bindings.zsh
 which fzf &> /dev/null && source <(fzf --zsh)
 which batman &> /dev/null && eval $(batman --export-env)
+which direnv &> /dev/null && eval "$(direnv hook zsh)"
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
