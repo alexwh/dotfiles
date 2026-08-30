@@ -1,8 +1,8 @@
 [core]
     excludesfile = ~/.cvsignore
 [user]
-    email = alexwh@users.noreply.github.com
-    name = Alex W
+    email = alex@example.org
+    name = alex
 [push]
     default = simple
 	autoSetupRemote = true
@@ -38,3 +38,5 @@
 	defaultBranch = master
 [include]
 	path = ~/.config/git/config-priv-repo
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
