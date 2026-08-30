@@ -3,7 +3,7 @@ export MOZ_USE_XINPUT2=1
 export EDITOR=nvim
 export TERMINAL=kitty
 
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH:$HOME/.dotnet/tools:$HOME/.cargo/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH:$HOME/.dotnet/tools:$HOME/.cargo/bin:$HOME/.bun/bin"
 if command -v go 2>&1 > /dev/null;then
     export GOPATH=$(go env GOPATH)
     export PATH="$PATH:$GOPATH/bin"
