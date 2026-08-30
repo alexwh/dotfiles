@@ -40,6 +40,7 @@ alias rg='ranger'
 alias ag='\rg -uu' # ripgrep
 alias du='dua'
 alias ncdu='dua i'
+alias parallel='parallel --color --eta --bar '
 
 alias cf='wget -O /dev/null https://speedtest.wtnet.de/files/1000mb.bin'
 
