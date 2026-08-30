@@ -140,11 +140,15 @@ require("lazy").setup {
           "awk_ls",
           "bashls",
           "cssls",
+          "clangd",
+          "cmake",
           "dockerls",
           "docker_compose_language_service",
           "gopls",
           "html",
+          "oxfmt",
           "eslint",
+          "ts_ls",
           "jqls",
           "jsonls",
           "lua_ls",
@@ -180,11 +184,52 @@ require("lazy").setup {
                   typeCheckingMode = "standard"
                 }
             }
-          end
+          end,
+          -- ["html"] = function()
+          --   require("lspconfig").html.setup({
+          --     on_attach = function(client, bufnr)
+          --       -- let oxfmt do this
+          --       client.server_capabilities.documentFormattingProvider = false
+          --       client.server_capabilities.documentRangeFormattingProvider = false
+          --     end,
+          --   })
+          -- end,
         }
       }
     },
     {'neovim/nvim-lspconfig'}
+  },
+
+  {
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile", "FileType" },
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        -- Customize or remove this keymap to your liking
+        "<leader>f",
+        function()
+          require("conform").format({ async = true })
+        end,
+        mode = "",
+        desc = "Format buffer",
+      },
+    },
+    -- This will provide type hinting with LuaLS
+    ---@module "conform"
+    ---@type conform.setupOpts
+    opts = {
+      formatters_by_ft = {
+        html = { "oxfmt" },
+      },
+      default_format_opts = {
+        lsp_format = "fallback",
+      },
+      format_on_save = false,
+    },
+    init = function()
+      vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+    end,
   },
 
   {"folke/lazydev.nvim",
