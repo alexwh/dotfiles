@@ -1,5 +1,5 @@
-# run ls every time pwd changes
-chpwd() { ls }
+# run ls every time pwd changes (in non-interactive shells eza inherits a socket stdin and blocks forever sometimes in git dirs)
+chpwd() { [[ -o interactive ]] && ls }
 checkip() { curl ip.me }
 checkip4() { curl -4 ip.me }
 cx () { xclip -i < "$1" }
