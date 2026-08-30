@@ -32,7 +32,7 @@ alias nh='bandwhich'
 
 alias xclip='xclip -selection clipboard '
 alias xc='xclip'
-alias rsync='rsync --info=progress2 --stats -hP'
+alias rsync='rsync --info=progress2 --stats -hP --partial-dir=.rsync-partial'
 alias hexdump='hexyl '
 alias hd='hexdump'
 alias dec='(base64 -d - | hexdump -C)'
