@@ -11,6 +11,24 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.o.updatetime = 300
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = '●',
+    source = "if_many",
+  },
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    source = "if_many",
+  },
+})
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, { focusable = false })
+  end,
+})
+
 require("lazy").setup {
   checker = {
     enabled = true,
