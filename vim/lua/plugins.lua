@@ -29,6 +29,35 @@ vim.api.nvim_create_autocmd("CursorHold", {
   end,
 })
 
+vim.lsp.config('basedpyright', {
+  settings = {
+    basedpyright = {
+      analysis = {
+        autoSearchPaths = true,
+        diagnosticMode = "workspace",
+        typeCheckingMode = "standard",
+      },
+    },
+  },
+})
+
+
+vim.lsp.config('yamlls', {
+  settings = {
+    yaml = {
+      schemaStore = {
+        url = "https://www.schemastore.org/api/json/catalog.json",
+        enable = true,
+      },
+      schemas = {
+        ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
+        ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.0/all.json"] = "k8s/**",
+      },
+    },
+  },
+})
+
+
 require("lazy").setup {
   checker = {
     enabled = true,
@@ -130,74 +159,32 @@ require("lazy").setup {
     end
   },
 
-  {
-    {'williamboman/mason.nvim', opts = true},
-    {'williamboman/mason-lspconfig.nvim',
-      opts = {
-        automatic_installation = true,
-        ensure_installed = {
-          "ansiblels",
-          "awk_ls",
-          "bashls",
-          "cssls",
-          "clangd",
-          "cmake",
-          "dockerls",
-          "docker_compose_language_service",
-          "gopls",
-          "html",
-          "oxfmt",
-          "eslint",
-          "ts_ls",
-          "jqls",
-          "jsonls",
-          "lua_ls",
-          "basedpyright",
-          "yamlls",
-          "terraformls"
-        },
-        handlers = {
-          -- The first entry (without a key) will be the default handler
-          -- and will be called for each installed server that doesn't have
-          -- a dedicated handler.
-          function (server_name) -- default handler (optional)
-              require("lspconfig")[server_name].setup {}
-          end,
-
-          ["yamlls"] = function ()
-              require'lspconfig'.yamlls.setup{
-                schemaStore = {
-                  url = "https://www.schemastore.org/api/json/catalog.json",
-                  enable = true,
-                },
-                schemas = {
-                  ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
-                  ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.0/all.json"] = "k8s/**",
-                },
-              }
-          end,
-          ["basedpyright"] = function ()
-            require'lspconfig'.basedpyright.setup{
-                analysis = {
-                  autoSearchPaths = true,
-                  diagnosticMode = "workspace",
-                  typeCheckingMode = "standard"
-                }
-            }
-          end,
-          -- ["html"] = function()
-          --   require("lspconfig").html.setup({
-          --     on_attach = function(client, bufnr)
-          --       -- let oxfmt do this
-          --       client.server_capabilities.documentFormattingProvider = false
-          --       client.server_capabilities.documentRangeFormattingProvider = false
-          --     end,
-          --   })
-          -- end,
-        }
-      }
+  {'williamboman/mason.nvim', opts = true},
+  {'williamboman/mason-lspconfig.nvim',
+    dependencies = {'neovim/nvim-lspconfig'},
+    opts = {
+      ensure_installed = {
+        "ansiblels",
+        "awk_ls",
+        "bashls",
+        "cssls",
+        "clangd",
+        "cmake",
+        "dockerls",
+        "docker_compose_language_service",
+        "gopls",
+        "html",
+        "oxfmt",
+        "eslint",
+        "ts_ls",
+        "jqls",
+        "jsonls",
+        "lua_ls",
+        "basedpyright",
+        "yamlls",
+        "terraformls",
+      },
     },
-    {'neovim/nvim-lspconfig'}
   },
 
   {
