@@ -1,5 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
@@ -72,9 +72,8 @@ require("lazy").setup {
     end,
   },
 
-  {"folke/neoconf.nvim", cmd = "Neoconf"},
 
-  {'nvim-telescope/telescope.nvim', branch = '0.1.x',
+  {'nvim-telescope/telescope.nvim', version = '*',
     dependencies = {
       'nvim-lua/plenary.nvim',
       {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
@@ -147,7 +146,7 @@ require("lazy").setup {
           if lang == "yaml" then
             return true
           end
-          local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(args.buf))
+          local ok, stats = pcall(vim.uv.fs_stat, vim.api.nvim_buf_get_name(args.buf))
           if ok and stats and stats.size > max_filesize then
             return true
           end
@@ -232,14 +231,11 @@ require("lazy").setup {
     dependencies = 'rafamadriz/friendly-snippets',
 
     -- use a release tag to download pre-built binaries
-    version = 'v0.*',
+    version = '*',
     opts = {
       keymap = { preset = 'super-tab' },
       appearance = {
-        -- Sets the fallback highlight groups to nvim-cmp's highlight groups
-        -- Useful for when your theme doesn't support blink.cmp
-        -- will be removed in a future release
-        use_nvim_cmp_as_default = true,
+        nerd_font_variant = 'mono',
       },
       signature = { enabled = true },
       sources = {
@@ -252,7 +248,7 @@ require("lazy").setup {
     },
   },
 
-  {"j-hui/fidget.nvim", tag = "legacy", event = "LspAttach"},
+  {"j-hui/fidget.nvim", event = "LspAttach", opts = true},
 
   {"folke/flash.nvim",
     event = "VeryLazy",
