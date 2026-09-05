@@ -25,3 +25,6 @@ export XMODIFIERS=@im=fcitx
 export VDPAU_DRIVER=radeonsi
 export LIBVA_DRIVER_NAME=radeonsi
 export QT_QPA_PLATFORMTHEME=kvantum
+
+# default of 1 benchmarks for ages and doesn't help much in oneshot scripts
+export MIOPEN_FIND_MODE=2
