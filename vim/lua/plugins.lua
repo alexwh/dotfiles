@@ -173,7 +173,6 @@ require("lazy").setup {
         "docker_compose_language_service",
         "gopls",
         "html",
-        "oxfmt",
         "eslint",
         "ts_ls",
         "jqls",
@@ -185,39 +184,6 @@ require("lazy").setup {
       },
     },
   },
-
-  {
-    "stevearc/conform.nvim",
-    event = { "BufReadPre", "BufNewFile", "FileType" },
-    cmd = { "ConformInfo" },
-    keys = {
-      {
-        -- Customize or remove this keymap to your liking
-        "<leader>f",
-        function()
-          require("conform").format({ async = true })
-        end,
-        mode = "",
-        desc = "Format buffer",
-      },
-    },
-    -- This will provide type hinting with LuaLS
-    ---@module "conform"
-    ---@type conform.setupOpts
-    opts = {
-      formatters_by_ft = {
-        html = { "oxfmt" },
-      },
-      default_format_opts = {
-        lsp_format = "fallback",
-      },
-      format_on_save = false,
-    },
-    init = function()
-      vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
-    end,
-  },
-
   {"folke/lazydev.nvim",
     ft = "lua",
     opts = {
